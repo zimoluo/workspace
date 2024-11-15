@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 import shutil
 import json
 import zipfile
-import build
+from build import build
 
 
 def main():
