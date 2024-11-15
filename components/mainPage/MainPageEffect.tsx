@@ -28,23 +28,19 @@ export default function MainPageEffect({ children }: Props) {
   const { restoreWindowFromSave } = useWindow();
 
   useEffect(() => {
-    async function downloadUserInfo(): Promise<SettingsState> {
+    function downloadUserInfo() {
       const savedRawSettings = localStorage.getItem("websiteSettingsWorkspace");
       const loadedSettings = parseStoredSettings(savedRawSettings || "") || {};
 
       updateSettings(loadedSettings, false);
 
-      return loadedSettings;
-    }
-
-    downloadUserInfo().then((preparedSettings) => {
       if (
-        !preparedSettings.disableWindowSaving &&
-        (preparedSettings.windowSaveData?.windows?.length ?? 0) > 0
+        !loadedSettings.disableWindowSaving &&
+        (loadedSettings.windowSaveData?.windows?.length ?? 0) > 0
       ) {
         restoreWindowFromSave(
-          preparedSettings.windowSaveData.windows,
-          preparedSettings.windowSaveData.viewport
+          loadedSettings.windowSaveData.windows,
+          loadedSettings.windowSaveData.viewport
         );
       } else {
         restoreWindowFromSave(
@@ -76,7 +72,9 @@ export default function MainPageEffect({ children }: Props) {
           }
         );
       }
-    });
+    }
+
+    downloadUserInfo();
   }, []);
 
   return (
