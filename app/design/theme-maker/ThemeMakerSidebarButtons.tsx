@@ -3,7 +3,6 @@
 import DuplicateIcon from "@/components/assets/entries/DuplicateIcon";
 import { useSettings } from "@/components/contexts/SettingsContext";
 import ChangeToCustomThemeButton from "./ChangeToCustomThemeButton";
-import EnterFullPageSingleArrow from "@/components/assets/entries/EnterFullPageSingleArrow";
 import ExportIcon from "@/components/assets/entries/ExportIcon";
 import FallingStarsIcon from "@/components/assets/entries/FallingStarsIcon";
 import { clampValue, randomIntFromRange } from "@/lib/generalHelper";
@@ -13,7 +12,6 @@ import { optimizeExportedProfile } from "@/lib/themeMaker/profileOptimizeTool";
 import ImportProfileButton from "./ImportProfileButton";
 import { useTheme } from "@/components/contexts/ThemeContext";
 import PresetConfigButton from "./PresetConfigButton";
-import SidebarToggleIcon from "@/components/assets/entries/SidebarToggleIcon";
 import { Fragment, ReactNode } from "react";
 
 interface Props {

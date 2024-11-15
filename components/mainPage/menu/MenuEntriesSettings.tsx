@@ -37,7 +37,6 @@ const settingsNameMap: { [key in keyof Partial<SettingsState>]: string } = {
   randomizeThemeOnEveryVisit: "Randomize themes on every visit",
   windowLimit: "Number of windows",
   calculatorButtonHasBorder: "Enable calculator button border",
-  disableWindows: "Disable windows",
   disableWindowSnapping: "Disable window snapping",
   disableSpecialTheme: "Disable special theme",
   disableWindowSaving: "Disable window saving",
@@ -184,7 +183,6 @@ export default function MenuEntriesSettings({
           values: [1, 3, 6, 12, 30],
           captions: ["One", "Three", "Six", "Twelve", "Thirty"],
         },
-        { entry: "disableWindows", type: "flip" },
         { entry: "disableWindowSaving", type: "flip" },
         { entry: "disableWindowSnapping", type: "flip" },
         {

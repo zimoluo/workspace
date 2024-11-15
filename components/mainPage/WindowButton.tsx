@@ -77,58 +77,56 @@ export default function WindowButton() {
   };
 
   return (
-    !settings.disableWindows && (
-      <div
-        className={`hidden md:flex fixed z-[12] bottom-8 right-8 items-center flex-col-reverse ${buttonStyle.container}`}
+    <div
+      className={`hidden md:flex fixed z-[12] bottom-8 right-8 items-center flex-col-reverse ${buttonStyle.container}`}
+    >
+      <button
+        className={`w-16 h-16 aspect-square p-3.5 rounded-full border-none border-transparent group ${
+          buttonStyle.transition
+        } ${
+          isWindowMinimized ? buttonStyle.glow : "shadow-lg ease-out"
+        } backdrop-blur-2xl bg-widget-60`}
+        onClick={handleClick}
+        onContextMenu={toggleMinimize}
       >
-        <button
-          className={`w-16 h-16 aspect-square p-3.5 rounded-full border-none border-transparent group ${
-            buttonStyle.transition
-          } ${
-            isWindowMinimized ? buttonStyle.glow : "shadow-lg ease-out"
-          } backdrop-blur-2xl bg-widget-60`}
-          onClick={handleClick}
-          onContextMenu={toggleMinimize}
-        >
-          <WindowIcon className="relative w-full h-full transition-transform duration-300 ease-out delay-0 group-hover:scale-110" />
-        </button>
-        <button
-          className={`w-16 h-16 ${buttonStyle.extraButton} ${
-            windows.length > 0 ? buttonStyle.extraButtonActive : ""
-          } aspect-square rounded-full border-none shadow-lg backdrop-blur-2xl bg-widget-60 group`}
-          onClick={toggleMinimize}
-          disabled={windows.length === 0}
-        >
-          <MagnetIcon
-            strokeWidth={40}
-            className="relative w-full h-full transition-transform duration-300 ease-out group-hover:scale-110 -rotate-135"
-          />
-        </button>
-        <button
-          className={`w-16 h-16 ${buttonStyle.extraButton} ${
-            windows.length > 0 ? buttonStyle.extraButtonActive : ""
-          } aspect-square rounded-full border-none shadow-lg backdrop-blur-2xl bg-widget-60 group`}
-          onClick={handleBroom}
-          disabled={windows.length === 0}
-        >
-          <BroomIcon
-            strokeWidth={40}
-            className="relative w-full h-full transition-transform duration-300 ease-out scale-110 group-hover:scale-125"
-          />
-        </button>
-        <button
-          className={`w-16 h-16 ${buttonStyle.extraButton} ${
-            windows.length > 0 ? buttonStyle.extraButtonActive : ""
-          } aspect-square rounded-full border-none shadow-lg backdrop-blur-2xl bg-widget-60 group`}
-          onClick={clearAllWindows}
-          disabled={windows.length === 0}
-        >
-          <DeleteCommentIcon
-            strokeWidth={1.4}
-            className="relative w-full h-full transition-transform duration-300 ease-out scale-90 group-hover:scale-100"
-          />
-        </button>
-      </div>
-    )
+        <WindowIcon className="relative w-full h-full transition-transform duration-300 ease-out delay-0 group-hover:scale-110" />
+      </button>
+      <button
+        className={`w-16 h-16 ${buttonStyle.extraButton} ${
+          windows.length > 0 ? buttonStyle.extraButtonActive : ""
+        } aspect-square rounded-full border-none shadow-lg backdrop-blur-2xl bg-widget-60 group`}
+        onClick={toggleMinimize}
+        disabled={windows.length === 0}
+      >
+        <MagnetIcon
+          strokeWidth={40}
+          className="relative w-full h-full transition-transform duration-300 ease-out group-hover:scale-110 -rotate-135"
+        />
+      </button>
+      <button
+        className={`w-16 h-16 ${buttonStyle.extraButton} ${
+          windows.length > 0 ? buttonStyle.extraButtonActive : ""
+        } aspect-square rounded-full border-none shadow-lg backdrop-blur-2xl bg-widget-60 group`}
+        onClick={handleBroom}
+        disabled={windows.length === 0}
+      >
+        <BroomIcon
+          strokeWidth={40}
+          className="relative w-full h-full transition-transform duration-300 ease-out scale-110 group-hover:scale-125"
+        />
+      </button>
+      <button
+        className={`w-16 h-16 ${buttonStyle.extraButton} ${
+          windows.length > 0 ? buttonStyle.extraButtonActive : ""
+        } aspect-square rounded-full border-none shadow-lg backdrop-blur-2xl bg-widget-60 group`}
+        onClick={clearAllWindows}
+        disabled={windows.length === 0}
+      >
+        <DeleteCommentIcon
+          strokeWidth={1.4}
+          className="relative w-full h-full transition-transform duration-300 ease-out scale-90 group-hover:scale-100"
+        />
+      </button>
+    </div>
   );
 }

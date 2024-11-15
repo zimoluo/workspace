@@ -1,9 +1,6 @@
 "use client";
 
 import CommandKeyIcon from "@/components/assets/entries/CommandKeyIcon";
-import { usePopUp } from "@/components/contexts/PopUpContext";
-import PresetConfigPopUp from "./PresetConfigPopUp";
-import { useSettings } from "@/components/contexts/SettingsContext";
 import { useWindow } from "@/components/contexts/WindowContext";
 import PresetConfigWindow from "./PresetConfigWindow";
 import { useEffect, useRef } from "react";
@@ -11,43 +8,32 @@ import { useEffect, useRef } from "react";
 const contextKey = "theme-maker-preset-config";
 
 export default function PresetConfigButton() {
-  const { appendPopUp, removePopUpByContextKey } = usePopUp();
   const { appendWindow, removeWindowByContextKey } = useWindow();
-  const { settings } = useSettings();
 
   const buttonRef = useRef<HTMLButtonElement>(null);
 
   const openMenu = () => {
-    if (window.innerWidth < 768 || settings.disableWindows) {
-      appendPopUp({
-        content: <PresetConfigPopUp />,
-        contextKey,
-        darkOpacity: 0.25,
-      });
-    } else {
-      appendWindow({
-        content: <PresetConfigWindow />,
-        contextKey,
-        defaultHeight: 450,
-        defaultWidth: 420,
-        minHeight: 380,
-        minWidth: 360,
-        maxHeight: 560,
-        maxWidth: 640,
-        defaultCenterX:
-          (buttonRef.current?.getBoundingClientRect().left ?? 0) +
-          (buttonRef.current?.getBoundingClientRect().width ?? 0) / 2,
-        defaultCenterY:
-          (buttonRef.current?.getBoundingClientRect().top ?? 0) +
-          (buttonRef.current?.getBoundingClientRect().height ?? 0) / 2,
-        layer: 1,
-      });
-    }
+    appendWindow({
+      content: <PresetConfigWindow />,
+      contextKey,
+      defaultHeight: 450,
+      defaultWidth: 420,
+      minHeight: 380,
+      minWidth: 360,
+      maxHeight: 560,
+      maxWidth: 640,
+      defaultCenterX:
+        (buttonRef.current?.getBoundingClientRect().left ?? 0) +
+        (buttonRef.current?.getBoundingClientRect().width ?? 0) / 2,
+      defaultCenterY:
+        (buttonRef.current?.getBoundingClientRect().top ?? 0) +
+        (buttonRef.current?.getBoundingClientRect().height ?? 0) / 2,
+      layer: 1,
+    });
   };
 
   useEffect(() => {
     return () => {
-      removePopUpByContextKey(contextKey);
       removeWindowByContextKey(contextKey);
     };
   }, []);

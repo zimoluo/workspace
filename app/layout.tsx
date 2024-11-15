@@ -8,7 +8,6 @@ import { ToastProvider } from "@/components/contexts/ToastContext";
 import { defaultRobotsMeta } from "@/lib/siteMetadata";
 import ThemeDataInitializer from "@/components/theme/util/ThemeDataInitializer";
 import ThemeApplier from "@/components/theme/util/ThemeApplier";
-import { PopUpProvider } from "@/components/contexts/PopUpContext";
 import { WindowProvider } from "@/components/contexts/WindowContext";
 import SystemUIFontLoader from "@/components/mainPage/SystemUIFontLoader";
 
@@ -67,17 +66,15 @@ export default function RootLayout({
           <SystemUIFontLoader>
             <ToastProvider>
               <WindowProvider>
-                <PopUpProvider>
-                  <ThemeDataInitializer>
-                    <ThemeApplier>
-                      <MainPageFrame>
-                        <MainPageEffect>
-                          <MainPageElements>{children}</MainPageElements>
-                        </MainPageEffect>
-                      </MainPageFrame>
-                    </ThemeApplier>
-                  </ThemeDataInitializer>
-                </PopUpProvider>
+                <ThemeDataInitializer>
+                  <ThemeApplier>
+                    <MainPageFrame>
+                      <MainPageEffect>
+                        <MainPageElements>{children}</MainPageElements>
+                      </MainPageEffect>
+                    </MainPageFrame>
+                  </ThemeApplier>
+                </ThemeDataInitializer>
               </WindowProvider>
             </ToastProvider>
           </SystemUIFontLoader>

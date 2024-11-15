@@ -3,9 +3,26 @@
 import { useNotebook } from "@/components/contexts/NotebookContext";
 import { useSettings } from "@/components/contexts/SettingsContext";
 import { formatDate } from "@/lib/dateUtil";
-import { trimTitleText } from "@/lib/photos/helper";
 import { useEffect, useRef } from "react";
 import notebookStyle from "./notebook.module.css";
+
+const trimTitleText = (text: string, maxLength: number = 16): string => {
+  if (text.length <= maxLength) {
+    return text;
+  }
+
+  let trimmedText = text.slice(0, maxLength);
+
+  const lastSpaceIndex = trimmedText.lastIndexOf(" ");
+
+  if (lastSpaceIndex > 0) {
+    trimmedText = trimmedText.slice(0, lastSpaceIndex);
+  }
+
+  trimmedText = trimmedText.replace(/[ .]+$/, "");
+
+  return `${trimmedText}...`;
+};
 
 export default function NotebookMenu() {
   const { settings, updateSettings } = useSettings();
