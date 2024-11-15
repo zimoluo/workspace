@@ -3,5 +3,6 @@
     "# Changes",
     "",
     "Workspace is the new progressive web app derived from Zimo Web, utilizing its latest windows framework."
-  ]
+  ],
+  "v1.0.1": ["# Changes", "", "Fixed some minor issues."]
 }
