@@ -1,24 +1,12 @@
 "use client";
 
 import { ReactNode, useEffect } from "react";
-import { useUser } from "../contexts/UserContext";
-import {
-  isBirthday,
-  isChristmas,
-  isHalloween,
-  isNewYear,
-  isRightAroundHalloween,
-  isZimoWebDay,
-} from "@/lib/seasonUtil";
 import { parseStoredSettings, useSettings } from "../contexts/SettingsContext";
-import { restoreClientUser } from "@/lib/dataLayer/client/accountStateCommunicator";
 import { defaultSettings } from "@/lib/constants/defaultSettings";
 import _ from "lodash";
 import ToastBannerReceiver from "../widgets/ToastBannerReceiver";
 import ToastDisplayLegacy from "../widgets/ToastDisplayLegacy";
 import PopUpManager from "../widgets/PopUpManager";
-import { allListedThemes } from "../theme/util/listedThemesMap";
-import { randomIntFromRange } from "@/lib/generalHelper";
 import WindowManager from "../window/WindowManager";
 import MobileDesktopEntryRenderer from "../widgets/MobileDesktopEntryRenderer";
 import { useWindow } from "../contexts/WindowContext";
@@ -48,45 +36,17 @@ const getUniformPageTheme = (
 };
 
 export default function MainPageEffect({ children }: Props) {
-  const { user, setUser } = useUser();
   const { updateSettings, settings } = useSettings();
   const { restoreWindowFromSave } = useWindow();
 
   useEffect(() => {
     async function downloadUserInfo(): Promise<SettingsState> {
-      const savedRawSettings = localStorage.getItem("websiteSettings");
+      const savedRawSettings = localStorage.getItem("websiteSettingsWorkspace");
       const loadedSettings = parseStoredSettings(savedRawSettings || "") || {};
 
       updateSettings(loadedSettings, false);
 
-      if (user !== null) {
-        return loadedSettings;
-      }
-
-      try {
-        const restoredUserInfo = await restoreClientUser(loadedSettings);
-
-        if (!restoredUserInfo) {
-          throw new Error(
-            "Encountered an unexpected error while trying to restore user session."
-          );
-        }
-
-        if (!restoredUserInfo.exists) {
-          console.log("No user session found.");
-          return loadedSettings;
-        }
-
-        const { integratedUser, downloadedSettings } = restoredUserInfo;
-        setUser(integratedUser);
-        if (downloadedSettings !== null) {
-          updateSettings(downloadedSettings, false);
-        }
-        return downloadedSettings || loadedSettings;
-      } catch (error) {
-        console.error("Error in restoring user session:", error);
-        return loadedSettings;
-      }
+      return loadedSettings;
     }
 
     downloadUserInfo().then((preparedSettings) => {
@@ -99,111 +59,6 @@ export default function MainPageEffect({ children }: Props) {
         restoreWindowFromSave(
           preparedSettings.windowSaveData.windows,
           preparedSettings.windowSaveData.viewport
-        );
-      }
-
-      if (!preparedSettings.disableSpecialTheme) {
-        if (
-          _.isEqual(preparedSettings.pageTheme, defaultSettings.pageTheme) &&
-          window.matchMedia("(prefers-color-scheme: dark)").matches
-        ) {
-          updateSettings(
-            {
-              pageTheme: getUniformPageTheme("plainDark"),
-            },
-            false
-          );
-        }
-
-        if (isHalloween()) {
-          updateSettings(
-            {
-              pageTheme: getUniformPageTheme(
-                isRightAroundHalloween() ? "halloween" : "spookfest"
-              ),
-            },
-            false
-          );
-        }
-
-        if (isZimoWebDay()) {
-          updateSettings(
-            {
-              pageTheme: getUniformPageTheme("perpetuity"),
-            },
-            false
-          );
-        }
-
-        if (isBirthday()) {
-          const age = new Date().getFullYear() - 2005;
-          let birthdayThemeKey = (
-            age === 18 ? "birthday" : `birthday${age}`
-          ) as ThemeKey;
-
-          birthdayThemeKey = allListedThemes.includes(birthdayThemeKey)
-            ? birthdayThemeKey
-            : "birthdayGeneric";
-
-          updateSettings(
-            {
-              pageTheme: getUniformPageTheme(birthdayThemeKey),
-            },
-            false
-          );
-        }
-
-        if (isChristmas()) {
-          updateSettings(
-            {
-              pageTheme: getUniformPageTheme("christmas"),
-            },
-            false
-          );
-        }
-
-        if (isNewYear()) {
-          updateSettings(
-            {
-              pageTheme: getUniformPageTheme("celebration"),
-            },
-            false
-          );
-        }
-      }
-
-      if (preparedSettings.randomizeThemeOnEveryVisit) {
-        const themeList: ThemeKey[] = [...allListedThemes, "custom"];
-
-        const repetitions = Math.ceil(pageKeys.length / themeList.length);
-        const extendedThemeList: ThemeKey[] = Array(repetitions)
-          .fill(structuredClone(themeList))
-          .flat();
-
-        const shuffledThemeList = _.shuffle(extendedThemeList);
-
-        const pickedThemes = shuffledThemeList.slice(0, pageKeys.length);
-
-        const pageThemeMapping = pageKeys.reduce((acc, key, index) => {
-          acc[key] = pickedThemes[index];
-          return acc;
-        }, {} as Record<string, ThemeKey>);
-
-        let customThemeIndex: number = preparedSettings.customThemeIndex;
-
-        if (pickedThemes.includes("custom")) {
-          customThemeIndex = randomIntFromRange(
-            0,
-            preparedSettings.customThemeData.length - 1
-          );
-        }
-
-        updateSettings(
-          {
-            pageTheme: pageThemeMapping,
-            customThemeIndex,
-          },
-          false
         );
       }
     });

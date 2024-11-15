@@ -1,32 +1,10 @@
-import HeaderText from "@/components/mainPage/HeaderText";
-import SocialMediaButtons from "@/components/mainPage/SocialMediaButtons";
-import HomeSecretText from "./HomeSecretText";
-import HomeContent from "./HomeContent";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Zimo Web",
-  description: "The personal website of Zimo.",
+  title: "Workspace",
+  description: "Workspace of windows, derived from Zimo Web.",
 };
 
 export default function Home() {
-  return (
-    <>
-      <HeaderText
-        title={
-          <>
-            {"Greetings, I\u2019m\u00A0"}
-            <HomeSecretText />
-            {"."}
-          </>
-        }
-        subtitle={"Hello there. I\u2019m glad you made it here."}
-      >
-        <SocialMediaButtons />
-      </HeaderText>
-      <HomeContent />
-    </>
-  );
+  return null;
 }
-
-export const revalidate = 30;

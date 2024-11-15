@@ -16,15 +16,10 @@ const securityCommentShutDown =
   process.env.NEXT_PUBLIC_ZIMO_WEB_COMMENT_SHUTDOWN === "true";
 
 const settingsNameMap: { [key in keyof Partial<SettingsState>]: string } = {
-  syncSettings: "Sync data",
   backgroundRichness: "Background richness",
-  navigationBar: "Navigation bar",
   disableCenterPainting: "Disable center art",
-  disableComments: "Disable comments",
   disableGestures: "Disable gestures",
   disableSerifFont: "Disable serif font",
-  disableEntryPopUp: "Disable entry pop-up",
-  enableGallery: "Gallery mode",
   disableSoundEffect: "Disable sound effect",
   instantSearchResult: "Show search results instantly",
   disableTableOfContents: "Disable table of contents",
@@ -50,6 +45,7 @@ const settingsNameMap: { [key in keyof Partial<SettingsState>]: string } = {
   alwaysEnableFireworks: "Always enable fireworks effect",
   windowResizeBehavior: "Window resizing behavior",
   disableWindowSnapToViewportBorder: "Disable snap to screen border",
+  disableSystemFont: "Disable system font",
 };
 
 interface SettingsPanelEntry {
@@ -89,10 +85,6 @@ export default function MenuEntriesSettings({
     title: string;
     entries: SettingsPanelEntry[];
   }[] = [
-    {
-      title: "Account",
-      entries: [{ entry: "syncSettings", type: "flip" }],
-    },
     {
       title: "Theme",
       entries: [
@@ -142,6 +134,10 @@ export default function MenuEntriesSettings({
           type: "flip",
         },
         {
+          entry: "randomizeThemeOnEveryVisit",
+          type: "flip",
+        },
+        {
           entry: "disableCenterPainting",
           type: "flip",
           condition: [{ value: "animationKey", match: "blog" }],
@@ -183,12 +179,6 @@ export default function MenuEntriesSettings({
       title: "Interface",
       entries: [
         {
-          entry: "navigationBar",
-          type: "slider",
-          values: ["disabled", "always", "flexible"],
-          captions: ["Disabled", "Always-on", "Flexible"],
-        },
-        {
           entry: "windowLimit",
           type: "slider",
           values: [1, 3, 6, 12, 30],
@@ -226,6 +216,10 @@ export default function MenuEntriesSettings({
               match: "banner",
             },
           ],
+        },
+        {
+          entry: "disableSystemFont",
+          type: "flip",
         },
         {
           entry: "hideColorLookupPanel",
@@ -285,17 +279,6 @@ export default function MenuEntriesSettings({
     {
       title: "Miscellaneous",
       entries: [
-        {
-          entry: "enableGallery",
-          type: "flip",
-          condition: [{ value: "currentPage", match: "photos" }],
-        },
-        {
-          entry: "disableEntryPopUp",
-          type: "flip",
-          condition: [{ value: "currentPage", match: ["photos", "projects"] }],
-        },
-        { entry: "disableComments", type: "flip" },
         {
           entry: "disableTableOfContents",
           type: "flip",
@@ -426,22 +409,12 @@ export default function MenuEntriesSettings({
                           {settingsNameMap[entry.entry]}
                         </div>
                         <SettingsFlip
-                          onClick={
-                            entry.entry === "disableComments" &&
-                            securityCommentShutDown
-                              ? () => {}
-                              : (status: boolean) => {
-                                  updateSettings({
-                                    [entry.entry]: status,
-                                  } as Partial<SettingsState>);
-                                }
-                          }
-                          state={
-                            !!(entry.entry === "disableComments" &&
-                            securityCommentShutDown
-                              ? true
-                              : settings[entry.entry])
-                          }
+                          onClick={(status: boolean) => {
+                            updateSettings({
+                              [entry.entry]: status,
+                            } as Partial<SettingsState>);
+                          }}
+                          state={settings[entry.entry] as boolean}
                         />
                       </div>
                       {showDivider && entryDivider}

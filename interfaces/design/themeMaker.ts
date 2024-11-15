@@ -44,12 +44,9 @@ interface ImageColorAnalysisResult {
 }
 
 type SidebarButtonsOption =
-  | "sidebar"
   | "customTheme"
-  | "fullscreen"
   | "duplicate"
   | "stars"
   | "preset"
-  | "image"
   | "export"
   | "import";

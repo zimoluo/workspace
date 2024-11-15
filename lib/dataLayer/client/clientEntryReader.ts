@@ -1,3 +1,5 @@
+const baseUrl = "https://www.zimoluo.me";
+
 export async function readEntryOnClient(
   slug: string,
   directory: string,
@@ -5,12 +7,13 @@ export async function readEntryOnClient(
   fields: string[] = []
 ): Promise<Record<string, any>> {
   try {
-    const response = await fetch("/api/entry/readEntryBySlug", {
+    const response = await fetch(`${baseUrl}/api/entry/readEntryBySlug`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ slug, directory, mode, fields }),
+      mode: "cors",
     });
 
     if (!response.ok) {
@@ -33,12 +36,13 @@ export async function readAllEntriesOnClient(
   fields: string[] = []
 ): Promise<Record<string, any>[]> {
   try {
-    const response = await fetch("/api/entry/readAllEntries", {
+    const response = await fetch(`${baseUrl}/api/entry/readAllEntries`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ directory, mode, fields }),
+      mode: "cors",
     });
 
     if (!response.ok) {

@@ -1,17 +1,8 @@
 import type { Metadata } from "next";
-import {
-  Roboto_Mono,
-  Lora,
-  Open_Sans,
-  Pacifico,
-  Work_Sans,
-} from "next/font/google";
 import "@/styles/globals.css";
 import MainPageFrame from "@/components/mainPage/MainPageFrame";
 import MainPageElements from "@/components/mainPage/MainPageElements";
-import { UserProvider } from "@/components/contexts/UserContext";
 import { SettingsProvider } from "@/components/contexts/SettingsContext";
-import GoogleOAuthProvider from "@/components/contexts/GoogleOAuthContext";
 import MainPageEffect from "@/components/mainPage/MainPageEffect";
 import { baseUrl } from "@/lib/constants/navigationFinder";
 import { ToastProvider } from "@/components/contexts/ToastContext";
@@ -20,37 +11,7 @@ import ThemeDataInitializer from "@/components/theme/util/ThemeDataInitializer";
 import ThemeApplier from "@/components/theme/util/ThemeApplier";
 import { PopUpProvider } from "@/components/contexts/PopUpContext";
 import { WindowProvider } from "@/components/contexts/WindowContext";
-
-const mainFont = Work_Sans({
-  subsets: ["latin"],
-  variable: "--font-main",
-  display: "swap",
-});
-
-const fancyFont = Pacifico({
-  subsets: ["latin"],
-  variable: "--font-pacifico",
-  display: "swap",
-  weight: "400",
-});
-
-const tabularFont = Open_Sans({
-  subsets: ["latin"],
-  variable: "--font-open-sans",
-  display: "swap",
-});
-
-const monoFont = Roboto_Mono({
-  subsets: ["latin"],
-  variable: "--font-roboto-mono",
-  display: "swap",
-});
-
-const serifFont = Lora({
-  subsets: ["latin"],
-  variable: "--font-lora",
-  display: "swap",
-});
+import SystemUIFontLoader from "@/components/mainPage/SystemUIFontLoader";
 
 const environment = (process.env.VERCEL_ENV ?? "development").toLowerCase();
 
@@ -109,32 +70,26 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        className={`${mainFont.variable} ${monoFont.variable} ${tabularFont.variable} ${serifFont.variable} ${fancyFont.variable} font-main`}
-      >
-        <GoogleOAuthProvider
-          clientId={process.env.NEXT_PUBLIC_ZIMO_WEB_GOOGLE_CLIENT_ID || ""}
-        >
-          <UserProvider>
-            <SettingsProvider>
-              <ToastProvider>
-                <WindowProvider>
-                  <PopUpProvider>
-                    <ThemeDataInitializer>
-                      <ThemeApplier>
-                        <MainPageFrame>
-                          <MainPageEffect>
-                            <MainPageElements>{children}</MainPageElements>
-                          </MainPageEffect>
-                        </MainPageFrame>
-                      </ThemeApplier>
-                    </ThemeDataInitializer>
-                  </PopUpProvider>
-                </WindowProvider>
-              </ToastProvider>
-            </SettingsProvider>
-          </UserProvider>
-        </GoogleOAuthProvider>
+      <body className="font-main">
+        <SettingsProvider>
+          <SystemUIFontLoader>
+            <ToastProvider>
+              <WindowProvider>
+                <PopUpProvider>
+                  <ThemeDataInitializer>
+                    <ThemeApplier>
+                      <MainPageFrame>
+                        <MainPageEffect>
+                          <MainPageElements>{children}</MainPageElements>
+                        </MainPageEffect>
+                      </MainPageFrame>
+                    </ThemeApplier>
+                  </ThemeDataInitializer>
+                </PopUpProvider>
+              </WindowProvider>
+            </ToastProvider>
+          </SystemUIFontLoader>
+        </SettingsProvider>
       </body>
     </html>
   );

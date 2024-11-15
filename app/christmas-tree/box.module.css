@@ -1,9 +1,0 @@
-.sizing {
-  width: 100%;
-}
-
-@media (min-width: 768px) {
-  .sizing {
-    width: clamp(1rem, 90%, 50rem);
-  }
-}

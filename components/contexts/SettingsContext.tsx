@@ -1,9 +1,7 @@
 "use client";
 
-import { createContext, useContext, useState, useEffect } from "react";
-import { useUser } from "./UserContext";
+import { createContext, useContext, useState } from "react";
 import { defaultSettings } from "@/lib/constants/defaultSettings";
-import { syncUpUserSettings } from "@/lib/dataLayer/client/accountStateCommunicator";
 import _ from "lodash";
 
 export const parseStoredSettings = (
@@ -74,25 +72,7 @@ export const SettingsProvider = ({
 }: {
   children?: React.ReactNode;
 }) => {
-  const { user, setUser } = useUser();
-
   const [settings, setSettings] = useState<SettingsState>(defaultSettings);
-
-  useEffect(() => {
-    const doSyncSettings = settings.syncSettings;
-
-    if (user !== null) {
-      const preparedSettings = doSyncSettings ? settings : null;
-
-      if (user.websiteSettings === null && preparedSettings === null) {
-        return; // Exit if both are null
-      }
-
-      const newUser = { ...user, websiteSettings: preparedSettings };
-
-      setUser(newUser);
-    }
-  }, [settings]);
 
   const updateAndPersistSettings = (
     newSettings: Partial<SettingsState>,
@@ -109,7 +89,10 @@ export const SettingsProvider = ({
         updatedSettings
       ) as SettingsState;
 
-      localStorage.setItem("websiteSettings", JSON.stringify(filteredSettings));
+      localStorage.setItem(
+        "websiteSettingsWorkspace",
+        JSON.stringify(filteredSettings)
+      );
 
       callback(filteredSettings);
 
@@ -121,11 +104,7 @@ export const SettingsProvider = ({
     newSettings: Partial<SettingsState>,
     doSync: boolean = true
   ) => {
-    updateAndPersistSettings(newSettings, (updatedSettings) => {
-      if (doSync && user !== null && updatedSettings.syncSettings) {
-        syncUpUserSettings(user.sub, updatedSettings);
-      }
-    });
+    updateAndPersistSettings(newSettings);
   };
 
   const updatePageTheme = (

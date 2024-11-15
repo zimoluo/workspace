@@ -8,7 +8,6 @@ import { generateTOCSectionData } from "@/lib/markdownParser";
 import tocStyle from "@/components/widgets/toc.module.css";
 import TOCSettingApplier from "@/components/widgets/TOCSettingApplier";
 import TOCExistChecker from "@/components/widgets/TOCExistChecker";
-import EntryLikeButtonInitializer from "@/components/comments/EntryLikeButtonInitializer";
 
 interface Props {
   title: string;
@@ -43,11 +42,7 @@ export default function BlogHeader({
         content={content}
         date={date}
         lastEditedDate={lastEditedDate}
-      >
-        <EntryLikeButtonInitializer
-          resourceLocation={`blog/likedBy/${slug}.json`}
-        />
-      </BlogAuthor>
+      />
       {tags.length > 0 && (
         <>
           <p className="sr-only">Tags of this article: </p>

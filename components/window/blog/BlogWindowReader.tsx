@@ -4,10 +4,6 @@ import parseCustomMarkdown, {
   generateTOCSectionData,
 } from "@/lib/markdownParser";
 import Image from "next/image";
-import CommentAreaWrapper from "@/components/comments/CommentAreaWrapper";
-import { CommentProvider } from "@/components/contexts/CommentContext";
-import CommentTypingArea from "@/components/comments/CommentTypingArea";
-import CommentCardContainer from "@/components/comments/CommentCardContainer";
 import BlogTitle from "@/app/blog/[slug]/BlogTitle";
 import {
   enrichTextContent,
@@ -16,7 +12,6 @@ import {
 import BlogDescription from "@/app/blog/[slug]/BlogDescription";
 import ShareButtonArray from "@/components/widgets/ShareButtonArray";
 import BlogAuthor from "@/app/blog/[slug]/BlogAuthor";
-import EntryLikeButton from "@/components/comments/EntryLikeButton";
 import clientWindowMarkdownComponentsMap from "@/lib/clientWindowMarkdownComponentsMap";
 import BlogWindowTagButton from "./BlogWindowTagButton";
 import WindowReadingSettingsApplier from "../WindowReadingSettingsApplier";
@@ -44,9 +39,7 @@ export default function BlogWindowReader(post: PostEntry) {
       <BlogDescription>
         {enrichTextContent(post.description || "")}
       </BlogDescription>
-      <BlogAuthor {...post} mayIncludePublishDate={false}>
-        <EntryLikeButton resourceLocation={`blog/likedBy/${post.slug}.json`} />
-      </BlogAuthor>
+      <BlogAuthor {...post} mayIncludePublishDate={false} />
       {tags.length > 0 && (
         <>
           <p className="sr-only">Tags of this article: </p>
@@ -86,14 +79,6 @@ export default function BlogWindowReader(post: PostEntry) {
           uniqueId
         )}
       </WindowReadingSettingsApplier>
-      <CommentAreaWrapper>
-        <hr className="my-10 border-saturated border-t opacity-50" />
-        <CommentProvider location={`blog/comments/${post.slug}.json`}>
-          <CommentTypingArea />
-          <div className="h-10 pointer-events-none select-none" />
-          <CommentCardContainer />
-        </CommentProvider>
-      </CommentAreaWrapper>
     </>
   );
 }

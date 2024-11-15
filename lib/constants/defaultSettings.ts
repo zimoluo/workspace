@@ -4,30 +4,15 @@ import lollipopConfig from "@/components/theme/config/lollipop";
 import oasisConfig from "@/components/theme/config/oasis";
 import springFieldConfig from "@/components/theme/config/springField";
 
-const themeMakerDefaultTheme: ThemeKey = "penumbra";
-
 export const defaultSettings: SettingsState = {
   backgroundRichness: "rich",
-  syncSettings: true,
-  navigationBar: "flexible",
   floatingCodeSpeed: 1800,
   disableCenterPainting: false,
-  disableComments: false,
   disableGestures: false,
   disableSerifFont: false,
-  disableEntryPopUp: false,
-  enableGallery: false,
   disableSoundEffect: false,
   pageTheme: {
-    home: "home",
-    photos: "photos",
-    blog: "blog",
-    projects: "projects",
-    about: "about",
-    management: "bubbles",
-    design: "vitreous",
-    themeMaker: themeMakerDefaultTheme,
-    notebook: "bewitched",
+    home: "about",
   },
   notificationStyle: "banner",
   instantSearchResult: false,
@@ -42,7 +27,7 @@ export const defaultSettings: SettingsState = {
     springFieldConfig,
   ],
   customThemeIndex: 0,
-  regularThemeMakerTheme: themeMakerDefaultTheme,
+  regularThemeMakerTheme: "about",
   expandThemeMakerWindow: false,
   optimizeProfileExport: false,
   allowExtendedGradientStopsRange: false,
@@ -68,4 +53,5 @@ export const defaultSettings: SettingsState = {
   alwaysEnableFireworks: false,
   windowResizeBehavior: "adaptive",
   disableWindowSnapToViewportBorder: false,
+  disableSystemFont: false,
 };

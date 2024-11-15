@@ -1,14 +1,9 @@
 interface SettingsState {
   backgroundRichness: "minimal" | "reduced" | "rich";
-  syncSettings: boolean;
-  navigationBar: "disabled" | "always" | "flexible";
   floatingCodeSpeed: number;
   disableCenterPainting: boolean;
-  disableComments: boolean;
   disableGestures: boolean;
   disableSerifFont: boolean;
-  disableEntryPopUp: boolean;
-  enableGallery: boolean;
   disableSoundEffect: boolean;
   pageTheme: Record<NavigationKey, ThemeKey | ThemeDataConfig>;
   notificationStyle: NotificationStyle;
@@ -44,6 +39,7 @@ interface SettingsState {
   alwaysEnableFireworks: boolean;
   windowResizeBehavior: "corner" | "center" | "adaptive";
   disableWindowSnapToViewportBorder: boolean;
+  disableSystemFont: boolean;
 }
 
 type NotificationStyle = "disabled" | "toast" | "banner";

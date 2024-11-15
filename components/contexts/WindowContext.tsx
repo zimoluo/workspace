@@ -62,7 +62,7 @@ const WindowContext = createContext<
   | undefined
 >(undefined);
 
-export const windowSoftTopBorder = 60;
+export const windowSoftTopBorder = 36;
 
 export function WindowProvider({ children }: Props) {
   const [windows, setWindows] = useState<WindowData[]>([]);

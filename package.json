@@ -1,6 +1,6 @@
 {
-  "name": "zimo-web",
-  "version": "8.1.1",
+  "name": "workspace",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",

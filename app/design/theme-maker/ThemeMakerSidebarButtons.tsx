@@ -5,7 +5,6 @@ import { useSettings } from "@/components/contexts/SettingsContext";
 import ChangeToCustomThemeButton from "./ChangeToCustomThemeButton";
 import EnterFullPageSingleArrow from "@/components/assets/entries/EnterFullPageSingleArrow";
 import ExportIcon from "@/components/assets/entries/ExportIcon";
-import ImageUploadButton from "./ImageUploadButton";
 import FallingStarsIcon from "@/components/assets/entries/FallingStarsIcon";
 import { clampValue, randomIntFromRange } from "@/lib/generalHelper";
 import { intelligentlyGenerateThemeConfig } from "@/lib/themeMaker/colorHelper";
@@ -30,13 +29,10 @@ export default function ThemeMakerSidebarButtons({
   noBackground = false,
   alwaysCentered = false,
   sidebarOptions = [
-    "sidebar",
     "customTheme",
-    "fullscreen",
     "duplicate",
     "stars",
     "preset",
-    "image",
     "export",
     "import",
   ],
@@ -117,63 +113,7 @@ export default function ThemeMakerSidebarButtons({
   };
 
   const sidebarButtonMap: Record<SidebarButtonsOption, ReactNode> = {
-    sidebar: (
-      <button
-        className="transition-transform hover:scale-110 duration-300 ease-in-out w-7 h-auto aspect-square hidden md:block shrink-0"
-        onClick={toggleCollapse}
-        aria-expanded={!isCollapsed}
-      >
-        <SidebarToggleIcon className="w-full h-auto aspect-square" />
-      </button>
-    ),
     customTheme: <ChangeToCustomThemeButton />,
-    fullscreen: (
-      <button
-        className="transition-transform hover:scale-110 duration-300 ease-in-out w-7 h-auto aspect-square hidden md:block shrink-0"
-        onClick={() =>
-          updateSettings({ expandThemeMakerWindow: !isFullscreen })
-        }
-      >
-        <div className="w-full h-auto aspect-square relative scale-85">
-          <div className="w-full h-auto aspect-square absolute top-0 left-0 rotate-0">
-            <EnterFullPageSingleArrow
-              className={`w-full h-auto aspect-square transition-transform duration-500 ease-in-out ${
-                isFullscreen
-                  ? "rotate-180 -translate-x-[58%] -translate-y-[58%]"
-                  : ""
-              }`}
-            />
-          </div>
-          <div className="w-full h-auto aspect-square absolute top-0 left-0 rotate-90">
-            <EnterFullPageSingleArrow
-              className={`w-full h-auto aspect-square transition-transform duration-500 ease-in-out ${
-                isFullscreen
-                  ? "rotate-180 -translate-x-[58%] -translate-y-[58%]"
-                  : ""
-              }`}
-            />
-          </div>
-          <div className="w-full h-auto aspect-square absolute top-0 left-0 rotate-180">
-            <EnterFullPageSingleArrow
-              className={`w-full h-auto aspect-square transition-transform duration-500 ease-in-out ${
-                isFullscreen
-                  ? "rotate-180 -translate-x-[58%] -translate-y-[58%]"
-                  : ""
-              }`}
-            />
-          </div>
-          <div className="w-full h-auto aspect-square absolute top-0 left-0 -rotate-90">
-            <EnterFullPageSingleArrow
-              className={`w-full h-auto aspect-square transition-transform duration-500 ease-in-out ${
-                isFullscreen
-                  ? "rotate-180 -translate-x-[58%] -translate-y-[58%]"
-                  : ""
-              }`}
-            />
-          </div>
-        </div>
-      </button>
-    ),
     duplicate: (
       <button
         className="transition-transform hover:scale-110 duration-300 ease-in-out w-7 h-auto aspect-square shrink-0"
@@ -194,7 +134,6 @@ export default function ThemeMakerSidebarButtons({
       </button>
     ),
     preset: <PresetConfigButton />,
-    image: <ImageUploadButton />,
     export: (
       <button
         className="transition-transform hover:scale-110 duration-300 ease-in-out w-7 h-auto aspect-square shrink-0"

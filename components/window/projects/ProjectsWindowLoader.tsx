@@ -1,14 +1,9 @@
 import WindowDisplay from "@/components/widgets/WindowDisplay";
-import CommentAreaWrapper from "@/components/comments/CommentAreaWrapper";
-import { CommentProvider } from "@/components/contexts/CommentContext";
 import ShareButtonArray from "@/components/widgets/ShareButtonArray";
 import ProjectsHeader from "@/app/projects/ProjectsHeader";
 import WindowReadingSettingsApplier from "../WindowReadingSettingsApplier";
 import parseCustomMarkdown from "@/lib/markdownParser";
 import clientWindowMarkdownComponentsMap from "@/lib/clientWindowMarkdownComponentsMap";
-import CommentTypingArea from "@/components/comments/CommentTypingArea";
-import CommentCardContainer from "@/components/comments/CommentCardContainer";
-import EntryLikeButton from "@/components/comments/EntryLikeButton";
 import EntryWindowLoader from "../EntryWindowLoader";
 
 interface Props {
@@ -52,28 +47,13 @@ export default function ProjectsWindowLoader({ slug }: Props) {
                 />
               </div>
               <div className="px-6 md:px-10 pt-4 md:pt-4 pb-6 md:pb-8">
-                <ProjectsHeader {...entry}>
-                  <EntryLikeButton
-                    resourceLocation={`projects/likedBy/${slug}.json`}
-                  />
-                </ProjectsHeader>
+                <ProjectsHeader {...entry} />
                 <WindowReadingSettingsApplier slug={slug}>
                   {parseCustomMarkdown(
                     entry.content,
                     clientWindowMarkdownComponentsMap
                   )}
                 </WindowReadingSettingsApplier>
-                <CommentAreaWrapper>
-                  <hr className="my-8 border-saturated border-t opacity-50" />
-                  <CommentProvider
-                    location={`projects/comments/${slug}.json`}
-                    likeIconType="star"
-                  >
-                    <CommentTypingArea />
-                    <div className="h-10 pointer-events-none select-none" />
-                    <CommentCardContainer />
-                  </CommentProvider>
-                </CommentAreaWrapper>
               </div>
             </article>
           }

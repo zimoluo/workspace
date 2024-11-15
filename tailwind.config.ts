@@ -10,11 +10,12 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        main: ["var(--font-main)"],
-        tabular: ["var(--font-open-sans)"],
-        mono: ["var(--font-roboto-mono)"],
-        serif: ["var(--font-lora)"],
-        fancy: ["var(--font-pacifico)"],
+        main: ["Helvetica", "Arial", "Verdana", "Roboto", "Segoe UI", "Tahoma"],
+        tabular: ["Open Sans", "Arial", "sans-serif"],
+        mono: ["Roboto Mono", "Courier New", "monospace"],
+        serif: ["Lora", "Georgia", "serif"],
+        fancy: ["Pacifico", "Comic Sans MS", "cursive"],
+        system: ["system-ui"],
       },
       backdropBlur: {
         reading: "var(--reading-blur)",

@@ -1,13 +1,4 @@
-type NavigationKey =
-  | "home"
-  | "photos"
-  | "blog"
-  | "projects"
-  | "about"
-  | "management"
-  | "design"
-  | "themeMaker"
-  | "notebook";
+type NavigationKey = "home";
 
 type ArticleCardProps = ArticleCardData & ArticleCardDisplay;
 
@@ -35,10 +26,4 @@ type SharingPlatform =
   | "reddit"
   | "download";
 
-type MenuUtility =
-  | "logOut"
-  | "resetSettings"
-  | "deleteAccount"
-  | "manuallyDownloadSettings"
-  | "resetProfiles"
-  | "resetAllData";
+type MenuUtility = "resetSettings" | "resetProfiles" | "resetAllData";

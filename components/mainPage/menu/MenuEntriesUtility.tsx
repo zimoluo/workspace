@@ -1,20 +1,11 @@
 "use client";
 
-import { useUser } from "@/components/contexts/UserContext";
 import { Fragment } from "react";
 import MenuUtilityButton from "./MenuUtilityButton";
 
 export default function MenuEntriesUtility() {
-  const { user } = useUser();
   return (
-    [
-      "resetSettings",
-      "resetProfiles",
-      "resetAllData",
-      ...(user !== null
-        ? ["logOut", "manuallyDownloadSettings", "deleteAccount"]
-        : []),
-    ] as MenuUtility[]
+    ["resetSettings", "resetProfiles", "resetAllData"] as MenuUtility[]
   ).map((item, index) => (
     <Fragment key={item}>
       {index !== 0 && (
@@ -23,10 +14,8 @@ export default function MenuEntriesUtility() {
       <MenuUtilityButton
         utility={item}
         needsConfirm={[
-          "deleteAccount",
           "resetSettings",
           "resetProfiles",
-          "manuallyDownloadSettings",
           "resetAllData",
         ].includes(item)}
       />
