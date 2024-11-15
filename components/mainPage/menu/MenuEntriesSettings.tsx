@@ -12,17 +12,11 @@ import NotificationStylePicker from "./settings/NotificationStylePicker";
 import ThemeProfileSelector from "@/app/design/theme-maker/ThemeProfileSelector";
 import { useWindow } from "@/components/contexts/WindowContext";
 
-const securityCommentShutDown =
-  process.env.NEXT_PUBLIC_ZIMO_WEB_COMMENT_SHUTDOWN === "true";
-
 const settingsNameMap: { [key in keyof Partial<SettingsState>]: string } = {
   backgroundRichness: "Background richness",
   disableCenterPainting: "Disable center art",
   disableGestures: "Disable gestures",
-  disableSerifFont: "Disable serif font",
   disableSoundEffect: "Disable sound effect",
-  instantSearchResult: "Show search results instantly",
-  disableTableOfContents: "Disable table of contents",
   pageTheme: "Theme preset",
   notificationStyle: "Notification style",
   floatingCodeSpeed: "Floating code rate",
@@ -277,40 +271,7 @@ export default function MenuEntriesSettings({
     {
       title: "Miscellaneous",
       entries: [
-        {
-          entry: "disableTableOfContents",
-          type: "flip",
-          condition: [
-            { value: "currentPage", match: ["blog", "management"] },
-            {
-              value: "windowTag",
-              match: "requireTableOfContentsSettings",
-            },
-          ],
-        },
-        {
-          entry: "disableSerifFont",
-          type: "flip",
-          condition: [
-            { value: "currentPage", match: "blog" },
-            {
-              value: "windowTag",
-              match: "requireBlogSettings",
-            },
-          ],
-        },
         { entry: "disableGestures", type: "flip" },
-        {
-          entry: "instantSearchResult",
-          type: "flip",
-          condition: [
-            { value: "currentPage", match: "blog" },
-            {
-              value: "windowTag",
-              match: "requireEntrySettings",
-            },
-          ],
-        },
         {
           entry: "calculatorButtonHasBorder",
           type: "flip",

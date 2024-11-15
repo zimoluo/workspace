@@ -3,13 +3,10 @@ interface SettingsState {
   floatingCodeSpeed: number;
   disableCenterPainting: boolean;
   disableGestures: boolean;
-  disableSerifFont: boolean;
   disableSoundEffect: boolean;
   pageTheme: Record<NavigationKey, ThemeKey | ThemeDataConfig>;
   notificationStyle: NotificationStyle;
-  instantSearchResult: boolean;
   flyingBalloonRate: number;
-  disableTableOfContents: boolean;
   goldSphereAnimationIntensity: number;
   customThemeData: ThemeDataConfig[];
   customThemeIndex: number;

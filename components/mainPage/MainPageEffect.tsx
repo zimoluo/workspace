@@ -3,7 +3,6 @@
 import { ReactNode, useEffect } from "react";
 import { parseStoredSettings, useSettings } from "../contexts/SettingsContext";
 import { defaultSettings } from "@/lib/constants/defaultSettings";
-import _ from "lodash";
 import ToastBannerReceiver from "../widgets/ToastBannerReceiver";
 import ToastDisplayLegacy from "../widgets/ToastDisplayLegacy";
 import WindowManager from "../window/WindowManager";

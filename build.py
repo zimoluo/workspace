@@ -3,7 +3,7 @@ import subprocess
 import sys
 
 
-def main():
+def build():
     # Get the directory of the current script
     script_dir = os.path.dirname(os.path.realpath(__file__))
 
@@ -39,4 +39,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    build()

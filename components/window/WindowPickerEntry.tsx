@@ -1,6 +1,5 @@
 "use client";
 
-import BlogIcon from "../assets/navigation/BlogIcon";
 import windowPickerStyle from "./window-picker.module.css";
 import { useWindow } from "../contexts/WindowContext";
 import { useRef } from "react";
@@ -29,7 +28,7 @@ interface Props {
 export const windowEntryMap: Record<
   WindowPickerEntry,
   {
-    icon: typeof BlogIcon;
+    icon: typeof CogIcon;
     title: string;
     window?: PartialBy<WindowData, "uniqueId">;
   }
