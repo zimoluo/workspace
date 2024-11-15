@@ -4,6 +4,8 @@ import lollipopConfig from "@/components/theme/config/lollipop";
 import oasisConfig from "@/components/theme/config/oasis";
 import springFieldConfig from "@/components/theme/config/springField";
 
+const defaultTheme: ThemeKey = "plainGray";
+
 export const defaultSettings: SettingsState = {
   backgroundRichness: "rich",
   floatingCodeSpeed: 1800,
@@ -11,7 +13,7 @@ export const defaultSettings: SettingsState = {
   disableGestures: false,
   disableSoundEffect: false,
   pageTheme: {
-    home: "about",
+    home: defaultTheme,
   },
   notificationStyle: "banner",
   flyingBalloonRate: 1600,
@@ -24,7 +26,7 @@ export const defaultSettings: SettingsState = {
     springFieldConfig,
   ],
   customThemeIndex: 0,
-  regularThemeMakerTheme: "about",
+  regularThemeMakerTheme: defaultTheme,
   expandThemeMakerWindow: false,
   optimizeProfileExport: false,
   allowExtendedGradientStopsRange: false,
