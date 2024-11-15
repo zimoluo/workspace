@@ -40,6 +40,8 @@ export default function WindowButton() {
 
     appendWindow({
       ...windowEntryMap.windowPicker.window,
+      defaultCenterX: window.innerWidth / 2,
+      defaultCenterY: window.innerHeight / 2,
       saveComponentKey: "windowPicker",
     });
   };

@@ -176,8 +176,6 @@ export const windowEntryMap: Record<
       minHeight: 400,
       maxWidth: 688,
       maxHeight: 660,
-      defaultCenterX: window.innerWidth / 2,
-      defaultCenterY: window.innerHeight / 2,
     },
   },
 };
