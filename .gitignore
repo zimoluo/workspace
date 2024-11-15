@@ -40,4 +40,6 @@ next-env.d.ts
 .__pycache__
 *.pyc
 
+# build files
 *.zip
+placeholder-index.html
