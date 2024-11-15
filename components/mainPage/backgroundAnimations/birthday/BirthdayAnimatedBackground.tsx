@@ -13,7 +13,7 @@ export default function BirthdayAnimatedBackground() {
       <BirthdayBalloon />
       <div className="object-contain object-center fixed -z-40 inset-0 flex items-center justify-center w-screen h-screen pointer-events-none select-none">
         <Image
-          src="/theme/animated-background/birthday/eighteen.svg"
+          src="./theme/animated-background/birthday/eighteen.svg"
           height={300}
           width={300}
           alt="Eighteen"
@@ -25,7 +25,7 @@ export default function BirthdayAnimatedBackground() {
   ) : (
     <>
       <Image
-        src="/theme/animated-background/birthday/static-balloon.svg"
+        src="./theme/animated-background/birthday/static-balloon.svg"
         height={300}
         width={300}
         alt="Static balloon"
@@ -34,7 +34,7 @@ export default function BirthdayAnimatedBackground() {
       />
       <div className="object-contain object-center fixed -z-20 inset-0 flex items-center justify-center w-screen h-screen pointer-events-none select-none">
         <Image
-          src="/theme/animated-background/birthday/eighteen.svg"
+          src="./theme/animated-background/birthday/eighteen.svg"
           height={300}
           width={300}
           alt="Eighteen"

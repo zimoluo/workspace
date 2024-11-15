@@ -186,7 +186,6 @@
   position: absolute;
   height: calc(1.75 * var(--tile-length));
   width: calc(1.75 * var(--tile-length));
-  background-image: url("/theme/animated-background/verdant/kaleidoscope.svg");
   background-size: 100%;
   transform: rotate(10deg);
 }

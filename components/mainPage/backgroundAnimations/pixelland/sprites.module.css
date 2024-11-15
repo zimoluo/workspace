@@ -8,7 +8,6 @@
 .trees {
   height: 90vh;
   bottom: -15vh;
-  background-image: url("/theme/animated-background/pixelland/pixel-trees.png");
 }
 
 .sun {
@@ -18,29 +17,17 @@
   aspect-ratio: 51 / 50;
   width: auto;
   image-rendering: pixelated;
-  background-image: url("/theme/animated-background/pixelland/sun/outer-1.png");
   @apply bg-cover bg-center;
-}
-
-.sunOuterAnimated {
-  animation: outerAnimated 0.93s steps(2, jump-none) infinite;
-}
-
-.sunCore {
-  background-image: url("/theme/animated-background/pixelland/sun/inner-1.png");
-  animation: innerAnimated 1.8s steps(5) infinite;
 }
 
 .treesFar {
   height: 56vh;
   bottom: 18vh;
-  background-image: url("/theme/animated-background/pixelland/pixel-trees.png");
 }
 
 .clouds {
   height: 45vh;
   top: 1vh;
-  background-image: url("/theme/animated-background/pixelland/pixel-clouds.png");
 }
 
 .animatedTrees {
@@ -79,38 +66,5 @@
   }
   to {
     background-position: 275.349vh 0;
-  }
-}
-
-@keyframes innerAnimated {
-  20% {
-    background-image: url("/theme/animated-background/pixelland/sun/inner-2.png");
-  }
-  40% {
-    background-image: url("/theme/animated-background/pixelland/sun/inner-3.png");
-  }
-  60% {
-    background-image: url("/theme/animated-background/pixelland/sun/inner-4.png");
-  }
-  80% {
-    background-image: url("/theme/animated-background/pixelland/sun/inner-5.png");
-  }
-  100% {
-    background-image: url("/theme/animated-background/pixelland/sun/inner-1.png");
-  }
-}
-
-@keyframes outerAnimated {
-  25% {
-    background-image: url("/theme/animated-background/pixelland/sun/outer-2.png");
-  }
-  50% {
-    background-image: url("/theme/animated-background/pixelland/sun/outer-3.png");
-  }
-  75% {
-    background-image: url("/theme/animated-background/pixelland/sun/outer-4.png");
-  }
-  100% {
-    background-image: url("/theme/animated-background/pixelland/sun/outer-1.png");
   }
 }

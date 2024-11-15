@@ -36,7 +36,7 @@ export default function BlogPainting() {
 
   return selectedImage ? (
     <Image
-      src={`/theme/animated-background/blog/painting/${selectedImage}.svg`}
+      src={`./theme/animated-background/blog/painting/${selectedImage}.svg`}
       alt="Blog Painting"
       height={0}
       width={0}

@@ -7,13 +7,13 @@ export default function GrassAnimatedBackground() {
   const { settings } = useSettings();
 
   return (
-    <div
-      className="fixed inset-0 -z-20 flex items-center justify-center h-screen pointer-events-none select-none"
-      aria-hidden="true"
-    >
-      {settings.backgroundRichness === "rich" ? (
+    settings.backgroundRichness === "rich" && (
+      <div
+        className="fixed inset-0 -z-20 flex items-center justify-center h-screen pointer-events-none select-none"
+        aria-hidden="true"
+      >
         <Image
-          src="/theme/animated-background/grass/bg.svg"
+          src="./theme/animated-background/grass/bg.svg"
           alt="Grass BG"
           height={1000}
           width={1000}
@@ -21,17 +21,7 @@ export default function GrassAnimatedBackground() {
           priority={true}
           aria-hidden="true"
         />
-      ) : (
-        <Image
-          src="/theme/animated-background/grass/reduced.png"
-          alt="Grass BG"
-          height={1000}
-          width={1000}
-          className="object-cover w-full h-full"
-          priority={true}
-          aria-hidden="true"
-        />
-      )}
-    </div>
+      </div>
+    )
   );
 }

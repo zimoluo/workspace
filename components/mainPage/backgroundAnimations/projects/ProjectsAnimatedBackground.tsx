@@ -18,7 +18,7 @@ export default function ProjectsAnimatedBackground() {
             className={`absolute pointer-events-none ${projectsStyle.cogSize} ${projectsStyle.cogYangPos}`}
           >
             <Image
-              src="/theme/animated-background/projects/cog-yang.svg"
+              src="./theme/animated-background/projects/cog-yang.svg"
               alt="Cog Yang"
               height={600}
               width={600}
@@ -30,7 +30,7 @@ export default function ProjectsAnimatedBackground() {
             className={`absolute pointer-events-none ${projectsStyle.cogSize} ${projectsStyle.cogYinPos}`}
           >
             <Image
-              src="/theme/animated-background/projects/cog-yin.svg"
+              src="./theme/animated-background/projects/cog-yin.svg"
               alt="Cog Yin"
               height={600}
               width={600}

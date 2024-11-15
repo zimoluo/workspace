@@ -14,7 +14,7 @@ export default function BubblesAnimatedBackground() {
         <Image
           width={800}
           height={800}
-          src="/theme/animated-background/bubbles/moving.svg"
+          src="./theme/animated-background/bubbles/moving.svg"
           alt="Moving bubbles"
           className="min-w-full min-h-full aspect-square object-cover"
         />
@@ -22,7 +22,7 @@ export default function BubblesAnimatedBackground() {
         <Image
           width={800}
           height={800}
-          src="/theme/animated-background/bubbles/static.svg"
+          src="./theme/animated-background/bubbles/static.svg"
           alt="Static bubbles"
           className="min-w-full min-h-full aspect-square object-cover"
         />

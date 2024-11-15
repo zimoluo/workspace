@@ -5,18 +5,14 @@ import movingBlocksImage from "@/public/theme/animated-background/perpetuity/mov
 import movingBlocksStaticImage from "@/public/theme/animated-background/perpetuity/moving-blocks-static.svg";
 import { useSettings } from "@/components/contexts/SettingsContext";
 import CelebrationAnimatedBackground from "../celebration/CelebrationAnimatedBackground";
-import { useClientSideFlag } from "@/lib/helperHooks";
-import { isZimoWebDay } from "@/lib/seasonUtil";
 
 export default function PerpetuityAnimatedBackground() {
   const { settings } = useSettings();
-  const isZimoWebDayClient = useClientSideFlag(isZimoWebDay);
 
   return (
     <>
       {settings.backgroundRichness === "rich" &&
-        ((!settings.disableSpecialTheme && isZimoWebDayClient) ||
-          settings.alwaysEnableFireworks) && (
+        settings.alwaysEnableFireworks && (
           <>
             <div className="bg-black bg-opacity-35 fixed inset-0 w-screen h-screen -z-20 pointer-events-none select-none touch-none" />
             <CelebrationAnimatedBackground />

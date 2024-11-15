@@ -11,6 +11,9 @@ export default function StormAnimatedBackground() {
     <>
       {settings.backgroundRichness === "rich" && <EyeOfTheStorm />}
       <div
+        style={{
+          backgroundImage: `url("./theme/animated-background/storm/storm-clouds.svg")`,
+        }}
         className={`${stormCloudsStyle.scroll} ${
           settings.backgroundRichness === "rich"
             ? stormCloudsStyle.animated
@@ -18,6 +21,9 @@ export default function StormAnimatedBackground() {
         } fixed bottom-0 left-1/2 -translate-x-1/2 pointer-events-none select-none -z-20`}
       />
       <div
+        style={{
+          backgroundImage: `url("./theme/animated-background/storm/storm-clouds-ceiling.svg")`,
+        }}
         className={`${stormCloudsStyle.scroll} ${stormCloudsStyle.ceiling} ${
           settings.backgroundRichness === "rich"
             ? stormCloudsStyle.ceilingAnimated

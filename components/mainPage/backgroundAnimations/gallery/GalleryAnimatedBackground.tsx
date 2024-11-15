@@ -12,7 +12,7 @@ export default function GalleryAnimatedBackground() {
         settings.backgroundRichness === "rich" ? galleryStyle.hueShift : ""
       }`}
       style={{
-        backgroundImage: "url(/theme/animated-background/gallery/favicons.svg)",
+        backgroundImage: `url("./theme/animated-background/gallery/favicons.svg")`,
         backgroundSize: "44rem",
         backgroundRepeat: "repeat",
         backgroundPosition: "44% 0%",

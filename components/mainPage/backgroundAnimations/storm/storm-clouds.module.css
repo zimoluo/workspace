@@ -1,14 +1,12 @@
 .scroll {
   width: 100vw;
   height: 50vh;
-  background-image: url("/theme/animated-background/storm/storm-clouds.svg");
   background-size: auto 100%;
   background-repeat: repeat-x;
 }
 
 .ceiling {
   height: 40vh;
-  background-image: url("/theme/animated-background/storm/storm-clouds-ceiling.svg");
 }
 
 .animated {

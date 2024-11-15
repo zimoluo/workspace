@@ -12,7 +12,7 @@ export default function BlogAnimatedBackground() {
     <>
       <div className="fixed inset-0 -z-20 flex items-center justify-center h-screen pointer-events-none opacity-40 select-none">
         <Image
-          src="/theme/animated-background/blog/eunoe-text.svg"
+          src="./theme/animated-background/blog/eunoe-text.svg"
           alt="Eunoe Text"
           height={1000}
           width={1000}
@@ -24,7 +24,7 @@ export default function BlogAnimatedBackground() {
       {settings.backgroundRichness === "rich" && (
         <div className="fixed inset-0 flex justify-center items-center pointer-events-none -z-10 select-none">
           <Image
-            src="/theme/animated-background/blog/base-glow.svg"
+            src="./theme/animated-background/blog/base-glow.svg"
             alt="Blog Painting"
             height="0"
             width="0"
@@ -32,7 +32,7 @@ export default function BlogAnimatedBackground() {
             priority={true}
           />
           <Image
-            src="/theme/animated-background/blog/base-orb.svg"
+            src="./theme/animated-background/blog/base-orb.svg"
             alt="Blog Painting"
             height="0"
             width="0"

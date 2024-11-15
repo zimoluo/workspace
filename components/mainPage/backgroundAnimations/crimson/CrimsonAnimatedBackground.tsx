@@ -24,6 +24,9 @@ export default function CrimsonAnimatedBackground() {
         className={`fixed select-none pointer-events-none left-1/2 bottom-0 -translate-x-1/2 -z-20 w-auto ${crimsonStyle.tower}`}
       />
       <div
+        style={{
+          backgroundImage: `url("./theme/animated-background/crimson/cloud.svg")`,
+        }}
         className={`fixed select-none pointer-events-none left-1/2 -translate-x-1/2 -z-20 ${
           crimsonStyle.cloud
         } ${
