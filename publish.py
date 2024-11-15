@@ -26,7 +26,7 @@ def main():
     AWS_SECRET_KEY = os.getenv('ZIMO_WEB_AWS_SECRET_KEY')
 
     # S3 bucket details
-    BUCKET_NAME = 'zimo-web-theme-maker-spa'
+    BUCKET_NAME = 'zimo-workspace'
     BUCKET_REGION = 'us-east-2'
 
     try:
