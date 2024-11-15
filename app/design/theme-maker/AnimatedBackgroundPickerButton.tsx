@@ -77,7 +77,7 @@ export default function AnimatedBackgroundPickerButton({
       >
         {animationKey ? (
           <Image
-            src={`/theme/picker/${getThemeKeyFromAnimationKey(
+            src={`./theme/picker/${getThemeKeyFromAnimationKey(
               animationKey
             )}.svg`}
             alt={`Use ${animationKey} animated background`}
