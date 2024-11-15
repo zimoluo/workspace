@@ -4,7 +4,7 @@ import lollipopConfig from "@/components/theme/config/lollipop";
 import oasisConfig from "@/components/theme/config/oasis";
 import springFieldConfig from "@/components/theme/config/springField";
 
-const defaultTheme: ThemeKey = "plainGray";
+const defaultTheme: ThemeKey = "home";
 
 export const defaultSettings: SettingsState = {
   backgroundRichness: "rich",

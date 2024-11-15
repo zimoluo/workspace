@@ -68,4 +68,5 @@ type WindowPickerEntry =
   | "wikipedia"
   | "calculator"
   | "blank"
-  | "signalGenerator";
+  | "signalGenerator"
+  | "windowPicker";

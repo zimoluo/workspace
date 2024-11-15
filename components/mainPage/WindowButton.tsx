@@ -4,9 +4,8 @@ import DeleteCommentIcon from "../assets/comment/DeleteCommentIcon";
 import BroomIcon from "../assets/entries/BroomIcon";
 import MagnetIcon from "../assets/entries/MagnetIcon";
 import WindowIcon from "../assets/entries/WindowIcon";
-import { useSettings } from "../contexts/SettingsContext";
 import { useWindow } from "../contexts/WindowContext";
-import WindowPicker from "../window/WindowPicker";
+import { windowEntryMap } from "../window/WindowPickerEntry";
 import buttonStyle from "./window-button.module.css";
 
 const contextKey = "window-picker";
@@ -21,7 +20,6 @@ export default function WindowButton() {
     clearWindow,
     initiateWindowCleanup,
   } = useWindow();
-  const { settings } = useSettings();
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     if (event.shiftKey && windows.length > 0) {
@@ -41,16 +39,8 @@ export default function WindowButton() {
     }
 
     appendWindow({
-      content: <WindowPicker />,
-      contextKey: contextKey,
-      defaultHeight: 480,
-      defaultWidth: 562,
-      minWidth: 432,
-      minHeight: 400,
-      maxWidth: 688,
-      maxHeight: 660,
-      defaultCenterX: window.innerWidth / 2,
-      defaultCenterY: window.innerHeight / 2,
+      ...windowEntryMap.windowPicker.window,
+      saveComponentKey: "windowPicker",
     });
   };
 

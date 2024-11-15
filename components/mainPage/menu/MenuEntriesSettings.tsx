@@ -174,8 +174,8 @@ export default function MenuEntriesSettings({
         {
           entry: "windowLimit",
           type: "slider",
-          values: [1, 3, 6, 12, 30],
-          captions: ["One", "Three", "Six", "Twelve", "Thirty"],
+          values: [4, 8, 16, 50],
+          captions: ["Four", "Eight", "Sixteen", "Fifty"],
         },
         { entry: "disableWindowSaving", type: "flip" },
         { entry: "disableWindowSnapping", type: "flip" },
@@ -386,7 +386,7 @@ export default function MenuEntriesSettings({
                       entryValue < 1000) ||
                     (entry.entry === "flyingBalloonRate" &&
                       entryValue < 1000) ||
-                    (entry.entry === "windowLimit" && entryValue > 4);
+                    (entry.entry === "windowLimit" && entryValue > 15);
 
                   return (
                     <Fragment key={`${entry.entry}-${entryIndex}`}>

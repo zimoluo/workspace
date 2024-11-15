@@ -20,6 +20,8 @@ import CalculatorIcon from "../assets/entries/CalculatorIcon";
 import DashSquircleIcon from "../assets/entries/DashSquircleIcon";
 import SignalGeneratorWindow from "./widget/SignalGeneratorWindow";
 import SignalIcon from "../assets/entries/SignalIcon";
+import WindowIcon from "../assets/entries/WindowIcon";
+import WindowPicker from "./WindowPicker";
 
 interface Props {
   entry: WindowPickerEntry;
@@ -30,7 +32,7 @@ export const windowEntryMap: Record<
   {
     icon: typeof CogIcon;
     title: string;
-    window?: PartialBy<WindowData, "uniqueId">;
+    window: PartialBy<WindowData, "uniqueId">;
   }
 > = {
   faviconWidget: {
@@ -160,6 +162,22 @@ export const windowEntryMap: Record<
       minHeight: 300,
       maxHeight: 460,
       maxWidth: 800,
+    },
+  },
+  windowPicker: {
+    icon: WindowIcon,
+    title: "Window Gallery",
+    window: {
+      content: <WindowPicker />,
+      contextKey: "window-picker",
+      defaultHeight: 488,
+      defaultWidth: 562,
+      minWidth: 432,
+      minHeight: 400,
+      maxWidth: 688,
+      maxHeight: 660,
+      defaultCenterX: window.innerWidth / 2,
+      defaultCenterY: window.innerHeight / 2,
     },
   },
 };

@@ -39,13 +39,41 @@ export default function MainPageEffect({ children }: Props) {
 
     downloadUserInfo().then((preparedSettings) => {
       if (
-        window.innerWidth >= 768 &&
         !preparedSettings.disableWindowSaving &&
         (preparedSettings.windowSaveData?.windows?.length ?? 0) > 0
       ) {
         restoreWindowFromSave(
           preparedSettings.windowSaveData.windows,
           preparedSettings.windowSaveData.viewport
+        );
+      } else {
+        restoreWindowFromSave(
+          [
+            {
+              centerX: window.innerWidth / 2,
+              centerY: window.innerHeight / 2,
+              width: 562,
+              height: 488,
+              order: 0,
+              initialProps: {},
+              data: {
+                contextKey: "window-picker",
+                defaultHeight: 488,
+                defaultWidth: 562,
+                minWidth: 432,
+                minHeight: 400,
+                maxWidth: 688,
+                maxHeight: 660,
+                defaultCenterX: window.innerWidth / 2,
+                defaultCenterY: window.innerHeight / 2,
+                saveComponentKey: "windowPicker",
+              },
+            },
+          ],
+          {
+            width: window.innerWidth,
+            height: window.innerHeight,
+          }
         );
       }
     });

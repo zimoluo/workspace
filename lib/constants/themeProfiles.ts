@@ -1,1 +1,1 @@
-export const maxProfileCount: number = 16;
+export const maxProfileCount: number = 500;
