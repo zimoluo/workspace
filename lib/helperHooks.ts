@@ -20,14 +20,6 @@ export function useNavigation(): NavigationKey {
   return navigation;
 }
 
-export function usePrevious<T>(value: T): T {
-  const ref = useRef<T>(value);
-  useEffect(() => {
-    ref.current = value;
-  }, [value]);
-  return ref.current;
-}
-
 export const useSwipe = ({
   left,
   right,

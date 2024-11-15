@@ -1,10 +1,9 @@
-import type { Metadata } from "next";
 import "@/styles/globals.css";
+import type { Metadata } from "next";
 import MainPageFrame from "@/components/mainPage/MainPageFrame";
 import MainPageElements from "@/components/mainPage/MainPageElements";
 import { SettingsProvider } from "@/components/contexts/SettingsContext";
 import MainPageEffect from "@/components/mainPage/MainPageEffect";
-import { baseUrl } from "@/lib/constants/navigationFinder";
 import { ToastProvider } from "@/components/contexts/ToastContext";
 import { defaultRobotsMeta } from "@/lib/siteMetadata";
 import ThemeDataInitializer from "@/components/theme/util/ThemeDataInitializer";
@@ -16,51 +15,44 @@ import SystemUIFontLoader from "@/components/mainPage/SystemUIFontLoader";
 const environment = (process.env.VERCEL_ENV ?? "development").toLowerCase();
 
 export const metadata: Metadata = {
-  title: "Zimo Web",
-  description: "The personal website of Zimo.",
-  metadataBase: new URL("https://www.zimoluo.me/"),
+  title: "Workspace",
+  description: "Workspace of windows, derived from Zimo Web.",
   robots: defaultRobotsMeta,
   authors: [{ name: "Zimo", url: "https://github.com/zimoluo" }],
-  openGraph: {
-    type: "website",
-    url: baseUrl,
-    title: "Zimo Web",
-    description: "The personal website of Zimo.",
-    siteName: "Zimo Web",
-  },
   icons: [
     {
       rel: "icon",
-      url: `/website-favicon/${environment}/favicon-32x32.png`,
+      url: `./website-favicon/${environment}/favicon-32x32.png`,
       type: "image/png",
       sizes: "32x32",
     },
     {
       rel: "icon",
-      url: `/website-favicon/${environment}/favicon-96x96.png`,
+      url: `./website-favicon/${environment}/favicon-96x96.png`,
       type: "image/png",
       sizes: "96x96",
     },
     {
       rel: "icon",
-      url: `/website-favicon/${environment}/favicon-192x192.png`,
+      url: `./website-favicon/${environment}/favicon-192x192.png`,
       type: "image/png",
       sizes: "192x192",
     },
     {
       rel: "icon",
-      url: `/website-favicon/${environment}/favicon-1024x1024.png`,
+      url: `./website-favicon/${environment}/favicon-1024x1024.png`,
       type: "image/png",
       sizes: "1024x1024",
     },
     {
       rel: "apple-touch-icon",
-      url: `/website-favicon/${environment}/favicon-180x180.png`,
+      url: `./website-favicon/${environment}/favicon-180x180.png`,
       type: "image/png",
       sizes: "180x180",
     },
   ],
-  keywords: "Zimo Web, Zimo Luo, Zimo, Personal Website",
+  keywords:
+    "Zimo Web, Zimo Luo, Color, Personal Website, Color Palette, Palette, Theme, Design, Editor, Web app, Theme Editor, Theme Maker, Interactive, Responsive, Online editor, Workspace, Windows, OS, Productivity, PWA",
 };
 
 export default function RootLayout({

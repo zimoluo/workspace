@@ -60,10 +60,6 @@ interface WindowPickerSection {
 }
 
 type WindowPickerEntry =
-  | "blog"
-  | "projects"
-  | "photos"
-  | "management"
   | "faviconWidget"
   | "zimoWebInWindow"
   | "themeMakerToolset"

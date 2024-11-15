@@ -1,18 +1,6 @@
 import MenuEntriesSettings from "./MenuEntriesSettings";
 import MenuEntriesUtility from "./MenuEntriesUtility";
 
-export const menuNavigationItems = [
-  "home",
-  "photos",
-  "blog",
-  "projects",
-  "about",
-  "design",
-  "themeMaker",
-  "notebook",
-  "management",
-];
-
 export default function MenuEntriesLayout() {
   return (
     <div className="h-full w-full overflow-y-auto px-6 md:px-8 py-8">

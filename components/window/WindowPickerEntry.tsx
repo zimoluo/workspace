@@ -1,20 +1,13 @@
 "use client";
 
 import BlogIcon from "../assets/navigation/BlogIcon";
-import BlogWindowFrame from "./blog/BlogWindowFrame";
-import ProjectsIcon from "../assets/navigation/ProjectsIcon";
-import ManagementIcon from "../assets/navigation/ManagementIcon";
 import windowPickerStyle from "./window-picker.module.css";
-import ManagementWindowFrame from "./management/ManagementWindowFrame";
-import PhotosIcon from "../assets/navigation/PhotosIcon";
 import { useWindow } from "../contexts/WindowContext";
 import { useRef } from "react";
 import OutlineFavicon from "../assets/OutlineFavicon";
 import WindowWidgetFavicon from "./widget/WindowWidgetFavicon";
 import DisplayFavicon from "../assets/DisplayFavicon";
 import WindowIFrame from "./widget/WindowIFrame";
-import PhotosWindowFrame from "./photos/PhotosWindowFrame";
-import ProjectsWindowFrame from "./projects/ProjectsWindowFrame";
 import CommandKeyIcon from "../assets/entries/CommandKeyIcon";
 import ThemeMakerWindowToolset from "./widget/ThemeMakerWindowToolset";
 import CogIcon from "../assets/toast/CogIcon";
@@ -41,66 +34,6 @@ export const windowEntryMap: Record<
     window?: PartialBy<WindowData, "uniqueId">;
   }
 > = {
-  blog: {
-    icon: BlogIcon,
-    title: "Blog Article",
-    window: {
-      content: <BlogWindowFrame />,
-      defaultHeight: 580,
-      defaultWidth: 440,
-      minWidth: 416,
-      minHeight: 420,
-      maxWidth: 960,
-      maxHeight: 920,
-      tags: [
-        "requireEntrySettings",
-        "requireBlogSettings",
-        "requireTableOfContentsSettings",
-      ],
-    },
-  },
-  projects: {
-    icon: ProjectsIcon,
-    title: "Projects Entry",
-    window: {
-      content: <ProjectsWindowFrame />,
-      defaultHeight: 460,
-      defaultWidth: 720,
-      minWidth: 700,
-      minHeight: 280,
-      maxWidth: 1200,
-      minAspectRatio: 1.45,
-      tags: ["requireEntrySettings"],
-    },
-  },
-  photos: {
-    icon: PhotosIcon,
-    title: "Album Post",
-    window: {
-      content: <PhotosWindowFrame />,
-      defaultHeight: 420,
-      defaultWidth: 630,
-      minWidth: 580,
-      minHeight: 410,
-      maxWidth: 980,
-      minAspectRatio: 1.4,
-      tags: ["requireEntrySettings"],
-    },
-  },
-  management: {
-    icon: ManagementIcon,
-    title: "Management Article",
-    window: {
-      content: <ManagementWindowFrame />,
-      defaultHeight: 580,
-      defaultWidth: 440,
-      minWidth: 416,
-      minHeight: 420,
-      maxWidth: 960,
-      maxHeight: 920,
-      tags: ["requireEntrySettings", "requireTableOfContentsSettings"],
-    },
-  },
   faviconWidget: {
     icon: OutlineFavicon,
     title: "Favicon",

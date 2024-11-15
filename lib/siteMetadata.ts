@@ -5,18 +5,3 @@ export const defaultRobotsMeta: Robots = {
   index: true,
   "max-image-preview": "large",
 };
-
-export const generateFilterRobotsMeta = (
-  unlisted: boolean | undefined
-): Partial<Robots> => {
-  if (unlisted) {
-    return {
-      follow: false,
-      index: false,
-      noarchive: true,
-      nosnippet: true,
-    };
-  }
-
-  return defaultRobotsMeta;
-};
