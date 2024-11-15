@@ -12,7 +12,7 @@ const iconsInfo = {
   "favicon-180x180.png": 180,
 };
 
-const environments = ["production", "preview", "development"];
+const environments = ["production"];
 const doLog = false;
 
 function optimizeSVG(filePath) {

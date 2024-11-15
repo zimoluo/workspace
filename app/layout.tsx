@@ -11,7 +11,7 @@ import ThemeApplier from "@/components/theme/util/ThemeApplier";
 import { WindowProvider } from "@/components/contexts/WindowContext";
 import SystemUIFontLoader from "@/components/mainPage/SystemUIFontLoader";
 
-const environment = (process.env.VERCEL_ENV ?? "development").toLowerCase();
+const environment = "production";
 
 export const metadata: Metadata = {
   title: "Workspace",

@@ -1,13 +1,13 @@
 import { MetadataRoute } from "next";
 
-const environment = (process.env.VERCEL_ENV ?? "development").toLowerCase();
+const environment = "production";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Zimo Web",
-    short_name: "Zimo Web",
-    description: "The personal website of Zimo.",
-    start_url: "/",
+    name: "Workspace",
+    short_name: "Workspace",
+    description: "Workspace, derived from Zimo Web.",
+    start_url: "/index.html",
     display: "standalone",
     icons: [
       {

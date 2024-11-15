@@ -1,3 +1,9 @@
-# Zimo Web
+# Workspace
 
-This repo contains the source code of Zimo Web, released under GNU AGPLv3 license. Unless critical issues and/or liabilities are found within the website, please refrain from making pull requests and utilize the [Feedback Form](https://forms.gle/hiowUpHKcd5qpx6v8) instead. All security-related issues must be reported to me privately through my email (abgkings0920@gmail.com).
+Workspace is the progressive web app derived from Zimo Web, utilizing its latest Windows framework. It offers a streamlined web workspace experience for various tasks.
+
+## Installation
+
+To install the PWA offline, run `build.py` to create a static build of the website from the source code. These scripts require `node` and `npm`.
+
+The `github-release.py` is specifically used to automatically create releases on GitHub and upload the latest build at time. This script requires a valid GitHub API token in the `.env.local` file.
