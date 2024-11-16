@@ -26,7 +26,7 @@ const NotebookContext = createContext<
   | undefined
 >(undefined);
 
-export const maximumNotebooks = 20;
+export const maximumNotebooks = 500;
 
 export function NotebookProvider({ children }: Props) {
   const { settings, updateSettings } = useSettings();
