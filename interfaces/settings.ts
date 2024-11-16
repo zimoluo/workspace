@@ -16,7 +16,6 @@ interface SettingsState {
   allowExtendedGradientStopsRange: boolean;
   enableColorInterpolationMethod: boolean;
   hideColorLookupPanel: boolean;
-  randomizeThemeOnEveryVisit: boolean;
   windowLimit: number;
   notebookData: NotebookData[];
   notebookIndex: number;

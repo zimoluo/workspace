@@ -32,7 +32,6 @@ export const defaultSettings: SettingsState = {
   allowExtendedGradientStopsRange: false,
   enableColorInterpolationMethod: false,
   hideColorLookupPanel: false,
-  randomizeThemeOnEveryVisit: false,
   windowLimit: 8,
   notebookData: [],
   notebookIndex: 0,

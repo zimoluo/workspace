@@ -28,7 +28,6 @@ const settingsNameMap: { [key in keyof Partial<SettingsState>]: string } = {
   allowExtendedGradientStopsRange: "Allow extended gradient",
   enableColorInterpolationMethod: "Enable color interpolation method",
   hideColorLookupPanel: "Hide color lookup panel",
-  randomizeThemeOnEveryVisit: "Randomize themes on every visit",
   windowLimit: "Number of windows",
   calculatorButtonHasBorder: "Enable calculator button border",
   disableWindowSnapping: "Disable window snapping",
@@ -124,10 +123,6 @@ export default function MenuEntriesSettings({
         },
         {
           entry: "disableSpecialTheme",
-          type: "flip",
-        },
-        {
-          entry: "randomizeThemeOnEveryVisit",
           type: "flip",
         },
         {

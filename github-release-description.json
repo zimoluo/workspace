@@ -6,5 +6,10 @@
   ],
   "v1.0.1": ["# Changes", "", "Fixed some minor issues."],
   "v1.0.2": ["# Changes", "", "Window Gallery is now saved between sessions."],
-  "v1.0.3": ["# Changes", "", "Optimized the build size."]
+  "v1.0.3": ["# Changes", "", "Optimized the build size."],
+  "v1.0.4": [
+    "# Changes",
+    "",
+    "Removed randomize themes on every visit setting as it has no effect."
+  ]
 }
