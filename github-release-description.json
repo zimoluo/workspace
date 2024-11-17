@@ -16,5 +16,10 @@
     "# Changes",
     "",
     "The dimension of the favicon window is now adjustible."
+  ],
+  "v1.0.6": [
+    "# Changes",
+    "",
+    "Slightly tweaked the default dimension of the Window Gallery."
   ]
 }

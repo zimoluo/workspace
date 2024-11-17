@@ -172,10 +172,10 @@ export const windowEntryMap: Record<
     window: {
       content: <WindowPicker />,
       contextKey: "window-picker",
-      defaultHeight: 488,
+      defaultHeight: 480,
       defaultWidth: 562,
       minWidth: 432,
-      minHeight: 400,
+      minHeight: 408,
       maxWidth: 688,
       maxHeight: 660,
     },
