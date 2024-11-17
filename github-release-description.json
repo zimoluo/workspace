@@ -27,5 +27,6 @@
     "",
     "* Changed a few notifications.",
     "* Increased the limit of number of windows to 80."
-  ]
+  ],
+  "v1.0.8": ["# Changes", "", "Fixed a miscalculation in window snapping."]
 }
