@@ -21,5 +21,11 @@
     "# Changes",
     "",
     "Slightly tweaked the default dimension of the Window Gallery."
+  ],
+  "v1.0.7": [
+    "# Changes",
+    "",
+    "* Changed a few notifications.",
+    "* Increased the limit of number of windows to 80."
   ]
 }

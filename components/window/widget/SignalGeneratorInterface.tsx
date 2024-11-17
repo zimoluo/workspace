@@ -185,7 +185,7 @@ export default function SignalGeneratorInterface(preset: Partial<ToastEntry>) {
           className="w-9 h-9 aspect-square p-2 rounded-full shrink-0"
           disabled={!toastEntry.description}
           onClick={() => {
-            appendToast({ ...toastEntry, title: "Zimo Web", icon: "generic" });
+            appendToast({ ...toastEntry, title: "Workspace", icon: "generic" });
             modifyWindowSaveProps(structuredClone(toastEntry));
             saveWindows();
           }}
