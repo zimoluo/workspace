@@ -11,5 +11,10 @@
     "# Changes",
     "",
     "Removed randomize themes on every visit setting as it has no effect."
+  ],
+  "v1.0.5": [
+    "# Changes",
+    "",
+    "The dimension of the favicon window is now adjustible."
   ]
 }
