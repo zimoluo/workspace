@@ -38,6 +38,7 @@ const settingsNameMap: { [key in keyof Partial<SettingsState>]: string } = {
   windowResizeBehavior: "Window resizing behavior",
   disableWindowSnapToViewportBorder: "Disable snap to screen border",
   disableSystemFont: "Disable system font",
+  enableWindowDebugger: "Enable window debugger",
 };
 
 interface SettingsPanelEntry {
@@ -276,6 +277,10 @@ export default function MenuEntriesSettings({
               match: "requireCalculatorSettings",
             },
           ],
+        },
+        {
+          entry: "enableWindowDebugger",
+          type: "flip",
         },
       ],
     },

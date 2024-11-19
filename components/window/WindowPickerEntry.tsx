@@ -22,6 +22,7 @@ import SignalGeneratorWindow from "./widget/SignalGeneratorWindow";
 import SignalIcon from "../assets/entries/SignalIcon";
 import WindowIcon from "../assets/entries/WindowIcon";
 import WindowPicker from "./WindowPicker";
+import WindowDebugger from "./widget/WindowDebugger";
 
 interface Props {
   entry: WindowPickerEntry;
@@ -178,6 +179,19 @@ export const windowEntryMap: Record<
       minHeight: 408,
       maxWidth: 688,
       maxHeight: 660,
+    },
+  },
+  debugger: {
+    icon: DashSquircleIcon,
+    title: "Debugger",
+    window: {
+      content: <WindowDebugger />,
+      defaultHeight: 420,
+      defaultWidth: 600,
+      minWidth: 560,
+      minHeight: 380,
+      maxWidth: 1200,
+      maxHeight: 1200,
     },
   },
 };

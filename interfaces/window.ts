@@ -52,6 +52,14 @@ interface WindowAction {
   isWindowDragging: boolean;
   isWindowResizing: boolean;
   modifyWindowSaveProps: (newProps: Record<string, any>) => void;
+  windowData: WindowData;
+  setWindowData: (
+    updater: ((data: WindowData) => WindowData) | Partial<WindowData>
+  ) => void;
+  windowState: WindowState;
+  setWindowState: (
+    updater: ((state: WindowState) => WindowState) | Partial<WindowState>
+  ) => void;
 }
 
 interface WindowPickerSection {
@@ -69,4 +77,5 @@ type WindowPickerEntry =
   | "calculator"
   | "blank"
   | "signalGenerator"
-  | "windowPicker";
+  | "windowPicker"
+  | "debugger";

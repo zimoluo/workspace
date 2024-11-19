@@ -51,4 +51,5 @@ export const defaultSettings: SettingsState = {
   windowResizeBehavior: "adaptive",
   disableWindowSnapToViewportBorder: false,
   disableSystemFont: false,
+  enableWindowDebugger: false,
 };

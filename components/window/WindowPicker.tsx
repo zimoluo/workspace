@@ -1,3 +1,6 @@
+"use client";
+
+import { useSettings } from "../contexts/SettingsContext";
 import windowPickerStyle from "./window-picker.module.css";
 import WindowPickerEntry from "./WindowPickerEntry";
 
@@ -34,10 +37,18 @@ const EntrySection = ({ title, entries }: WindowPickerSection) => (
 );
 
 export default function WindowPicker({ sections = defaultSections }: Props) {
+  const { settings } = useSettings();
+
+  const processedSections = structuredClone(sections);
+
+  if (settings.enableWindowDebugger) {
+    processedSections[0].entries.push("debugger");
+  }
+
   return (
     <div className="w-full h-full px-8 py-6 bg-widget-80">
       <div className="w-full h-full overflow-y-auto space-y-6">
-        {sections.map((section, index) => (
+        {processedSections.map((section, index) => (
           <EntrySection
             key={index}
             title={section.title}

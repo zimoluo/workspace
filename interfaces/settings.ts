@@ -35,6 +35,7 @@ interface SettingsState {
   windowResizeBehavior: "corner" | "center" | "adaptive";
   disableWindowSnapToViewportBorder: boolean;
   disableSystemFont: boolean;
+  enableWindowDebugger: boolean;
 }
 
 type NotificationStyle = "disabled" | "toast" | "banner";
