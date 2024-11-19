@@ -49,5 +49,6 @@
     "# Changes",
     "",
     "Slightly adjusted the window debugger's styling."
-  ]
+  ],
+  "v1.1.2": ["# Changes", "", "Window debugger now has its own icon."]
 }
