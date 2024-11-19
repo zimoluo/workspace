@@ -39,5 +39,10 @@
     "",
     "Fixed the default dimension of the Window Gallery not applying properly."
   ],
-  "v1.0.11": ["# Changes", "", "Fixed the Notebook page limit being too low."]
+  "v1.0.11": ["# Changes", "", "Fixed the Notebook page limit being too low."],
+  "v1.1.0": [
+    "# Changes",
+    "",
+    "Added the window debugger, which can be enabled in settings. This is a developer tool but might otherwise be enjoyable."
+  ]
 }
