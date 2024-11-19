@@ -28,5 +28,10 @@
     "* Changed a few notifications.",
     "* Increased the limit of number of windows to 80."
   ],
-  "v1.0.8": ["# Changes", "", "Fixed a miscalculation in window snapping."]
+  "v1.0.8": ["# Changes", "", "Fixed a miscalculation in window snapping."],
+  "v1.0.9": [
+    "# Changes",
+    "",
+    "Fixed a rare issue that occurs while adjusting the window with aspect ratio constraint in adaptive mode."
+  ]
 }
