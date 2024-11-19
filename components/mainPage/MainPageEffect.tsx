@@ -8,6 +8,7 @@ import ToastDisplayLegacy from "../widgets/ToastDisplayLegacy";
 import WindowManager from "../window/WindowManager";
 import MobileDesktopEntryRenderer from "../widgets/MobileDesktopEntryRenderer";
 import { useWindow } from "../contexts/WindowContext";
+import { windowEntryMap } from "../window/WindowPickerEntry";
 
 interface Props {
   children?: ReactNode;
@@ -53,13 +54,7 @@ export default function MainPageEffect({ children }: Props) {
               order: 0,
               initialProps: {},
               data: {
-                contextKey: "window-picker",
-                defaultHeight: 488,
-                defaultWidth: 562,
-                minWidth: 432,
-                minHeight: 400,
-                maxWidth: 688,
-                maxHeight: 660,
+                ...windowEntryMap.windowPicker.window,
                 defaultCenterX: window.innerWidth / 2,
                 defaultCenterY: window.innerHeight / 2,
                 saveComponentKey: "windowPicker",

@@ -33,5 +33,10 @@
     "# Changes",
     "",
     "Fixed a rare issue that occurs while adjusting the window with aspect ratio constraint in adaptive mode."
+  ],
+  "v1.0.10": [
+    "# Changes",
+    "",
+    "Fixed the default dimension of the Window Gallery not applying properly."
   ]
 }
