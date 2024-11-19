@@ -44,5 +44,10 @@
     "# Changes",
     "",
     "Added the window debugger, which can be enabled in settings. This is a developer tool but might otherwise be enjoyable."
+  ],
+  "v1.1.1": [
+    "# Changes",
+    "",
+    "Slightly adjusted the window debugger's styling."
   ]
 }
