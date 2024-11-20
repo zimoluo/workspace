@@ -50,5 +50,10 @@
     "",
     "Slightly adjusted the window debugger's styling."
   ],
-  "v1.1.2": ["# Changes", "", "Window debugger now has its own icon."]
+  "v1.1.2": ["# Changes", "", "Window debugger now has its own icon."],
+  "v1.1.3": [
+    "# Changes",
+    "",
+    "Removed disable special theme setting as it has no effect."
+  ]
 }

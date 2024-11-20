@@ -37,7 +37,6 @@ export const defaultSettings: SettingsState = {
   notebookIndex: 0,
   calculatorButtonHasBorder: false,
   disableWindowSnapping: false,
-  disableSpecialTheme: false,
   windowSaveData: {
     viewport: {
       width: 0,

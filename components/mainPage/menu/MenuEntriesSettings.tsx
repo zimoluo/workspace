@@ -31,7 +31,6 @@ const settingsNameMap: { [key in keyof Partial<SettingsState>]: string } = {
   windowLimit: "Number of windows",
   calculatorButtonHasBorder: "Enable calculator button border",
   disableWindowSnapping: "Disable window snapping",
-  disableSpecialTheme: "Disable special theme",
   disableWindowSaving: "Disable window saving",
   toastBannerLimit: "Number of banners for wide screen",
   alwaysEnableFireworks: "Always enable fireworks effect",
@@ -121,10 +120,6 @@ export default function MenuEntriesSettings({
           type: "slider",
           values: ["minimal", "reduced", "rich"],
           captions: ["Minimal", "Reduced", "Rich"],
-        },
-        {
-          entry: "disableSpecialTheme",
-          type: "flip",
         },
         {
           entry: "disableCenterPainting",

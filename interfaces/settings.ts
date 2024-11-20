@@ -21,7 +21,6 @@ interface SettingsState {
   notebookIndex: number;
   calculatorButtonHasBorder: boolean;
   disableWindowSnapping: boolean;
-  disableSpecialTheme: boolean;
   windowSaveData: {
     windows: WindowSaveData[];
     viewport: {
