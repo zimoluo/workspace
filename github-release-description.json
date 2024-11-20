@@ -60,5 +60,6 @@
     "# Changes",
     "",
     "Improved the horizontal border check of window dragging."
-  ]
+  ],
+  "v1.1.5": ["# Changes", "", "Improved the window snapping check."]
 }
