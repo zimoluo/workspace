@@ -55,5 +55,10 @@
     "# Changes",
     "",
     "Removed disable special theme setting as it has no effect."
+  ],
+  "v1.1.4": [
+    "# Changes",
+    "",
+    "Improved the horizontal border check of window dragging."
   ]
 }
