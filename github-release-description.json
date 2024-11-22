@@ -71,5 +71,6 @@
     "# Changes",
     "",
     "Added fireworks effect to the Birthday 19 theme."
-  ]
+  ],
+  "v1.1.8": ["# Changes", "", "Improved some edge cases handling of windows."]
 }
