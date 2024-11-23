@@ -77,5 +77,10 @@
     "# Changes",
     "",
     "Fixed a crash that occurs when trying to duplicate or export Notebook pages when the Notebook is empty."
+  ],
+  "v1.1.10": [
+    "# Changes",
+    "",
+    "Rebuild of the previous version with up-to-date Node."
   ]
 }
