@@ -2,6 +2,7 @@
 
 import { useSettings } from "@/components/contexts/SettingsContext";
 import Image from "next/image";
+import bgSrc from "@/public/theme/animated-background/grass/bg.svg";
 
 export default function GrassAnimatedBackground() {
   const { settings } = useSettings();
@@ -13,10 +14,8 @@ export default function GrassAnimatedBackground() {
         aria-hidden="true"
       >
         <Image
-          src="./theme/animated-background/grass/bg.svg"
-          alt="Grass BG"
-          height={1000}
-          width={1000}
+          src={bgSrc}
+          alt="Grass background"
           className="object-cover w-full h-full"
           priority={true}
           aria-hidden="true"
