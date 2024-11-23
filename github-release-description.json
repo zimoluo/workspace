@@ -84,5 +84,10 @@
     "Rebuild of the previous version with up-to-date Node."
   ],
   "v1.1.11": ["# Changes", "", "Optimized assets usage."],
-  "v1.1.12": ["# Changes", "", "Updated the icon of the Pixelland theme."]
+  "v1.1.12": ["# Changes", "", "Updated the icon of the Pixelland theme."],
+  "v1.1.13": [
+    "# Changes",
+    "",
+    "Updated the ordering of icons in the Signal Generator."
+  ]
 }
