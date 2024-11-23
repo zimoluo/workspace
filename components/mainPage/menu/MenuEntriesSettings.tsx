@@ -47,6 +47,7 @@ interface SettingsPanelEntry {
   component?: ReactNode;
   values?: string[] | number[];
   captions?: string[];
+  flipAppearance?: SettingsFlipAppearance;
 }
 
 const entryDivider = (
@@ -130,6 +131,7 @@ export default function MenuEntriesSettings({
           entry: "disableSoundEffect",
           type: "flip",
           condition: [{ value: "animationKey", match: "halloween" }],
+          flipAppearance: "halloween",
         },
         {
           entry: "alwaysEnableFireworks",
@@ -369,6 +371,7 @@ export default function MenuEntriesSettings({
                             } as Partial<SettingsState>);
                           }}
                           state={settings[entry.entry] as boolean}
+                          appearance={entry?.flipAppearance ?? undefined}
                         />
                       </div>
                       {showDivider && entryDivider}

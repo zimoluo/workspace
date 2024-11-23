@@ -72,5 +72,10 @@
     "",
     "Added fireworks effect to the Birthday 19 theme."
   ],
-  "v1.1.8": ["# Changes", "", "Improved some edge cases handling of windows."]
+  "v1.1.8": ["# Changes", "", "Improved some edge cases handling of windows."],
+  "v1.1.9": [
+    "# Changes",
+    "",
+    "Fixed a crash that occurs when trying to duplicate or export Notebook pages when the Notebook is empty."
+  ]
 }
