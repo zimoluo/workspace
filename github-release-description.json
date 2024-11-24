@@ -94,5 +94,6 @@
     "# Changes",
     "",
     "Removed the Accent (middle) and Soft (soft) colors from theme configuration. The Theme Maker is updated accordingly."
-  ]
+  ],
+  "v1.2.1": ["# Changes", "", "The sun in the Pixelland theme is now animated."]
 }

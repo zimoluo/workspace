@@ -68,3 +68,145 @@
     background-position: 275.349vh 0;
   }
 }
+
+.outerSun1 {
+  animation: outerSun1 0.93s steps(1, end) infinite;
+}
+
+.outerSun2 {
+  animation: outerSun2 0.93s steps(1, end) infinite;
+}
+
+.outerSun3 {
+  animation: outerSun3 0.93s steps(1, end) infinite;
+}
+
+.outerSun4 {
+  animation: outerSun4 0.93s steps(1, end) infinite;
+}
+
+.innerSun1 {
+  animation: innerSun1 1.8s linear infinite;
+}
+
+.innerSun2 {
+  animation: innerSun2 1.8s linear infinite;
+}
+
+.innerSun3 {
+  animation: innerSun3 1.8s linear infinite;
+}
+
+.innerSun4 {
+  animation: innerSun4 1.8s linear infinite;
+}
+
+.innerSun5 {
+  animation: innerSun5 1.8s linear infinite;
+}
+
+@keyframes outerSun1 {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+@keyframes outerSun2 {
+  0%,
+  50%,
+  100% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+}
+
+@keyframes outerSun3 {
+  0%,
+  25%,
+  75%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes outerSun4 {
+  0%,
+  25%,
+  50%,
+  100% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+}
+
+@keyframes innerSun1 {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  20%,
+  80% {
+    opacity: 0;
+  }
+}
+
+@keyframes innerSun2 {
+  0%,
+  40%,
+  100% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+}
+
+@keyframes innerSun3 {
+  0%,
+  20%,
+  60%,
+  100% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+}
+
+@keyframes innerSun4 {
+  0%,
+  20%,
+  40%,
+  80%,
+  100% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+}
+
+@keyframes innerSun5 {
+  0%,
+  20%,
+  40%,
+  60%,
+  100% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+}
