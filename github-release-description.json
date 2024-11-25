@@ -110,5 +110,6 @@
     "# Changes",
     "",
     "Implemented shift key functionality for window dragging."
-  ]
+  ],
+  "v1.3.0": ["# Changes", "", "Added the Dusk theme."]
 }
