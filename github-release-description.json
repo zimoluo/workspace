@@ -105,5 +105,10 @@
     "",
     "Adjusted the dimension of the embedded webpage windows."
   ],
-  "v1.2.3": ["# Changes", "", "Optimized saved windows storage size."]
+  "v1.2.3": ["# Changes", "", "Optimized saved windows storage size."],
+  "v1.2.4": [
+    "# Changes",
+    "",
+    "Implemented shift key functionality for window dragging."
+  ]
 }
