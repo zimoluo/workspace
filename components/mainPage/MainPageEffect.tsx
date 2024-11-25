@@ -55,8 +55,6 @@ export default function MainPageEffect({ children }: Props) {
               initialProps: {},
               data: {
                 ...windowEntryMap.windowPicker.window,
-                defaultCenterX: window.innerWidth / 2,
-                defaultCenterY: window.innerHeight / 2,
                 saveComponentKey: "windowPicker",
               },
             },
