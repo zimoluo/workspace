@@ -104,5 +104,6 @@
     "# Changes",
     "",
     "Adjusted the dimension of the embedded webpage windows."
-  ]
+  ],
+  "v1.2.3": ["# Changes", "", "Optimized saved windows storage size."]
 }

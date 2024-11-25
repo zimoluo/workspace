@@ -199,6 +199,7 @@ export const windowEntryMap: Record<
       minHeight: 380,
       maxWidth: 1200,
       maxHeight: 1200,
+      requireAllDataSaved: true,
     },
   },
 };

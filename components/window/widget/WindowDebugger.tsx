@@ -226,6 +226,11 @@ const WindowDebugger = () => {
       windowData,
       setDataAndSave
     ),
+    requireAllDataSaved: useBooleanInput(
+      "requireAllDataSaved",
+      windowData,
+      setDataAndSave
+    ),
   };
 
   const stateInputs = {
@@ -317,6 +322,41 @@ const WindowDebugger = () => {
               </div>
             </div>
           ))}
+
+          <div className="mb-2">
+            <label className="block text-sm font-medium mb-1">
+              specificDataKeyToBeSaved (comma-separated)
+            </label>
+            <div className="relative">
+              <input
+                type="text"
+                value={windowData.specificDataKeyToBeSaved?.join(",") || ""}
+                onChange={(e) =>
+                  setDataAndSave({
+                    specificDataKeyToBeSaved: e.target.value
+                      ? (e.target.value
+                          .split(",")
+                          .map((dataKey) =>
+                            dataKey.trim()
+                          ) as (keyof WindowData)[])
+                      : undefined,
+                  })
+                }
+                className={`w-full p-2 border border-pastel border-opacity-80 rounded-lg bg-none bg-light bg-opacity-80 placeholder:text-saturated placeholder:text-opacity-50 ${debuggerStyle.input}`}
+                placeholder="Optional"
+              />
+              {windowData.specificDataKeyToBeSaved?.length && (
+                <button
+                  onClick={() =>
+                    setDataAndSave({ specificDataKeyToBeSaved: undefined })
+                  }
+                  className="absolute right-2 top-1/2 -translate-y-1/2 text-primary text-opacity-50 hover:text-opacity-100"
+                >
+                  ×
+                </button>
+              )}
+            </div>
+          </div>
 
           <div className="mb-2">
             <label className="block text-sm font-medium mb-1">
