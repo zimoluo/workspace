@@ -59,13 +59,13 @@ export const windowEntryMap: Record<
     ),
     title: "Window Web",
     window: {
-      content: <WindowIFrame url="https://www.zimoluo.me/" />,
-      defaultWidth: 768,
-      defaultHeight: 520,
-      minWidth: 420,
-      minHeight: 480,
-      maxWidth: 1600,
-      maxHeight: 1200,
+      content: <WindowIFrame url="https://www.zimoluo.me/" zoom={0.83} />,
+      defaultWidth: 640,
+      defaultHeight: 432,
+      minWidth: 350,
+      minHeight: 400,
+      maxWidth: 1350,
+      maxHeight: 1024,
       contextKey: "iframe-zimo-web",
     },
   },
@@ -119,13 +119,18 @@ export const windowEntryMap: Record<
     icon: WikipediaLogo,
     title: "Wikipedia",
     window: {
-      content: <WindowIFrame url="https://en.wikipedia.org/wiki/Main_Page" />,
-      defaultWidth: 768,
-      defaultHeight: 520,
-      minWidth: 420,
-      minHeight: 480,
-      maxWidth: 1600,
-      maxHeight: 1200,
+      content: (
+        <WindowIFrame
+          url="https://en.wikipedia.org/wiki/Main_Page"
+          zoom={0.83}
+        />
+      ),
+      defaultWidth: 640,
+      defaultHeight: 432,
+      minWidth: 350,
+      minHeight: 400,
+      maxWidth: 1350,
+      maxHeight: 1024,
       contextKey: "iframe-wikipedia",
     },
   },
