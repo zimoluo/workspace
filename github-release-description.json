@@ -112,5 +112,10 @@
     "Implemented shift key functionality for window dragging."
   ],
   "v1.3.0": ["# Changes", "", "Added the Dusk theme."],
-  "v1.3.1": ["# Changes", "", "Slightly adjusted the Theme Maker's styling."]
+  "v1.3.1": ["# Changes", "", "Slightly adjusted the Theme Maker's styling."],
+  "v1.3.2": [
+    "# Changes",
+    "",
+    "Slightly adjusted the default width of the Theme Maker window."
+  ]
 }
