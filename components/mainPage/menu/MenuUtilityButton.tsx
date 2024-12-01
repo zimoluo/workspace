@@ -2,7 +2,6 @@
 
 import { useSettings } from "@/components/contexts/SettingsContext";
 import { useToast } from "@/components/contexts/ToastContext";
-import { useWindow } from "@/components/contexts/WindowContext";
 import { defaultSettings } from "@/lib/constants/defaultSettings";
 import { useNextRenderEffect } from "@/lib/helperHooks";
 import { useState } from "react";
@@ -43,7 +42,6 @@ export default function MenuUtilityButton({
 }: Props) {
   const { appendToast } = useToast();
   const { updateSettings } = useSettings();
-  const { restoreWindowFromSave } = useWindow();
   const [isInvoked, setIsInvoked] = useState(false);
   const [isInvokedVisible, setIsInvokedVisible] = useState(false);
   const [isImmediatelyTriggered, setIsImmediatelyTriggered] = useState(false);
