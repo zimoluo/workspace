@@ -117,5 +117,6 @@
     "# Changes",
     "",
     "Slightly adjusted the default width of the Theme Maker window."
-  ]
+  ],
+  "v1.3.3": ["# Changes", "", "Added a title section to the sidebar menu."]
 }
