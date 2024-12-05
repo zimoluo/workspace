@@ -40,7 +40,10 @@ type ThemeKey =
   | "celebration"
   | "birthdayGeneric"
   | "birthday19"
-  | "dusk";
+  | "dusk"
+  | "murk"
+  | "eventide"
+  | "meadowland";
 
 type ThemeAnimatedBackgroundKey =
   | "photos"
@@ -69,7 +72,10 @@ type ThemeAnimatedBackgroundKey =
   | "perpetuity"
   | "celebration"
   | "birthday19"
-  | "dusk";
+  | "dusk"
+  | "murk"
+  | "eventide"
+  | "meadowland";
 
 interface ThemeMiscOptions {
   readingBlur?: number;
@@ -192,7 +198,7 @@ type EditorGradientMode =
 
 type FaviconMode = "backdrop" | "outline" | "separate" | "overall" | "custom";
 
-type CustomFaviconKey = "pixelland" | "gallery" | "dusk";
+type CustomFaviconKey = "gallery";
 
 interface FaviconGradientStop {
   color: HexColor;

@@ -26,6 +26,9 @@ import PerpetuityAnimatedBackground from "@/components/mainPage/backgroundAnimat
 import CelebrationAnimatedBackground from "@/components/mainPage/backgroundAnimations/celebration/CelebrationAnimatedBackground";
 import Birthday19AnimatedBackground from "@/components/mainPage/backgroundAnimations/birthday19/Birthday19AnimatedBackground";
 import DuskAnimatedBackground from "@/components/mainPage/backgroundAnimations/dusk/DuskAnimatedBackground";
+import MurkAnimatedBackground from "@/components/mainPage/backgroundAnimations/murk/MurkAnimatedBackground";
+import EventideAnimatedBackground from "@/components/mainPage/backgroundAnimations/eventide/EventideAnimatedBackground";
+import MeadowlandAnimatedBackground from "@/components/mainPage/backgroundAnimations/meadowland/MeadowlandAnimatedBackground";
 
 export const backgroundAnimationMap: Record<
   ThemeAnimatedBackgroundKey,
@@ -58,4 +61,7 @@ export const backgroundAnimationMap: Record<
   celebration: <CelebrationAnimatedBackground />,
   birthday19: <Birthday19AnimatedBackground />,
   dusk: <DuskAnimatedBackground />,
+  murk: <MurkAnimatedBackground />,
+  eventide: <EventideAnimatedBackground />,
+  meadowland: <MeadowlandAnimatedBackground />,
 };

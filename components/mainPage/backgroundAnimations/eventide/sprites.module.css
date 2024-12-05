@@ -1,0 +1,73 @@
+.sprite {
+  width: 100vw;
+  height: 100vh;
+  image-rendering: pixelated;
+  background-size: auto 100%;
+  background-repeat: repeat-x;
+  bottom: 0px;
+}
+
+.background {
+  top: 0px;
+  bottom: auto;
+}
+
+.moon {
+  top: 21.8vh;
+  left: 50vw;
+  background-repeat: none;
+  width: 6.82vh;
+  height: 6.82vh;
+  @apply -translate-x-1/2;
+}
+
+.darkMoon {
+  animation: moonDark 30s linear infinite;
+}
+
+.brightMoon {
+  animation: moonLight 30s linear infinite;
+}
+
+.backgroundAnimated {
+  animation: scroll 120s linear infinite;
+}
+
+.middleAnimated {
+  animation: scroll 38s linear infinite;
+}
+
+.foregroundAnimated {
+  animation: scroll 25s linear infinite;
+}
+
+@keyframes scroll {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 177.778vh 0;
+  }
+}
+
+@keyframes moonDark {
+  0%,
+  50%,
+  100% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+}
+
+@keyframes moonLight {
+  0%,
+  50%,
+  100% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+}

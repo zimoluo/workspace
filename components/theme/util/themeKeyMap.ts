@@ -40,6 +40,9 @@ import celebrationConfig from "../config/celebration";
 import birthdayGenericConfig from "../config/birthdayGeneric";
 import birthday19Config from "../config/birthday19";
 import duskConfig from "../config/dusk";
+import murkConfig from "../config/murk";
+import eventideConfig from "../config/eventide";
+import meadowlandConfig from "../config/meadowland";
 
 export const themeKeyMap: Record<ThemeKey, ThemeDataConfig> = {
   photos: photosConfig,
@@ -84,4 +87,7 @@ export const themeKeyMap: Record<ThemeKey, ThemeDataConfig> = {
   birthdayGeneric: birthdayGenericConfig,
   birthday19: birthday19Config,
   dusk: duskConfig,
+  murk: murkConfig,
+  eventide: eventideConfig,
+  meadowland: meadowlandConfig,
 };
