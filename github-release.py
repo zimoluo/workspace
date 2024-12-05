@@ -142,11 +142,40 @@ def main():
 
     # Create a ZIP file of the ./out directory
     zip_filename = f'workspace-build-{tag_name}.zip'
-    with zipfile.ZipFile(zip_filename, 'w', zipfile.ZIP_DEFLATED) as zipf:
-        for root, dirs, files in os.walk('./out'):
-            for file in files:
+
+    def get_files_to_zip(directory):
+        """Get all files to be included in the ZIP, sorted for reproducible builds"""
+        file_list = []
+        for root, _, files in os.walk(directory):
+            for file in sorted(files):  # Sort files for consistent ordering
                 file_path = os.path.join(root, file)
-                zipf.write(file_path, os.path.relpath(file_path, './out'))
+                if os.path.isfile(file_path):  # Only include regular files
+                    file_list.append(
+                        (file_path, os.path.relpath(file_path, directory)))
+        return file_list
+
+    with zipfile.ZipFile(zip_filename, 'w', compression=zipfile.ZIP_DEFLATED,
+                         compresslevel=9) as zipf:  # Use maximum compression level
+
+        # Get sorted list of files
+        files_to_zip = get_files_to_zip('./out')
+
+        # Add files to ZIP with consistent timestamp
+        for file_path, arc_path in files_to_zip:
+            # Read the file contents
+            with open(file_path, 'rb') as f:
+                contents = f.read()
+
+            # Create a ZipInfo object for consistent metadata
+            info = zipfile.ZipInfo(arc_path)
+            # Use fixed timestamp for reproducibility
+            info.date_time = (2024, 1, 1, 0, 0, 0)
+            info.compress_type = zipfile.ZIP_DEFLATED
+            info.external_attr = 0o644 << 16  # Set consistent permissions
+
+            # Write file to ZIP
+            zipf.writestr(info, contents, compresslevel=9)
+            print(f"Added to ZIP with maximum compression: {arc_path}")
 
     def upload_asset_to_release(upload_url, file_path):
         headers = {

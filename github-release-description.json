@@ -124,5 +124,10 @@
     "",
     "Added the Eventide, Meadowland, and Murk theme."
   ],
-  "v1.4.1": ["# Changes", "", "Updated the Murk theme's color."]
+  "v1.4.1": ["# Changes", "", "Updated the Murk theme's color."],
+  "v1.4.2": [
+    "# Changes",
+    "",
+    "Re-release of the previous version with better compression."
+  ]
 }
