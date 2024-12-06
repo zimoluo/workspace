@@ -129,5 +129,10 @@
     "# Changes",
     "",
     "Re-release of the previous version with better compression."
+  ],
+  "v1.4.3": [
+    "# Changes",
+    "",
+    "Adjusted the animation speed of the Eventide theme."
   ]
 }
