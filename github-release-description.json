@@ -139,5 +139,10 @@
     "# Changes",
     "",
     "Fixed an issue where saved windows could sometimes lose width and height."
+  ],
+  "v1.4.5": [
+    "# Changes",
+    "",
+    "Adjusted the behavior of window expanding to center."
   ]
 }
