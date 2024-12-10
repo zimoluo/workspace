@@ -144,5 +144,6 @@
     "# Changes",
     "",
     "Adjusted the behavior of window expanding to center."
-  ]
+  ],
+  "v1.4.6": ["# Changes", "", "Saved windows are now restored instantly."]
 }

@@ -560,6 +560,7 @@ export function WindowProvider({ children }: Props) {
           (saveData.centerY / viewportDimension.height) * window.innerHeight,
         defaultWidth: saveData.width,
         defaultHeight: saveData.height,
+        removeStartingAnimation: true,
       }))
     );
 
