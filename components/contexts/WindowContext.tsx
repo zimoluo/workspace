@@ -491,7 +491,8 @@ export function WindowProvider({ children }: Props) {
                           "defaultCenterX",
                           "defaultCenterY",
                           "defaultWidth",
-                          "defaultHeight", // These fields are never saved no matter what situation. They are not meant to be saved for various reasons.
+                          "defaultHeight",
+                          "removeStartingAnimation", // These fields are never saved no matter what situation. They are not meant to be saved for various reasons.
                         ])
                       : {
                           ...Object.fromEntries(
@@ -502,7 +503,8 @@ export function WindowProvider({ children }: Props) {
                               "defaultCenterX",
                               "defaultCenterY",
                               "defaultWidth",
-                              "defaultHeight"
+                              "defaultHeight",
+                              "removeStartingAnimation"
                             ).map((key) => [key, window[key]])
                           ),
                           saveComponentKey: window.saveComponentKey, // saveComponentKey is always saved, since this is needed to identify which preset this window should use upon restoration.

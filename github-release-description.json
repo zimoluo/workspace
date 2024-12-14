@@ -145,5 +145,6 @@
     "",
     "Adjusted the behavior of window expanding to center."
   ],
-  "v1.4.6": ["# Changes", "", "Saved windows are now restored instantly."]
+  "v1.4.6": ["# Changes", "", "Saved windows are now restored instantly."],
+  "v1.4.7": ["# Changes", "", "Further optimized saved windows size."]
 }
