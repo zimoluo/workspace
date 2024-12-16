@@ -161,6 +161,7 @@ def main():
         files_to_zip = get_files_to_zip('./out')
 
         # Add files to ZIP with consistent timestamp
+        print(f"Added to ZIP with maximum compression:")
         for file_path, arc_path in files_to_zip:
             # Read the file contents
             with open(file_path, 'rb') as f:
@@ -175,7 +176,7 @@ def main():
 
             # Write file to ZIP
             zipf.writestr(info, contents, compresslevel=9)
-            print(f"Added to ZIP with maximum compression: {arc_path}")
+            print(f"{arc_path}", end=', ')
 
     def upload_asset_to_release(upload_url, file_path):
         headers = {
