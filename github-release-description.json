@@ -156,5 +156,10 @@
     "",
     "Slightly improved the handling of the favicon window."
   ],
-  "v1.5.5": ["# Changes", "", "Tweaked a few themes."]
+  "v1.5.5": ["# Changes", "", "Tweaked a few themes."],
+  "v1.5.6": [
+    "# Changes",
+    "",
+    "Simplified the icons of the Blog and Album theme."
+  ]
 }
