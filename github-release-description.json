@@ -161,5 +161,10 @@
     "# Changes",
     "",
     "Simplified the icons of the Blog and Album theme."
+  ],
+  "v1.6.0": [
+    "# Changes",
+    "",
+    "Added the Unity theme which is now the default theme."
   ]
 }

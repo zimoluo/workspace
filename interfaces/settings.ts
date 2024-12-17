@@ -19,7 +19,7 @@ interface SettingsState {
   windowLimit: number;
   notebookData: NotebookData[];
   notebookIndex: number;
-  calculatorButtonHasBorder: boolean;
+  calculatorAppearance: "normal" | "border" | "contrast";
   disableWindowSnapping: boolean;
   windowSaveData: {
     windows: WindowSaveData[];

@@ -4,7 +4,7 @@ import lollipopConfig from "@/components/theme/config/lollipop";
 import oasisConfig from "@/components/theme/config/oasis";
 import springFieldConfig from "@/components/theme/config/springField";
 
-const defaultTheme: ThemeKey = "home";
+const defaultTheme: ThemeKey = "unity";
 
 export const defaultSettings: SettingsState = {
   backgroundRichness: "rich",
@@ -35,7 +35,7 @@ export const defaultSettings: SettingsState = {
   windowLimit: 8,
   notebookData: [],
   notebookIndex: 0,
-  calculatorButtonHasBorder: false,
+  calculatorAppearance: "normal",
   disableWindowSnapping: false,
   windowSaveData: {
     viewport: {

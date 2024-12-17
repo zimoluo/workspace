@@ -29,7 +29,7 @@ const settingsNameMap: { [key in keyof Partial<SettingsState>]: string } = {
   enableColorInterpolationMethod: "Enable color interpolation method",
   hideColorLookupPanel: "Hide color lookup panel",
   windowLimit: "Number of windows",
-  calculatorButtonHasBorder: "Enable calculator button border",
+  calculatorAppearance: "Calculator appearance",
   disableWindowSnapping: "Disable window snapping",
   disableWindowSaving: "Disable window saving",
   toastBannerLimit: "Number of banners for wide screen",
@@ -266,8 +266,10 @@ export default function MenuEntriesSettings({
       entries: [
         { entry: "disableGestures", type: "flip" },
         {
-          entry: "calculatorButtonHasBorder",
-          type: "flip",
+          entry: "calculatorAppearance",
+          type: "slider",
+          values: ["normal", "border", "contrast"],
+          captions: ["Standard", "Bordered", "Contrast"],
           condition: [
             {
               value: "windowTag",
