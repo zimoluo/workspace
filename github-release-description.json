@@ -166,5 +166,6 @@
     "# Changes",
     "",
     "Added the Unity theme which is now the default theme."
-  ]
+  ],
+  "v1.6.1": ["# Changes", "", "Slightly updated the Unity theme."]
 }
