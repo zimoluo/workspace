@@ -155,5 +155,6 @@
     "# Changes",
     "",
     "Slightly improved the handling of the favicon window."
-  ]
+  ],
+  "v1.5.5": ["# Changes", "", "Tweaked a few themes."]
 }
