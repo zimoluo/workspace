@@ -167,5 +167,6 @@
     "",
     "Added the Unity theme which is now the default theme."
   ],
-  "v1.6.1": ["# Changes", "", "Slightly updated the Unity theme."]
+  "v1.6.1": ["# Changes", "", "Slightly updated the Unity theme."],
+  "v1.6.2": ["# Changes", "", "Updated the site favicon."]
 }
