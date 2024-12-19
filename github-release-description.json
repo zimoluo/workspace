@@ -173,5 +173,10 @@
     "# Changes",
     "",
     "Theme Maker profiles selector now supports drag-and-drop gestures to import profiles."
+  ],
+  "v1.6.4": [
+    "# Changes",
+    "",
+    "Improved the Theme Maker profile import notifications."
   ]
 }
