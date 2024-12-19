@@ -178,5 +178,10 @@
     "# Changes",
     "",
     "Improved the Theme Maker profile import notifications."
+  ],
+  "v1.6.5": [
+    "# Changes",
+    "",
+    "Redesigned the Unity theme and updated the site favicon accordingly."
   ]
 }
