@@ -184,5 +184,6 @@
     "",
     "Redesigned the Unity theme and updated the site favicon accordingly."
   ],
-  "v1.6.6": ["# Changes", "", "Reordered a few themes in the settings."]
+  "v1.6.6": ["# Changes", "", "Reordered a few themes in the settings."],
+  "v1.6.7": ["# Changes", "", "Fixed the layout of the profile selector."]
 }
