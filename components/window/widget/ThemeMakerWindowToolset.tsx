@@ -24,6 +24,7 @@ export default function ThemeMakerWindowToolset() {
           noBackground={true}
           sidebarOptions={[
             "customTheme",
+            "settings",
             "duplicate",
             "stars",
             "preset",

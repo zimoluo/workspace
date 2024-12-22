@@ -49,4 +49,5 @@ type SidebarButtonsOption =
   | "stars"
   | "preset"
   | "export"
-  | "import";
+  | "import"
+  | "settings";

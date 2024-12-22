@@ -190,5 +190,10 @@
     "# Changes",
     "",
     "Fixed a logic error in the window centering action."
+  ],
+  "v1.7.0": [
+    "# Changes",
+    "",
+    "Theme Maker settings can now be accessed directly from the toolbar."
   ]
 }
