@@ -200,5 +200,10 @@
     "# Changes",
     "",
     "Added the ability to customize the favicon in the favicon window."
+  ],
+  "v1.8.1": [
+    "# Changes",
+    "",
+    "Improved the logic of the favicon window customization panel."
   ]
 }
