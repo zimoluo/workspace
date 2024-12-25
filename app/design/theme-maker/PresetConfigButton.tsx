@@ -46,7 +46,7 @@ export default function PresetConfigButton() {
     >
       <CommandKeyIcon
         className="w-full h-auto aspect-square"
-        strokeWidth={70}
+        strokeWidth={72}
       />
     </button>
   );
