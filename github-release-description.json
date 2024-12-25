@@ -210,5 +210,10 @@
     "# Changes",
     "",
     "Energize is now a preset theme instead of a template profile."
+  ],
+  "v1.8.3": [
+    "# Changes",
+    "",
+    "Fixed an issue in the minimal backdrop gradient of the Energize theme."
   ]
 }
