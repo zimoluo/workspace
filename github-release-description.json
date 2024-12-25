@@ -215,5 +215,10 @@
     "# Changes",
     "",
     "Fixed an issue in the minimal backdrop gradient of the Energize theme."
+  ],
+  "v1.8.4": [
+    "# Changes",
+    "",
+    "Adjusted the shadow intensity of the favicon window customization panel to be more consistent with other windows."
   ]
 }
