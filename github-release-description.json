@@ -205,5 +205,10 @@
     "# Changes",
     "",
     "Improved the logic of the favicon window customization panel."
+  ],
+  "v1.8.2": [
+    "# Changes",
+    "",
+    "Energize is now a preset theme instead of a template profile."
   ]
 }
