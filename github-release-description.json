@@ -220,5 +220,10 @@
     "# Changes",
     "",
     "Adjusted the shadow intensity of the favicon window customization panel to be more consistent with other windows."
+  ],
+  "v1.8.5": [
+    "# Changes",
+    "",
+    "Fixed a rendering issue of outline favicons in the panel."
   ]
 }
