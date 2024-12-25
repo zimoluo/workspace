@@ -225,5 +225,10 @@
     "# Changes",
     "",
     "Fixed a rendering issue of outline favicons in the panel."
+  ],
+  "v1.8.6": [
+    "# Changes",
+    "",
+    "Optimized the storage size of the favicon window when using custom favicons."
   ]
 }
