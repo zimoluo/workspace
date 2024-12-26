@@ -77,7 +77,7 @@ export default function ThemeMakerSettingsButton() {
       defaultCenterY:
         (buttonRef.current?.getBoundingClientRect().top ?? 0) +
         (buttonRef.current?.getBoundingClientRect().height ?? 0) / 2,
-      layer: 1,
+      layer: 10,
     });
   };
 

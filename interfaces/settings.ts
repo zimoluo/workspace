@@ -35,6 +35,7 @@ interface SettingsState {
   disableWindowSnapToViewportBorder: boolean;
   disableSystemFont: boolean;
   enableWindowDebugger: boolean;
+  hasOpenedStickyNotes: boolean;
 }
 
 type NotificationStyle = "disabled" | "toast" | "banner";

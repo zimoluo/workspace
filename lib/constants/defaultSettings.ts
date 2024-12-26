@@ -49,4 +49,5 @@ export const defaultSettings: SettingsState = {
   disableWindowSnapToViewportBorder: false,
   disableSystemFont: false,
   enableWindowDebugger: false,
+  hasOpenedStickyNotes: false,
 };

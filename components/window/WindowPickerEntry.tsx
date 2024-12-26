@@ -24,6 +24,8 @@ import WindowIcon from "../assets/entries/WindowIcon";
 import WindowPicker from "./WindowPicker";
 import WindowDebugger from "./widget/WindowDebugger";
 import DebuggerIcon from "../assets/entries/DebuggerIcon";
+import StickyNotesIcon from "../assets/entries/StickyNotesIcon";
+import StickyNotesWidget from "./widget/StickyNotesWidget";
 
 interface Props {
   entry: WindowPickerEntry;
@@ -185,6 +187,7 @@ export const windowEntryMap: Record<
       minHeight: 408,
       maxWidth: 688,
       maxHeight: 660,
+      countsToLimit: false,
     },
   },
   debugger: {
@@ -199,6 +202,22 @@ export const windowEntryMap: Record<
       maxWidth: 1200,
       maxHeight: 1200,
       requireAllDataSaved: true,
+    },
+  },
+  stickyNotes: {
+    icon: StickyNotesIcon,
+    title: "Sticky Notes",
+    window: {
+      content: <StickyNotesWidget />,
+      defaultWidth: 280,
+      defaultHeight: 280,
+      minWidth: 200,
+      minHeight: 200,
+      maxWidth: 520,
+      maxHeight: 520,
+      cornerRadius: 0.25,
+      layer: 1,
+      countsToLimit: false,
     },
   },
 };
@@ -235,7 +254,7 @@ export default function WindowPickerEntry({ entry }: Props) {
               defaultCenterY:
                 (buttonRef.current?.getBoundingClientRect().top ?? 0) +
                 (buttonRef.current?.getBoundingClientRect().height ?? 0) / 2,
-              countsToLimit: true,
+              countsToLimit: window.countsToLimit ?? true,
               saveComponentKey: entry,
             });
           }}
