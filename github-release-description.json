@@ -232,5 +232,10 @@
     "Optimized the storage size of the favicon window when using custom favicons."
   ],
   "v1.8.7": ["# Changes", "", "Adjusted the stroke weight of some glyphs."],
-  "v1.9.0": ["# Changes", "", "Added the Sticky Notes window."]
+  "v1.9.0": ["# Changes", "", "Added the Sticky Notes window."],
+  "v1.9.1": [
+    "# Changes",
+    "",
+    "Slightly adjusted the hovering effect of some elements."
+  ]
 }
