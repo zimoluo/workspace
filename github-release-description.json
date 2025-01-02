@@ -242,5 +242,6 @@
     "# Changes",
     "",
     "Adjusted the hovering effect of some more elements."
-  ]
+  ],
+  "v1.10.0": ["# Changes", "", "Added the Memories theme."]
 }
