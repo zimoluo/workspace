@@ -16,7 +16,6 @@ const settingsNameMap: { [key in keyof Partial<SettingsState>]: string } = {
   backgroundRichness: "Background richness",
   disableCenterPainting: "Disable center art",
   disableGestures: "Disable gestures",
-  disableSoundEffect: "Disable sound effect",
   pageTheme: "Theme preset",
   notificationStyle: "Notification style",
   floatingCodeSpeed: "Floating code rate",
@@ -102,12 +101,6 @@ const settingsConfig: {
         entry: "disableCenterPainting",
         type: "flip",
         condition: [{ value: "animationKey", match: "blog" }],
-      },
-      {
-        entry: "disableSoundEffect",
-        type: "flip",
-        condition: [{ value: "animationKey", match: "halloween" }],
-        flipAppearance: "halloween",
       },
       {
         entry: "alwaysEnableFireworks",

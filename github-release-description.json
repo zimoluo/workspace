@@ -253,5 +253,6 @@
     "* Reordered some theme presets.",
     "* Added a subtle animation to the Memories theme animated background."
   ],
-  "v1.10.4": ["# Changes", "", "Greatly optimized build size."]
+  "v1.10.4": ["# Changes", "", "Greatly optimized build size."],
+  "v1.10.5": ["# Changes", "", "Removed disable sound effect setting."]
 }

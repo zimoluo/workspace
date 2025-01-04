@@ -3,7 +3,6 @@ interface SettingsState {
   floatingCodeSpeed: number;
   disableCenterPainting: boolean;
   disableGestures: boolean;
-  disableSoundEffect: boolean;
   pageTheme: Record<NavigationKey, ThemeKey | ThemeDataConfig>;
   notificationStyle: NotificationStyle;
   flyingBalloonRate: number;

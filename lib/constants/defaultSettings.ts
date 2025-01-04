@@ -10,7 +10,6 @@ export const defaultSettings: SettingsState = {
   floatingCodeSpeed: 1800,
   disableCenterPainting: false,
   disableGestures: false,
-  disableSoundEffect: false,
   pageTheme: {
     home: defaultTheme,
   },
