@@ -245,5 +245,12 @@
   ],
   "v1.10.0": ["# Changes", "", "Added the Memories theme."],
   "v1.10.1": ["# Changes", "", "Updated the year of copyright information."],
-  "v1.10.2": ["# Changes", "", "Removed the Scintillating theme."]
+  "v1.10.2": ["# Changes", "", "Removed the Scintillating theme."],
+  "v1.10.3": [
+    "# Changes",
+    "",
+    "* Re-added the Scintillating theme with a slightly different design.",
+    "* Reordered some theme presets.",
+    "* Added a subtle animation to the Memories theme animated background."
+  ]
 }
