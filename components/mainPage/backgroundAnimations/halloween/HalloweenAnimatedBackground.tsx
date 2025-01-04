@@ -1,8 +1,4 @@
-"use client";
-
-import { useSettings } from "@/components/contexts/SettingsContext";
 import Image from "next/image";
-import HalloweenPulse from "./HalloweenPulse";
 import graveyardImage from "@/public/theme/animated-background/halloween/graveyard.svg";
 import castleImage from "@/public/theme/animated-background/halloween/castle.svg";
 import woodImage from "@/public/theme/animated-background/halloween/wood.svg";
@@ -11,8 +7,6 @@ import pumpkinsImage from "@/public/theme/animated-background/halloween/pumpkins
 import batsImage from "@/public/theme/animated-background/halloween/bats.svg";
 
 export default function HalloweenAnimatedBackground() {
-  const { settings } = useSettings();
-
   return (
     <>
       <div className="fixed inset-0 -z-20 h-screen pointer-events-none select-none">
@@ -87,7 +81,6 @@ export default function HalloweenAnimatedBackground() {
           />
         </div>
       </div>
-      {settings.backgroundRichness === "rich" && <HalloweenPulse />}
     </>
   );
 }
