@@ -259,5 +259,10 @@
     "# Changes",
     "",
     "Added theme-specific text selection effect to the Sticky Notes."
+  ],
+  "v1.10.7": [
+    "# Changes",
+    "",
+    "Active window now has its controls slightly less transparent to distinguish it better."
   ]
 }
