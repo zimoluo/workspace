@@ -265,5 +265,6 @@
     "",
     "Active window now has its controls slightly less transparent to distinguish it better."
   ],
-  "v1.10.8": ["# Changes", "", "Improved window starting animation."]
+  "v1.10.8": ["# Changes", "", "Improved window starting animation."],
+  "v1.10.9": ["# Changes", "", "Adjusted the rendering of some assets."]
 }
