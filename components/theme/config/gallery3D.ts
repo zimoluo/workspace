@@ -347,7 +347,6 @@ const gallery3DConfig: ThemeDataConfig = {
   },
   siteThemeColor: "#fefefe",
   favicon: { mode: "custom", customKey: "gallery3D" },
-  animatedBackgroundKey: "gallery3D",
 };
 
 export default gallery3DConfig;

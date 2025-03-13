@@ -21,7 +21,6 @@ const availableAnimatedBackgroundKeys: (ThemeAnimatedBackgroundKey | null)[] = [
   "crimson",
   "underwater",
   "gallery",
-  "gallery3D",
   "celebration",
   "stars",
   "halloween",
