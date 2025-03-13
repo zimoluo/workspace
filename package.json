@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@react-three/fiber": "^9.1.0",
+    "@types/three": "^0.174.0",
     "color-convert": "^3.0.1",
     "dayjs": "^1.11.13",
     "lodash": "^4.17.21",
