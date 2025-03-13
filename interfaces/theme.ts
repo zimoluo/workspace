@@ -80,7 +80,8 @@ type ThemeAnimatedBackgroundKey =
   | "murk"
   | "eventide"
   | "meadowland"
-  | "memories";
+  | "memories"
+  | "gallery3D";
 
 interface ThemeMiscOptions {
   readingBlur?: number;
