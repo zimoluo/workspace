@@ -15,7 +15,7 @@ export default function HomeAnimatedBackground() {
       {settings.backgroundRichness === "rich" && (
         <>
           <div
-            className={`fixed inset-0 -z-20 flex items-center justify-center pointer-events-none select-none ${homeStyle.moveOne}`}
+            className={`fixed inset-0 w-large-screen h-large-screen -z-20 flex items-center justify-center pointer-events-none select-none ${homeStyle.moveOne}`}
           >
             <Image
               src={moving1Src}
@@ -28,7 +28,7 @@ export default function HomeAnimatedBackground() {
           </div>
 
           <div
-            className={`fixed inset-0 -z-20 flex items-center justify-center pointer-events-none select-none ${homeStyle.moveThree}`}
+            className={`fixed inset-0 w-large-screen h-large-screen -z-20 flex items-center justify-center pointer-events-none select-none ${homeStyle.moveThree}`}
           >
             <Image
               src={moving3Src}
@@ -44,7 +44,7 @@ export default function HomeAnimatedBackground() {
 
       {settings.backgroundRichness === "rich" && (
         <div
-          className={`fixed inset-0 -z-10 flex items-center justify-center pointer-events-none select-none ${homeStyle.moveTwo}`}
+          className={`fixed inset-0 w-large-screen h-large-screen -z-10 flex items-center justify-center pointer-events-none select-none ${homeStyle.moveTwo}`}
         >
           <Image
             src={moving2Src}
