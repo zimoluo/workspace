@@ -272,5 +272,10 @@
     "",
     "* Added the Gallery 3D theme and reworked the Verdant theme.",
     "* Adopted Next 15."
+  ],
+  "v1.11.1": [
+    "# Changes",
+    "",
+    "Fixed the Gallery 3D favicon sometimes not displaying properly."
   ]
 }
