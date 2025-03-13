@@ -266,5 +266,11 @@
     "Active window now has its controls slightly less transparent to distinguish it better."
   ],
   "v1.10.8": ["# Changes", "", "Improved window starting animation."],
-  "v1.10.9": ["# Changes", "", "Adjusted the rendering of some assets."]
+  "v1.10.9": ["# Changes", "", "Adjusted the rendering of some assets."],
+  "v1.11.0": [
+    "# Changes",
+    "",
+    "* Added the Gallery 3D theme and reworked the Verdant theme.",
+    "* Adopted Next 15."
+  ]
 }
