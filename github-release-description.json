@@ -282,5 +282,10 @@
     "# Changes",
     "",
     "Added the animated background of the Gallery 3D theme which uses a different implementation."
+  ],
+  "v1.11.3": [
+    "# Changes",
+    "",
+    "Slightly optimized the animated background of the Gallery 3D theme."
   ]
 }
