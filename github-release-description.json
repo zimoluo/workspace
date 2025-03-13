@@ -277,5 +277,10 @@
     "# Changes",
     "",
     "Fixed the Gallery 3D favicon sometimes not displaying properly."
+  ],
+  "v1.11.2": [
+    "# Changes",
+    "",
+    "Added the animated background of the Gallery 3D theme which uses a different implementation."
   ]
 }
