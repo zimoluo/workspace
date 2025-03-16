@@ -287,5 +287,6 @@
     "# Changes",
     "",
     "Slightly optimized the animated background of the Gallery 3D theme."
-  ]
+  ],
+  "v1.11.4": ["# Changes", "", "Updated the Gallery 3D theme."]
 }
