@@ -1,6 +1,6 @@
 {
   "name": "workspace",
-  "version": "1.11.4",
+  "version": "1.11.5",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
@@ -16,7 +16,7 @@
     "color-convert": "^3.0.1",
     "dayjs": "^1.11.13",
     "lodash": "^4.17.21",
-    "next": "15.2.2",
+    "next": "^15.5.2",
     "react": "19.0.0",
     "react-colorful": "^5.6.1",
     "react-dom": "19.0.0",
