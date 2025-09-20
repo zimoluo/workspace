@@ -95,7 +95,7 @@ export default function MenuSlideWrapper({
           : "invisible opacity-0 scale-75 blur-[6px]"
       }`}
     >
-      <div className="bg-widget-60 rounded-[1.5rem] shadow-lg backdrop-blur-[6px] w-full h-full border-reflect-light">
+      <div className="bg-widget-60 rounded-[2rem] shadow-lg backdrop-blur-[6px] w-full h-full border-reflect-light">
         {children}
       </div>
     </aside>

@@ -12,11 +12,11 @@ export default function MenuEntriesLayout() {
 
       <MenuEntriesSettings />
 
-      <div className="rounded-2xl w-full bg-light bg-opacity-65 shadow-lg px-6 py-0 mb-4 text-lg">
+      <div className="rounded-3xl w-full bg-light bg-opacity-65 shadow-lg px-6 py-0 mb-4 text-lg">
         <MenuEntriesUtility />
       </div>
 
-      <div className="rounded-2xl w-full bg-light bg-opacity-65 shadow-lg px-6 py-0 text-lg">
+      <div className="rounded-3xl w-full bg-light bg-opacity-65 shadow-lg px-6 py-0 text-lg">
         <MenuEntriesInfo />
       </div>
     </div>
