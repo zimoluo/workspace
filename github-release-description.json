@@ -289,5 +289,10 @@
     "Slightly optimized the animated background of the Gallery 3D theme."
   ],
   "v1.11.4": ["# Changes", "", "Updated the Gallery 3D theme."],
-  "v1.11.5": ["# Changes", "", "Added the Aquarium theme."]
+  "v1.11.5": ["# Changes", "", "Added the Aquarium theme."],
+  "v1.12.0": [
+    "# Changes",
+    "",
+    "Redesigned much of the interface, bringing smoothness, translucency, and consistency to the layout."
+  ]
 }
