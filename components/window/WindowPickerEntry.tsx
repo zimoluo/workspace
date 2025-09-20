@@ -91,7 +91,7 @@ export const windowEntryMap: Record<
     title: "Settings Panel",
     window: {
       content: (
-        <div className="w-full h-full bg-widget-80 px-8 pb-8 pt-6 text-xl grid grid-cols-1 gap-4 overflow-y-auto">
+        <div className="w-full h-full bg-widget-60 px-4 pt-4 overflow-y-auto">
           <MenuEntriesSettings />
         </div>
       ),
