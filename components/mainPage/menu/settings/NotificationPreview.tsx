@@ -8,7 +8,7 @@ interface Props {
 export default function NotificationPreview({ className = "", mode }: Props) {
   return (
     <div
-      className={`border-reflect-saturated border-reflect-[2px] rounded-xl relative bg-page overflow-hidden ${className}`}
+      className={`border-reflect-saturated border-reflect-[2px] rounded-2xl relative bg-page overflow-hidden ${className}`}
       aria-hidden="true"
     >
       {mode === "banner" && (

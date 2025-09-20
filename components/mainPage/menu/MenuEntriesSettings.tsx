@@ -61,8 +61,8 @@ const settingsConfig: {
         type: "special",
         component: (
           <div className="my-5">
-            <div className="relative bg-light rounded-xl bg-opacity-40 border-reflect-primary">
-              <div className="relative overflow-y-auto py-4 px-4 rounded-xl">
+            <div className="relative bg-light rounded-2xl bg-opacity-40 border-reflect-primary">
+              <div className="relative overflow-y-auto py-4 px-4 rounded-2xl">
                 <div
                   className={`${menuStyle.pickerScrollContainer} rounded-xl`}
                 >
