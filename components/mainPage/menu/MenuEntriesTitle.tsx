@@ -2,11 +2,13 @@ import DisplayFavicon from "@/components/assets/DisplayFavicon";
 
 export default function MenuEntriesTitle() {
   return (
-    <div className="flex items-center w-full">
-      <div className="p-1 h-12 md:h-16 aspect-square">
+    <div className="flex items-center w-full relative h-10">
+      <div className="h-10 aspect-square relative">
         <DisplayFavicon className="h-full w-full aspect-square rounded-full" />
       </div>
-      <div className="text-xl md:text-2xl font-bold ml-3.5">Workspace</div>
+      <div className="absolute w-full h-full flex items-center justify-center">
+        <div className="text-xl font-bold ">Workspace</div>
+      </div>
     </div>
   );
 }

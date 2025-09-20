@@ -75,7 +75,7 @@ export default function NotebookTopBar() {
   };
 
   return (
-    <div className="flex gap-4 items-center rounded-lg bg-light bg-opacity-80 px-4 py-3 shadow-lg">
+    <div className="flex gap-4 items-center rounded-full bg-light bg-opacity-80 px-4 py-3 shadow-lg">
       <button
         onClick={() => {
           setIsMenuOpen((prev) => !prev);

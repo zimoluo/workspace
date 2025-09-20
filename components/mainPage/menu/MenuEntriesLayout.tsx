@@ -5,20 +5,22 @@ import MenuEntriesUtility from "./MenuEntriesUtility";
 
 export default function MenuEntriesLayout() {
   return (
-    <div className="h-full w-full overflow-y-auto px-6 md:px-8 py-8">
-      <div className="rounded-full w-full bg-light bg-opacity-65 shadow-lg px-4 py-4 mt-8 mb-14 flex items-center">
+    <div className="h-full w-full overflow-y-auto px-4 pb-4 rounded-[2rem]">
+      <div className="rounded-full w-full bg-light bg-opacity-65 shadow-lg px-3 py-3 mt-16 mb-8 flex items-center">
         <MenuEntriesTitle />
       </div>
 
-      <div className="rounded-2xl w-full bg-light bg-opacity-65 shadow-lg px-6 pt-4 pb-6 my-8 text-lg md:text-xl grid grid-cols-1 gap-4">
+      <div className="rounded-2xl w-full bg-light bg-opacity-65 shadow-lg px-6 pt-4 pb-6 mb-4 text-lg grid grid-cols-1 gap-4">
         <MenuEntriesSettings />
       </div>
 
-      <div className="rounded-2xl w-full bg-light bg-opacity-65 shadow-lg px-6 py-0 my-8 text-lg md:text-xl">
+      <div className="rounded-2xl w-full bg-light bg-opacity-65 shadow-lg px-6 py-0 mb-4 text-lg">
         <MenuEntriesUtility />
       </div>
 
-      <MenuEntriesInfo />
+      <div className="rounded-2xl w-full bg-light bg-opacity-65 shadow-lg px-6 py-0 text-lg">
+        <MenuEntriesInfo />
+      </div>
     </div>
   );
 }

@@ -60,9 +60,9 @@ const settingsConfig: {
         entry: "pageTheme",
         type: "special",
         component: (
-          <div className="md:flex-grow my-5 md:my-2">
+          <div className="my-5">
             <div className="relative bg-light rounded-xl bg-opacity-40 border-0.8 border-opacity-40 border-primary">
-              <div className="relative overflow-y-auto py-4 px-4 md:px-2.5 rounded-xl">
+              <div className="relative overflow-y-auto py-4 px-4 rounded-xl">
                 <div
                   className={`${menuStyle.pickerScrollContainer} rounded-xl`}
                 >
@@ -82,7 +82,7 @@ const settingsConfig: {
         type: "special",
         component: (
           <div className={`${menuStyle.themeProfileWidth}`}>
-            <div className="mt-4 mb-7 md:my-2 px-4">
+            <div className="mt-4 mb-7 px-4">
               <ThemeProfileSelector
                 className="-mb-3"
                 applyThemeDataConfig={true}
@@ -155,7 +155,7 @@ const settingsConfig: {
       {
         entry: "notificationStyle",
         type: "special",
-        component: <NotificationStylePicker className="mt-4 md:mt-0" />,
+        component: <NotificationStylePicker className="mt-4" />,
       },
       {
         entry: "toastBannerLimit",
@@ -346,9 +346,7 @@ export default function MenuEntriesSettings({
             key={`${section.title || "settings-section"}-${sectionIndex}`}
           >
             {section.title && (
-              <p className="text-lg md:text-xl font-bold mb-2 mt-2">
-                {section.title}
-              </p>
+              <p className="text-lg font-bold mb-2 mt-2">{section.title}</p>
             )}
             {filteredEntries.map((entry, entryIndex) => {
               const isLastEntry = entryIndex === filteredEntries.length - 1;
@@ -360,7 +358,7 @@ export default function MenuEntriesSettings({
                   return (
                     <Fragment key={`${entry.entry}-${entryIndex}`}>
                       <div className="flex items-center gap-2">
-                        <div className="flex-grow text-lg md:text-xl">
+                        <div className="flex-grow text-lg">
                           {settingsNameMap[entry.entry]}
                         </div>
                         <SettingsFlip
@@ -387,19 +385,15 @@ export default function MenuEntriesSettings({
 
                   return (
                     <Fragment key={`${entry.entry}-${entryIndex}`}>
-                      <div className="md:flex md:items-center md:gap-2">
+                      <div>
                         <div
-                          className={`md:flex-grow text-lg md:text-xl ${
-                            menuStyle.entryMinWidth
-                          } ${
-                            performanceWarning
-                              ? "flex md:block items-center"
-                              : ""
+                          className={`text-lg ${menuStyle.entryMinWidth} ${
+                            performanceWarning ? "flex items-center" : ""
                           }`}
                         >
                           {settingsNameMap[entry.entry]}
                           {performanceWarning && (
-                            <div className="text-xs ml-1 md:ml-0">
+                            <div className="text-xs ml-1">
                               (Performance warning)
                             </div>
                           )}
@@ -421,10 +415,8 @@ export default function MenuEntriesSettings({
                 case "special":
                   return (
                     <Fragment key={`${entry.entry}-${entryIndex}`}>
-                      <div className="md:flex md:items-center">
-                        <div
-                          className={`text-lg md:text-xl ${menuStyle.entryMinWidth}`}
-                        >
+                      <div>
+                        <div className={`text-lg ${menuStyle.entryMinWidth}`}>
                           {settingsNameMap[entry.entry]}
                         </div>
                         {entry.component}

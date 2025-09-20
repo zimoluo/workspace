@@ -1289,12 +1289,12 @@ export default function WindowInstance({ data, isActive, index }: Props) {
           </div>
           <div
             style={{
-              borderRadius: `${data.cornerRadius ?? 0.75}rem`,
+              borderRadius: `${data.cornerRadius ?? 2}rem`,
             }}
             className={`relative w-full h-full ${
               !data.disableShadow ? "shadow-xl" : ""
             } ${windowStyle.mountAnimator} ${
-              data.disableBlur ? "" : "backdrop-blur-2xl"
+              data.disableBlur ? "" : "backdrop-blur-[6px]"
             } ${
               isMounted || data.removeStartingAnimation
                 ? "opacity-100"

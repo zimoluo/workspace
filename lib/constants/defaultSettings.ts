@@ -42,7 +42,7 @@ export const defaultSettings: SettingsState = {
     windows: [],
   },
   disableWindowSaving: false,
-  toastBannerLimit: 3,
+  toastBannerLimit: 5,
   alwaysEnableFireworks: false,
   windowResizeBehavior: "adaptive",
   disableWindowSnapToViewportBorder: false,
