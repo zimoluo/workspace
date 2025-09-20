@@ -46,11 +46,11 @@ export function generateInlineStyleObject(
 
         const shadeMap = generateShadeMap(
           `#${colorConvert.rgb.hex(value as ColorTriplet)}`,
-          24
+          22
         ).shadeMap;
 
         const highlightColor = colorConvert.hex.rgb(shadeMap[0]);
-        const midlightColor = colorConvert.hex.rgb(shadeMap[2]);
+        const midlightColor = colorConvert.hex.rgb(shadeMap[4]);
 
         style[`--color-highlight-${kebabKey}`] = highlightColor.join(" ");
         style[`--color-midlight-${kebabKey}`] = midlightColor.join(" ");

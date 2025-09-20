@@ -206,7 +206,7 @@ export default function SignalGeneratorInterface(preset: Partial<ToastEntry>) {
 
   return (
     <div className={`w-full h-full ${signalStyle.grid}`}>
-      <div className="grid px-6 py-0 rounded-lg bg-light bg-opacity-80 h-full overflow-hidden items-center shadow-lg">
+      <div className="grid px-6 py-0 rounded-2xl bg-light bg-opacity-80 h-full overflow-hidden items-center shadow-lg">
         <div
           className={`${signalStyle.selector}`}
           ref={listRef}
@@ -241,7 +241,7 @@ export default function SignalGeneratorInterface(preset: Partial<ToastEntry>) {
       </div>
       <div className={`w-full h-full ${signalStyle.textboxGrid}`}>
         <input
-          className="bg-light bg-opacity-80 w-full h-12 bg-none py-1.5 px-4 font-bold text-xl rounded-lg placeholder:text-saturated placeholder:text-opacity-75 shadow-lg"
+          className="bg-light bg-opacity-80 w-full h-12 bg-none py-1.5 px-4 font-bold text-xl rounded-full placeholder:text-saturated placeholder:text-opacity-75 shadow-lg"
           placeholder="Title"
           value={toastEntry.title}
           onChange={(e) =>
@@ -249,7 +249,7 @@ export default function SignalGeneratorInterface(preset: Partial<ToastEntry>) {
           }
         />
         <textarea
-          className="bg-light bg-opacity-80 resize-none bg-none px-4 py-3 text-lg rounded-lg w-full h-full placeholder:text-saturated placeholder:text-opacity-75 shadow-lg"
+          className="bg-light bg-opacity-80 resize-none bg-none px-4 py-3 text-lg rounded-2xl w-full h-full placeholder:text-saturated placeholder:text-opacity-75 shadow-lg"
           placeholder="Content..."
           value={toastEntry.description}
           onChange={(e) =>
@@ -258,7 +258,7 @@ export default function SignalGeneratorInterface(preset: Partial<ToastEntry>) {
         />
       </div>
       <button
-        className={`bg-light bg-opacity-80 w-24 h-full rounded-lg flex items-center justify-center shadow-lg ${
+        className={`bg-light bg-opacity-80 w-24 h-full rounded-2xl flex items-center justify-center shadow-lg ${
           toastEntry.title ? "" : "pointer-events-none"
         }`}
         onClick={() => {

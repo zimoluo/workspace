@@ -70,14 +70,14 @@ export default function WindowButton() {
 
   return (
     <div
-      className={`hidden md:flex fixed z-[12] bottom-8 right-8 items-center flex-col-reverse ${buttonStyle.container}`}
+      className={`flex fixed z-[12] bottom-8 right-8 items-center flex-col-reverse ${buttonStyle.container}`}
     >
       <button
-        className={`w-16 h-16 aspect-square p-3.5 rounded-full border-none border-transparent group ${
+        className={`w-16 h-16 aspect-square p-3.5 rounded-full border-none border-transparent border-reflect-light group ${
           buttonStyle.transition
         } ${
           isWindowMinimized ? buttonStyle.glow : "shadow-lg ease-out"
-        } backdrop-blur-2xl bg-widget-60`}
+        } backdrop-blur-[4px] bg-widget-60`}
         onClick={handleClick}
         onContextMenu={toggleMinimize}
       >
@@ -86,7 +86,7 @@ export default function WindowButton() {
       <button
         className={`w-16 h-16 ${buttonStyle.extraButton} ${
           windows.length > 0 ? buttonStyle.extraButtonActive : ""
-        } aspect-square rounded-full border-none shadow-lg backdrop-blur-2xl bg-widget-60 group`}
+        } aspect-square rounded-full border-none border-reflect-light shadow-lg backdrop-blur-[4px] bg-widget-60 group`}
         onClick={toggleMinimize}
         disabled={windows.length === 0}
       >
@@ -95,7 +95,7 @@ export default function WindowButton() {
       <button
         className={`w-16 h-16 ${buttonStyle.extraButton} ${
           windows.length > 0 ? buttonStyle.extraButtonActive : ""
-        } aspect-square rounded-full border-none shadow-lg backdrop-blur-2xl bg-widget-60 group`}
+        } aspect-square rounded-full border-none border-reflect-light shadow-lg backdrop-blur-[4px] bg-widget-60 group`}
         onClick={handleBroom}
         disabled={windows.length === 0}
       >
@@ -107,7 +107,7 @@ export default function WindowButton() {
       <button
         className={`w-16 h-16 ${buttonStyle.extraButton} ${
           windows.length > 0 ? buttonStyle.extraButtonActive : ""
-        } aspect-square rounded-full border-none shadow-lg backdrop-blur-2xl bg-widget-60 group`}
+        } aspect-square rounded-full border-none border-reflect-light shadow-lg backdrop-blur-[4px] bg-widget-60 group`}
         onClick={clearAllWindows}
         disabled={windows.length === 0}
       >

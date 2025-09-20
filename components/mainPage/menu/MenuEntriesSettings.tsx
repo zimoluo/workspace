@@ -61,7 +61,7 @@ const settingsConfig: {
         type: "special",
         component: (
           <div className="my-5">
-            <div className="relative bg-light rounded-xl bg-opacity-40 border-0.8 border-opacity-40 border-primary">
+            <div className="relative bg-light rounded-xl bg-opacity-40 border-reflect-primary">
               <div className="relative overflow-y-auto py-4 px-4 rounded-xl">
                 <div
                   className={`${menuStyle.pickerScrollContainer} rounded-xl`}
@@ -236,7 +236,7 @@ const settingsConfig: {
         entry: "calculatorAppearance",
         type: "slider",
         values: ["normal", "border", "contrast"],
-        captions: ["Standard", "Bordered", "Contrast"],
+        captions: ["Standard", "Uniform", "Contrast"],
         condition: [
           {
             value: "windowTag",

@@ -81,30 +81,26 @@ export default function WindowSlideMenuWrapper({
   return (
     <aside
       ref={menuWrapperRef}
-      style={
-        slug
+      style={{
+        transition:
+          "transform 0.3s cubic-bezier(.37,.01,.11,.93), opacity 0.2s ease-out, visibility 0.3s ease-out, filter 0.3s ease-out",
+        ...(slug
           ? {
               width: `min(100%, ${maxWidth})`,
             }
-          : undefined
-      }
+          : undefined),
+      }}
       className={`absolute top-0 ${
-        direction === "left" ? "left-0" : "right-0"
-      } h-full ${
-        slug
-          ? `${
-              direction === "left" ? "rounded-r-xl" : "rounded-l-xl"
-            } bg-widget-100 backdrop-blur-2xl`
-          : "w-full bg-widget-90"
-      } shadow-lg transition-all duration-200 ease-out ${
-        isMenuOpen
-          ? `backdrop-blur-2xl translate-x-0`
-          : `${
-              direction === "left" ? "-translate-x-full" : "translate-x-full"
-            } invisible`
+        direction === "left"
+          ? "left-0 origin-top-left"
+          : "right-0 origin-top-right"
+      } h-full duration-200 ease-out p-2 ${
+        isMenuOpen ? `opacity-100 scale-100` : `scale-75 opacity-0 invisible blur`
       } ${className}`}
     >
-      {children}
+      <div className="rounded-[1.75rem] bg-widget-100 shadow-lg backdrop-blur-[6px] w-full h-full">
+        {children}
+      </div>
     </aside>
   );
 }

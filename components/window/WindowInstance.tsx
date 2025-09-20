@@ -1292,10 +1292,10 @@ export default function WindowInstance({ data, isActive, index }: Props) {
               borderRadius: `${data.cornerRadius ?? 2}rem`,
             }}
             className={`relative w-full h-full ${
-              !data.disableShadow ? "shadow-xl" : ""
-            } ${windowStyle.mountAnimator} ${
-              data.disableBlur ? "" : "backdrop-blur-[6px]"
-            } ${
+              data.enableEdgeHighlight ? "border-reflect-light" : ""
+            } ${!data.disableShadow ? "shadow-xl" : ""} ${
+              windowStyle.mountAnimator
+            } ${data.disableBlur ? "" : "backdrop-blur-[6px]"} ${
               isMounted || data.removeStartingAnimation
                 ? "opacity-100"
                 : "opacity-0"

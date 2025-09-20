@@ -103,23 +103,31 @@ const config: Config = {
         variants: ["responsive"],
       });
     },
-    function ({ addUtilities }: any) {
+    function ({ addUtilities, matchUtilities }: any) {
       const variants = {
         primary: {
-          "--reflect-min": "rgb(var(--color-midlight-primary) / 0.56)",
-          "--reflect-max": "rgb(var(--color-highlight-primary) / 0.4)",
+          "--reflect-min":
+            "color-mix(in srgb, rgb(var(--color-midlight-primary) / 0.5) 60%, rgb(253 253 253 / 0.5))",
+          "--reflect-max":
+            "color-mix(in srgb, rgb(var(--color-highlight-primary) / 0.2) 15%, rgb(253 253 253 / 0.2))",
         },
         saturated: {
-          "--reflect-min": "rgb(var(--color-midlight-saturated) / 0.56)",
-          "--reflect-max": "rgb(var(--color-highlight-saturated) / 0.4)",
+          "--reflect-min":
+            "color-mix(in srgb, rgb(var(--color-midlight-saturated) / 0.5) 60%, rgb(253 253 253 / 0.5))",
+          "--reflect-max":
+            "color-mix(in srgb, rgb(var(--color-highlight-saturated) / 0.2) 15%, rgb(253 253 253 / 0.2))",
         },
         pastel: {
-          "--reflect-min": "rgb(var(--color-midlight-pastel) / 0.56)",
-          "--reflect-max": "rgb(var(--color-highlight-pastel) / 0.4)",
+          "--reflect-min":
+            "color-mix(in srgb, rgb(var(--color-midlight-pastel) / 0.5) 60%, rgb(253 253 253 / 0.5))",
+          "--reflect-max":
+            "color-mix(in srgb, rgb(var(--color-highlight-pastel) / 0.2) 15%, rgb(253 253 253 / 0.2))",
         },
         light: {
-          "--reflect-min": "rgb(var(--color-midlight-light) / 0.56)",
-          "--reflect-max": "rgb(var(--color-highlight-light) / 0.4)",
+          "--reflect-min":
+            "color-mix(in srgb, rgb(var(--color-midlight-light) / 0.5) 60%, rgb(253 253 253 / 0.5))",
+          "--reflect-max":
+            "color-mix(in srgb, rgb(var(--color-highlight-light) / 0.2) 15%, rgb(253 253 253 / 0.2))",
         },
       };
 
@@ -158,8 +166,16 @@ const config: Config = {
           { ...baseEffect, ...vars },
         ])
       );
-
       addUtilities(utilities, ["responsive"]);
+
+      matchUtilities(
+        {
+          "border-reflect": (value: any) => ({
+            "--reflect-size": value,
+          }),
+        },
+        { values: {} }
+      );
     },
   ],
 };
