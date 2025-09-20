@@ -6,7 +6,6 @@ import { defaultSettings } from "@/lib/constants/defaultSettings";
 import ToastBannerReceiver from "../widgets/ToastBannerReceiver";
 import ToastDisplayLegacy from "../widgets/ToastDisplayLegacy";
 import WindowManager from "../window/WindowManager";
-import MobileDesktopEntryRenderer from "../widgets/MobileDesktopEntryRenderer";
 import { useWindow } from "../contexts/WindowContext";
 import { windowEntryMap } from "../window/WindowPickerEntry";
 
