@@ -96,10 +96,11 @@ export const windowEntryMap: Record<
         </div>
       ),
       defaultHeight: 500,
-      defaultWidth: 592,
+      defaultWidth: 500,
       minHeight: 300,
       maxHeight: 900,
-      disableWidthAdjustment: true,
+      minWidth: 320,
+      maxWidth: 800,
     },
   },
   notebook: {
