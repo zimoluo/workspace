@@ -25,7 +25,20 @@ const config: Config = {
         saturated: "rgb(var(--color-saturated) / <alpha-value>)",
         pastel: "rgb(var(--color-pastel) / <alpha-value>)",
         light: "rgb(var(--color-light) / <alpha-value>)",
+        "highlight-primary":
+          "rgb(var(--color-highlight-primary) / <alpha-value>)",
+        "highlight-saturated":
+          "rgb(var(--color-highlight-saturated) / <alpha-value>)",
+        "highlight-pastel":
+          "rgb(var(--color-highlight-pastel) / <alpha-value>)",
+        "highlight-light": "rgb(var(--color-highlight-light) / <alpha-value>)",
         highlight: "rgb(248 248 248 / <alpha-value>)",
+        "midlight-primary":
+          "rgb(var(--color-midlight-primary) / <alpha-value>)",
+        "midlight-saturated":
+          "rgb(var(--color-midlight-saturated) / <alpha-value>)",
+        "midlight-pastel": "rgb(var(--color-midlight-pastel) / <alpha-value>)",
+        "midlight-light": "rgb(var(--color-midlight-light) / <alpha-value>)",
       },
       backgroundImage: {
         page: "var(--bg-page)",
@@ -89,6 +102,64 @@ const config: Config = {
       addUtilities(newUtilities, {
         variants: ["responsive"],
       });
+    },
+    function ({ addUtilities }: any) {
+      const variants = {
+        primary: {
+          "--reflect-min": "rgb(var(--color-midlight-primary) / 0.56)",
+          "--reflect-max": "rgb(var(--color-highlight-primary) / 0.4)",
+        },
+        saturated: {
+          "--reflect-min": "rgb(var(--color-midlight-saturated) / 0.56)",
+          "--reflect-max": "rgb(var(--color-highlight-saturated) / 0.4)",
+        },
+        pastel: {
+          "--reflect-min": "rgb(var(--color-midlight-pastel) / 0.56)",
+          "--reflect-max": "rgb(var(--color-highlight-pastel) / 0.4)",
+        },
+        light: {
+          "--reflect-min": "rgb(var(--color-midlight-light) / 0.56)",
+          "--reflect-max": "rgb(var(--color-highlight-light) / 0.4)",
+        },
+      };
+
+      const baseEffect = {
+        position: "relative",
+        "--reflect-opacity": "1",
+        "--reflect-start": "1",
+        "--reflect-size": "1px",
+        "--reflect-angle": "-30deg",
+        "&::before": {
+          content: "''",
+          pointerEvents: "none",
+          userSelect: "none",
+          position: "absolute",
+          inset: "0",
+          borderRadius: "inherit",
+          padding: "var(--reflect-size, 1px)",
+          background: `linear-gradient(
+              var(--reflect-angle, 180deg),
+              var(--reflect-min) 0%,
+              var(--reflect-max) 40%,
+              var(--reflect-max) 60%,
+              var(--reflect-min) 100%
+            ),
+            linear-gradient(-15deg, var(--reflect-min) 50%, var(--reflect-max))`,
+          mask: `linear-gradient(rgba(0,0,0,var(--reflect-start)), #000) content-box,
+                 linear-gradient(rgba(0,0,0,var(--reflect-start)), #000)`,
+          maskComposite: "exclude",
+          opacity: "var(--reflect-opacity, 1)",
+        },
+      };
+
+      const utilities = Object.fromEntries(
+        Object.entries(variants).map(([name, vars]) => [
+          `.border-reflect-${name}`,
+          { ...baseEffect, ...vars },
+        ])
+      );
+
+      addUtilities(utilities, ["responsive"]);
     },
   ],
 };
