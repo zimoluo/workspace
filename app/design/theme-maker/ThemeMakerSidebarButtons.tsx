@@ -151,20 +151,20 @@ export default function ThemeMakerSidebarButtons({
   return (
     <div
       className={`relative h-12 ${
-        alwaysHorizontal ? "" : "md:h-auto md:static"
+        alwaysHorizontal ? "" : "h-auto static"
       } ${className}`}
     >
       <div
         className={`${
           noBackground ? "bg-none bg-transparent" : "bg-light bg-opacity-80"
-        } w-full ${alwaysHorizontal ? "" : "md:w-12"} h-12 ${
-          alwaysHorizontal ? "" : "md:h-full"
-        } flex ${alwaysHorizontal ? "" : "md:flex-col"} items-center ${
+        } ${alwaysHorizontal ? "w-full" : "w-12"} ${
+          alwaysHorizontal ? "h-12" : "h-full"
+        } flex ${alwaysHorizontal ? "" : "flex-col"} items-center ${
           alwaysCentered ? "justify-center" : ""
-        } px-4 absolute ${
-          alwaysHorizontal ? "" : "md:px-0 md:py-4 md:static"
-        } gap-4 overflow-x-auto overflow-y-hidden ${
-          alwaysHorizontal ? "" : "md:overflow-x-hidden md:overflow-y-auto"
+        } ${alwaysHorizontal ? "px-4 absolute" : "px-0 py-4 static"} gap-4 ${
+          alwaysHorizontal
+            ? "overflow-x-auto overflow-y-hidden"
+            : "overflow-x-hidden overflow-y-auto"
         }`}
       >
         {sidebarOptions.map((option, index) => (

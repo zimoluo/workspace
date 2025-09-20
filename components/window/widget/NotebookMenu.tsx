@@ -45,12 +45,12 @@ export default function NotebookMenu() {
     <div
       ref={menuRef}
       className={`${
-        isMenuOpen ? "" : "md:hidden"
-      } overflow-x-auto md:overflow-y-auto bg-light bg-opacity-80 rounded-2xl pl-2.5 pr-0 py-2.5 md:px-2.5 md:py-1 shadow-lg ${
+        isMenuOpen ? "" : "hidden"
+      } overflow-y-auto bg-light bg-opacity-80 rounded-2xl px-2.5 py-1 shadow-lg ${
         notebookStyle.menuContainer
       }`}
     >
-      <div className={`${notebookStyle.menu} w-auto md:w-48`}>
+      <div className={`${notebookStyle.menu} w-48`}>
         {notebookData.map((notebook, index) => {
           const isSelected = index === notebookIndex;
           return (
@@ -60,7 +60,7 @@ export default function NotebookMenu() {
                 isSelected
                   ? "bg-saturated bg-opacity-80 text-light"
                   : "bg-pastel bg-opacity-50"
-              } w-48 md:w-full h-14 rounded-lg text-start pt-3 pb-1.5 px-3 flex flex-col`}
+              } w-full h-14 rounded-lg text-start pt-3 pb-1.5 px-3 flex flex-col`}
               onClick={() =>
                 updateSettings({ ...settings, notebookIndex: index })
               }
@@ -77,12 +77,12 @@ export default function NotebookMenu() {
           );
         })}
         <div
-          className="md:flex-grow w-0.5 md:w-0 pointer-events-none select-none touch-none"
+          className="flex-grow w-0 pointer-events-none select-none touch-none"
           aria-hidden="true"
         />
       </div>
       <div
-        className="h-2 w-0 pointer-events-none select-none touch-none hidden md:block"
+        className="h-2 w-0 pointer-events-none select-none touch-none"
         aria-hidden="true"
       />
     </div>

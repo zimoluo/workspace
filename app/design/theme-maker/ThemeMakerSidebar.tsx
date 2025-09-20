@@ -20,19 +20,19 @@ export default function ThemeMakerSidebar({ children }: Props) {
   );
 
   return (
-    <div className="shrink-0 md:h-full flex flex-col md:flex-row">
+    <div className="shrink-0 h-full flex flex-row">
       <div
-        className={`md:h-full shrink-0 flex-grow ${sidebarStyle.colorWrapper} ${
+        className={`h-full shrink-0 flex-grow ${sidebarStyle.colorWrapper} ${
           isCollapsed ? sidebarStyle.collapsed : sidebarStyle.expanded
         }`}
       >
         <div
           style={colorPreviewThemeStyle}
-          className="md:h-full relative overflow-hidden"
+          className="h-full relative overflow-hidden"
         >
           <div
-            className={`md:h-full ${
-              isCollapsed ? "md:pointer-events-none md:select-none" : ""
+            className={`h-full ${
+              isCollapsed ? "pointer-events-none select-none" : ""
             }`}
           >
             {children}

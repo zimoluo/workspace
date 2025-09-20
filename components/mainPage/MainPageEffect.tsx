@@ -72,7 +72,7 @@ export default function MainPageEffect({ children }: Props) {
 
   return (
     <>
-      <MobileDesktopEntryRenderer desktop={<WindowManager />} />
+      <WindowManager />
       {toastComponentMap[settings.notificationStyle]}
       {children}
     </>
