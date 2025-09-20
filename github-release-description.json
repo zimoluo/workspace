@@ -294,5 +294,6 @@
     "# Changes",
     "",
     "Redesigned much of the interface, bringing smoothness, translucency, and consistency to the layout."
-  ]
+  ],
+  "v1.12.1": ["# Changes", "", "Fixed a minor rendering issue."]
 }

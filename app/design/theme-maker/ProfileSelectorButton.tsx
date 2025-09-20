@@ -81,7 +81,7 @@ export default function ProfileSelectorButton({
         }`}
       />
       <button
-        className="rounded-2xl bg-light flex w-16 h-auto aspect-square shadow-md transition-colors duration-300 ease-out relative"
+        className="rounded-2xl bg-light flex w-16 h-auto aspect-square shadow-xs transition-colors duration-300 ease-out relative"
         onClick={safelyChangeIndex}
       >
         <div
