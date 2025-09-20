@@ -342,16 +342,16 @@ export default function MenuEntriesSettings({
           checkCondition(entry.condition)
         );
         return (
-          <Fragment
+          <div
             key={`${section.title || "settings-section"}-${sectionIndex}`}
+            className="rounded-2xl w-full bg-light bg-opacity-65 shadow-lg px-6 pt-2 pb-6 mb-4 text-lg grid grid-cols-1 gap-4"
           >
             {section.title && (
               <p className="text-lg font-bold mb-2 mt-2">{section.title}</p>
             )}
             {filteredEntries.map((entry, entryIndex) => {
               const isLastEntry = entryIndex === filteredEntries.length - 1;
-              const showDivider =
-                !isLastEntry || sectionIndex !== config.length - 1;
+              const showDivider = !isLastEntry;
 
               switch (entry.type) {
                 case "flip":
@@ -428,7 +428,7 @@ export default function MenuEntriesSettings({
                   return null;
               }
             })}
-          </Fragment>
+          </div>
         );
       })}
     </>

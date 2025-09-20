@@ -10,9 +10,7 @@ export default function MenuEntriesLayout() {
         <MenuEntriesTitle />
       </div>
 
-      <div className="rounded-2xl w-full bg-light bg-opacity-65 shadow-lg px-6 pt-4 pb-6 mb-4 text-lg grid grid-cols-1 gap-4">
-        <MenuEntriesSettings />
-      </div>
+      <MenuEntriesSettings />
 
       <div className="rounded-2xl w-full bg-light bg-opacity-65 shadow-lg px-6 py-0 mb-4 text-lg">
         <MenuEntriesUtility />
