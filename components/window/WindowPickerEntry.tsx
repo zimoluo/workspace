@@ -53,7 +53,6 @@ export const windowEntryMap: Record<
       disableBlur: true,
       cornerRadius: 9999,
       allowOverflow: true,
-      disableEdgeHighlight: true,
     },
   },
   zimoWebInWindow: {

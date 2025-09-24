@@ -107,25 +107,25 @@ const config: Config = {
       const variants = {
         primary: {
           "--reflect-min":
-            "color-mix(in srgb, color-mix(in srgb, rgb(var(--color-highlight-primary) / 0.05) 60%, rgb(248 248 248 / 0.05)) 80%, rgb(var(--color-midlight-primary) / 0.05))",
+            "color-mix(in srgb, color-mix(in srgb, rgb(var(--color-highlight-primary) / 0.025) 60%, rgb(248 248 248 / 0.025)) 80%, rgb(var(--color-midlight-primary) / 0.025))",
           "--reflect-max":
             "color-mix(in srgb, rgb(var(--color-highlight-primary) / 0.5) 15%, rgb(253 253 253 / 0.5))",
         },
         saturated: {
           "--reflect-min":
-            "color-mix(in srgb, color-mix(in srgb, rgb(var(--color-highlight-saturated) / 0.05) 60%, rgb(248 248 248 / 0.05)) 80%, rgb(var(--color-midlight-saturated) / 0.05))",
+            "color-mix(in srgb, color-mix(in srgb, rgb(var(--color-highlight-saturated) / 0.025) 60%, rgb(248 248 248 / 0.025)) 80%, rgb(var(--color-midlight-saturated) / 0.025))",
           "--reflect-max":
             "color-mix(in srgb, rgb(var(--color-highlight-saturated) / 0.5) 15%, rgb(253 253 253 / 0.5))",
         },
         pastel: {
           "--reflect-min":
-            "color-mix(in srgb, color-mix(in srgb, rgb(var(--color-highlight-pastel) / 0.05) 60%, rgb(248 248 248 / 0.05)) 80%, rgb(var(--color-midlight-pastel) / 0.05))",
+            "color-mix(in srgb, color-mix(in srgb, rgb(var(--color-highlight-pastel) / 0.025) 60%, rgb(248 248 248 / 0.025)) 80%, rgb(var(--color-midlight-pastel) / 0.025))",
           "--reflect-max":
             "color-mix(in srgb, rgb(var(--color-highlight-pastel) / 0.5) 15%, rgb(253 253 253 / 0.5))",
         },
         light: {
           "--reflect-min":
-            "color-mix(in srgb, color-mix(in srgb, rgb(var(--color-highlight-light) / 0.05) 60%, rgb(248 248 248 / 0.05)) 80%, rgb(var(--color-midlight-light) / 0.05))",
+            "color-mix(in srgb, color-mix(in srgb, rgb(var(--color-highlight-light) / 0.025) 60%, rgb(248 248 248 / 0.025)) 80%, rgb(var(--color-midlight-light) / 0.025))",
           "--reflect-max":
             "color-mix(in srgb, rgb(var(--color-highlight-light) / 0.5) 15%, rgb(253 253 253 / 0.5))",
         },

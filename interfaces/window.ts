@@ -13,7 +13,7 @@ interface WindowData {
   disableWidthAdjustment?: boolean;
   disableHeightAdjustment?: boolean;
   disableExpandToScreen?: boolean;
-  disableEdgeHighlight?: boolean;
+  enableEdgeHighlight?: boolean;
   cornerRadius?: number;
   allowOverflow?: boolean;
   disableBlur?: boolean;
