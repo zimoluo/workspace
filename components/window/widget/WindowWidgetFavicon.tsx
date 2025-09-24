@@ -167,6 +167,7 @@ export default function WindowWidgetFavicon({
         >
           <CrossIcon className="w-full h-full transition-transform duration-300 ease-out hover:scale-110" />
         </button>
+        <div className="absolute top-0 left-0 w-full h-full pointer-events-none select-none rounded-3xl border-reflect-saturated -translate-y-full" />
       </div>
     </div>
   );
