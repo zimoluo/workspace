@@ -221,8 +221,8 @@ const WindowDebugger = () => {
     allowOverflow: useBooleanInput("allowOverflow", windowData, setDataAndSave),
     disableBlur: useBooleanInput("disableBlur", windowData, setDataAndSave),
     disableShadow: useBooleanInput("disableShadow", windowData, setDataAndSave),
-    enableEdgeHighlight: useBooleanInput(
-      "enableEdgeHighlight",
+    disableEdgeHighlight: useBooleanInput(
+      "disableEdgeHighlight",
       windowData,
       setDataAndSave
     ),
