@@ -218,6 +218,7 @@ export const windowEntryMap: Record<
       cornerRadius: 0.25,
       layer: 1,
       countsToLimit: false,
+      enableEdgeHighlight: true,
     },
   },
 };

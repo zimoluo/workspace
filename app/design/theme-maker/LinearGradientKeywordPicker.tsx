@@ -77,7 +77,7 @@ export default function LinearGradientKeywordPicker() {
     <div className="w-full h-full flex items-center justify-center p-4">
       <div className="w-full h-full flex flex-col items-center justify-end gap-4">
         <p className="text-center">Orientation</p>
-        <div className="w-auto h-1/2 aspect-square bg-pastel bg-opacity-80 shadow-sm rounded-lg relative flex items-center justify-center">
+        <div className="w-auto h-1/2 aspect-square bg-pastel bg-opacity-65 shadow-sm rounded-lg relative flex items-center justify-center">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full flex items-center justify-center">
             <div
               className="w-2/3 h-auto flex transition-transform duration-300"
@@ -149,7 +149,7 @@ export default function LinearGradientKeywordPicker() {
             <select
               value={linearHorizontalOrientation}
               onChange={handleDropdownChange}
-              className={`bg-none border-none appearance-none border-0 bg-pastel bg-opacity-80 shadow-sm flex-grow w-full h-full rounded-md pl-1 pr-4 py-0.5 text-start ${editorStyle.input} relative`}
+              className={`bg-none border-none appearance-none border-0 bg-pastel bg-opacity-65 shadow-sm flex-grow w-full h-full rounded-md pl-1 pr-4 py-0.5 text-start ${editorStyle.input} relative`}
             >
               <option value="left">Left</option>
               <option value="right">Right</option>
@@ -165,7 +165,7 @@ export default function LinearGradientKeywordPicker() {
             <select
               value={linearVerticalOrientation}
               onChange={handleDropdownChange}
-              className={`bg-none border-none appearance-none border-0 bg-pastel bg-opacity-80 shadow-sm flex-grow w-full h-full rounded-md pl-1 pr-4 py-0.5 text-start ${editorStyle.input} relative`}
+              className={`bg-none border-none appearance-none border-0 bg-pastel bg-opacity-65 shadow-sm flex-grow w-full h-full rounded-md pl-1 pr-4 py-0.5 text-start ${editorStyle.input} relative`}
             >
               <option value="top">Top</option>
               <option value="bottom">Bottom</option>

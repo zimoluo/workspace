@@ -88,7 +88,7 @@ const NumberInput = ({
         type="number"
         value={value}
         onChange={onChange}
-        className={`w-full py-2 px-3 border border-pastel border-opacity-80 rounded-full bg-none bg-light bg-opacity-80 placeholder:text-saturated placeholder:text-opacity-50 ${debuggerStyle.input}`}
+        className={`w-full py-2 px-3 border border-pastel border-opacity-80 rounded-full bg-none bg-light bg-opacity-65 placeholder:text-saturated placeholder:text-opacity-50 ${debuggerStyle.input}`}
         placeholder={required ? "Required" : "Optional"}
       />
       {!required && isSet && onClear && (
@@ -118,7 +118,7 @@ const BooleanInput = ({
       <select
         value={value === undefined ? "" : String(value)}
         onChange={onChange}
-        className="w-full py-2 px-3 appearance-none border border-pastel border-opacity-80 rounded-full bg-none bg-light bg-opacity-80 relative cursor-pointer"
+        className="w-full py-2 px-3 appearance-none border border-pastel border-opacity-80 rounded-full bg-none bg-light bg-opacity-65 relative cursor-pointer"
       >
         <option value="">Not set</option>
         <option value="true">True</option>
@@ -302,7 +302,7 @@ const WindowDebugger = () => {
               type="text"
               value={windowData.uniqueId || "Not set"}
               disabled
-              className={`w-full py-2 px-3 border border-pastel border-opacity-80 rounded-full bg-none bg-light bg-opacity-80 text-saturated ${debuggerStyle.input}`}
+              className={`w-full py-2 px-3 border border-pastel border-opacity-80 rounded-full bg-none bg-light bg-opacity-65 text-saturated ${debuggerStyle.input}`}
             />
           </div>
 
@@ -319,7 +319,7 @@ const WindowDebugger = () => {
                   onChange={(e) =>
                     setDataAndSave({ [key]: e.target.value || undefined })
                   }
-                  className={`w-full py-2 px-3 border border-pastel border-opacity-80 rounded-full bg-none bg-light bg-opacity-80 placeholder:text-saturated placeholder:text-opacity-50 ${debuggerStyle.input}`}
+                  className={`w-full py-2 px-3 border border-pastel border-opacity-80 rounded-full bg-none bg-light bg-opacity-65 placeholder:text-saturated placeholder:text-opacity-50 ${debuggerStyle.input}`}
                   placeholder="Optional"
                 />
                 {windowData[key] && (
@@ -353,7 +353,7 @@ const WindowDebugger = () => {
                       : undefined,
                   })
                 }
-                className={`w-full py-2 px-3 border border-pastel border-opacity-80 rounded-full bg-none bg-light bg-opacity-80 placeholder:text-saturated placeholder:text-opacity-50 ${debuggerStyle.input}`}
+                className={`w-full py-2 px-3 border border-pastel border-opacity-80 rounded-full bg-none bg-light bg-opacity-65 placeholder:text-saturated placeholder:text-opacity-50 ${debuggerStyle.input}`}
                 placeholder="Optional"
               />
               {windowData.specificDataKeyToBeSaved?.length && (
@@ -384,7 +384,7 @@ const WindowDebugger = () => {
                       : undefined,
                   })
                 }
-                className={`w-full py-2 px-3 border border-pastel border-opacity-80 rounded-full bg-none bg-light bg-opacity-80 placeholder:text-saturated placeholder:text-opacity-50 ${debuggerStyle.input}`}
+                className={`w-full py-2 px-3 border border-pastel border-opacity-80 rounded-full bg-none bg-light bg-opacity-65 placeholder:text-saturated placeholder:text-opacity-50 ${debuggerStyle.input}`}
                 placeholder="Optional"
               />
               {windowData.tags?.length && (
@@ -415,7 +415,7 @@ const WindowDebugger = () => {
 
         <div className="mt-8">
           <h3 className="text-lg font-bold mb-2">Raw Data</h3>
-          <div className="p-4 border border-pastel border-opacity-80 rounded-3xl bg-none bg-light bg-opacity-80">
+          <div className="p-4 border border-pastel border-opacity-80 rounded-3xl bg-none bg-light bg-opacity-65">
             <pre className="whitespace-pre-wrap break-all font-mono">
               {JSON.stringify({ windowData, windowState }, null, 2)}
             </pre>

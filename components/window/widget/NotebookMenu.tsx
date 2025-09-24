@@ -46,7 +46,7 @@ export default function NotebookMenu() {
       ref={menuRef}
       className={`${
         isMenuOpen ? "" : "hidden"
-      } overflow-y-auto bg-light bg-opacity-80 rounded-2xl px-2.5 py-1 shadow-lg ${
+      } overflow-y-auto bg-light bg-opacity-65 rounded-2xl px-2.5 py-1 shadow-lg border-reflect-light ${
         notebookStyle.menuContainer
       }`}
     >

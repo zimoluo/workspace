@@ -9,7 +9,7 @@ export default function ColorCodePicker() {
 
   return (
     <div
-      className={`w-full h-full bg-light bg-opacity-80 rounded-xl p-4 ${codeStyle.pickerGrid}`}
+      className={`w-full h-full bg-light bg-opacity-65 rounded-xl p-4 ${codeStyle.pickerGrid}`}
     >
       {codeInputDataArray.map((data: ColorCodeData, index: number) => {
         return <ColorCodeInputRow {...data} key={index} />;

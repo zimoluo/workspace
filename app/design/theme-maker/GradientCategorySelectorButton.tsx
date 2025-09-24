@@ -31,7 +31,7 @@ export default function GradientCategorySelectorButton({
 
   return (
     <button
-      className={`rounded-xl relative ${selectorStyle.button} bg-light bg-opacity-80 shadow-md flex items-center justify-center overflow-hidden`}
+      className={`rounded-xl relative ${selectorStyle.button} bg-light bg-opacity-65 shadow-md flex items-center justify-center overflow-hidden`}
       onClick={() => {
         setSelectedGradientCategory(category);
       }}

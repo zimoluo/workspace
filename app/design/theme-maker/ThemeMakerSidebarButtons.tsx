@@ -156,7 +156,7 @@ export default function ThemeMakerSidebarButtons({
     >
       <div
         className={`${
-          noBackground ? "bg-none bg-transparent" : "bg-light bg-opacity-80"
+          noBackground ? "bg-none bg-transparent" : "bg-light bg-opacity-65"
         } ${alwaysHorizontal ? "w-full" : "w-12"} ${
           alwaysHorizontal ? "h-12" : "h-full"
         } flex ${alwaysHorizontal ? "" : "flex-col"} items-center ${

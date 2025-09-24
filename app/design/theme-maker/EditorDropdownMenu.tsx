@@ -66,7 +66,7 @@ export default function EditorDropdownMenu<T>({
 
   return (
     <div
-      className="rounded-xl bg-light bg-opacity-80 shadow-lg px-3 py-2 h-10 flex items-center relative cursor-pointer"
+      className="rounded-xl bg-light bg-opacity-65 shadow-lg px-3 py-2 h-10 flex items-center relative cursor-pointer"
       ref={dropdownRef}
       onClick={expandMenu}
     >

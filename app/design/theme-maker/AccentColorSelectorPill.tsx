@@ -29,7 +29,7 @@ export default function AccentColorSelectorPill({
 
   return (
     <button
-      className={`bg-light bg-opacity-80 shadow-md rounded-full h-8 relative ${className}`}
+      className={`bg-light bg-opacity-65 shadow-md rounded-full h-8 relative ${className}`}
       onClick={() => {
         setSelectedAccent(accentType);
       }}

@@ -25,7 +25,7 @@ export default function ColorEditorModeSelector() {
 
   return (
     <div
-      className={`${selectorStyle.selector} rounded-xl bg-light bg-opacity-80 shadow-lg flex items-center gap-3`}
+      className={`${selectorStyle.selector} rounded-xl bg-light bg-opacity-65 shadow-lg flex items-center gap-3`}
     >
       {sidebarConfig.map((mode, index) => {
         return <Fragment key={index}>{modeComponentMap[mode]}</Fragment>;

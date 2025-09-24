@@ -42,7 +42,7 @@ export default function OutlineCustomInput() {
 
   return (
     <div
-      className={`bg-light bg-opacity-80 rounded-xl shadow-lg w-full ${
+      className={`bg-light bg-opacity-65 rounded-xl shadow-lg w-full ${
         selectorStyle.input
       } items-center justify-center gap-3 px-4 h-13 ${
         isDisabled ? "select-none pointer-events-none" : ""
@@ -58,7 +58,7 @@ export default function OutlineCustomInput() {
       </p>
       <div className="flex-grow">
         <input
-          className={`bg-none bg-pastel bg-opacity-80 shadow-sm w-full h-auto rounded-md px-1 py-0.5 text-center transition-opacity duration-300 ease-out ${
+          className={`bg-none bg-pastel bg-opacity-65 shadow-sm w-full h-auto rounded-md px-1 py-0.5 text-center transition-opacity duration-300 ease-out ${
             isDisabled ? "opacity-50" : "opacity-100"
           }`}
           disabled={isDisabled}
