@@ -310,5 +310,6 @@
     "# Changes",
     "",
     "Further improvements to certain visual elements."
-  ]
+  ],
+  "v1.12.5": ["# Changes", "", "Fixed certain rendering issues."]
 }
