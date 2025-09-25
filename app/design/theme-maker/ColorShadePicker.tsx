@@ -25,7 +25,7 @@ export default function ColorShadePicker() {
 
   return (
     <div
-      className={`${shadeStyle.grid} w-full h-full rounded-xl overflow-hidden`}
+      className={`${shadeStyle.grid} w-full h-full rounded-2xl overflow-hidden`}
     >
       {storedShadeMap.map((hexColor, index) => {
         return (

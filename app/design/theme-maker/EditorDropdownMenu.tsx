@@ -66,7 +66,7 @@ export default function EditorDropdownMenu<T>({
 
   return (
     <div
-      className="rounded-xl bg-light bg-opacity-65 shadow-lg px-3 py-2 h-10 flex items-center relative cursor-pointer"
+      className="rounded-2xl bg-light bg-opacity-65 shadow-lg px-3 py-2 h-10 flex items-center relative cursor-pointer"
       ref={dropdownRef}
       onClick={expandMenu}
     >
@@ -82,7 +82,7 @@ export default function EditorDropdownMenu<T>({
         <CircledEllipsisIcon className="h-5 w-auto aspect-square" />
       </button>
       <div
-        className={`absolute z-[5] w-full left-0 overflow-hidden max-h-max rounded-xl cursor-auto shadow-lg top-0 transition-opacity ease-out ${
+        className={`absolute z-[5] w-full left-0 overflow-hidden max-h-max rounded-2xl cursor-auto shadow-lg top-0 transition-opacity ease-out ${
           isExpanded
             ? "opacity-100 duration-150"
             : "pointer-events-none select-none opacity-0 duration-300"

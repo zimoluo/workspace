@@ -42,6 +42,7 @@ export default function GradientPalettePicker() {
       onChange={handleColorChange}
       onMouseDown={handleStartDragging}
       onTouchStart={handleStartTouching}
+      className="rounded-2xl"
     />
   );
 }

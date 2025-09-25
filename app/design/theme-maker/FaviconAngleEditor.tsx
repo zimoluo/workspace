@@ -30,7 +30,7 @@ export default function FaviconAngleEditor() {
   });
 
   return (
-    <div className="rounded-xl bg-light bg-opacity-65 shadow-lg h-[7.5rem] p-4 flex items-center justify-center">
+    <div className="rounded-2xl bg-light bg-opacity-65 shadow-lg h-[7.5rem] p-4 flex items-center justify-center">
       <div className="w-auto aspect-square h-full relative flex">
         <CircularSlider
           startPosition={90}

@@ -22,7 +22,7 @@ export default function CircleSizeDropdown() {
       <select
         value={selectedLayer.sizeKeyword ?? "farthest-side"}
         onChange={handleChange}
-        className={`bg-none border-none appearance-none border-0 bg-pastel bg-opacity-65 shadow-sm flex-grow w-full h-full rounded-md pl-1 pr-4 py-0.5 text-start ${editorStyle.input} relative`}
+        className={`bg-none border-none appearance-none border-0 bg-pastel bg-opacity-65 shadow-sm flex-grow w-full h-full rounded-xl pl-1 pr-4 py-0.5 text-start ${editorStyle.input} relative`}
       >
         <option value="farthest-corner">Farthest corner</option>
         <option value="farthest-side">Farthest side</option>

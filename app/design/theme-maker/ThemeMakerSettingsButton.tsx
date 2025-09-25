@@ -59,7 +59,7 @@ export default function ThemeMakerSettingsButton() {
     appendWindow({
       content: (
         <div className="w-full h-full bg-light bg-opacity-80 overflow-y-auto">
-          <div className="px-8 pb-6 pt-6 text-xl grid grid-cols-1 gap-4">
+          <div className="p-4 grid grid-cols-1 gap-4">
             {themeMakerSpecificSettingsPanel}
           </div>
         </div>

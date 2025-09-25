@@ -7,7 +7,7 @@ import FaviconEditorArea from "./FaviconEditorArea";
 
 export default function ThemeEditorFrame() {
   return (
-    <div className="flex-grow overflow-y-auto px-6 py-6">
+    <div className="flex-grow overflow-y-auto px-4 py-5">
       <SectionTextTitle>Profiles</SectionTextTitle>
       <div className="my-3">
         <ThemeProfileSelector

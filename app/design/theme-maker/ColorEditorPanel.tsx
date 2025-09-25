@@ -43,7 +43,7 @@ export default function ColorEditorPanel({
             hasAlpha
               ? "theme-editor-color-picker-alpha"
               : "theme-editor-color-picker-standard"
-          } rounded-xl shadow-lg`}
+          } rounded-2xl shadow-lg`}
         >
           <AccentColorPicker
             palette={palettePicker}

@@ -19,7 +19,7 @@ export default function SizePosInputBox({
       <input
         value={storedValue}
         onChange={handleChange}
-        className={`bg-none bg-pastel bg-opacity-65 shadow-sm w-full h-auto rounded-md px-1 py-0.5 text-center ${editorStyle.input}`}
+        className={`bg-none bg-pastel bg-opacity-65 shadow-sm w-full h-auto rounded-xl px-1 py-0.5 text-center ${editorStyle.input}`}
       />
     </div>
   );

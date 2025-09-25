@@ -57,6 +57,7 @@ export default function AccentPalettePicker() {
       onChange={isSite ? handleSiteColorChange : handleAccentColorChange}
       onMouseDown={handleStartDragging}
       onTouchStart={handleStartTouching}
+      className="rounded-2xl"
     />
   );
 }
