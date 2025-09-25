@@ -259,11 +259,13 @@ const entryDivider = (
 interface Props {
   config?: typeof settingsConfig;
   ignoreConditions?: boolean;
+  headless?: boolean;
 }
 
 export default function MenuEntriesSettings({
   config = settingsConfig,
   ignoreConditions = false,
+  headless = false,
 }: Props) {
   const { settings, updateSettings } = useSettings();
   const { windows } = useWindow();
@@ -344,7 +346,11 @@ export default function MenuEntriesSettings({
         return (
           <div
             key={`${section.title || "settings-section"}-${sectionIndex}`}
-            className="rounded-3xl w-full bg-light bg-opacity-65 shadow-lg px-6 pt-2 pb-6 mb-4 text-lg grid grid-cols-1 gap-4 border-reflect-light"
+            className={
+              headless
+                ? "grid grid-cols-1 gap-4"
+                : "rounded-3xl w-full bg-light bg-opacity-65 shadow-lg px-6 pt-2 pb-6 mb-4 text-lg grid grid-cols-1 gap-4 border-reflect-light"
+            }
           >
             {section.title && (
               <p className="text-lg font-bold mb-2 mt-2">{section.title}</p>

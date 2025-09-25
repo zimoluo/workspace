@@ -9,6 +9,7 @@ const contextKey = "theme-maker-specific-settings";
 
 const themeMakerSpecificSettingsPanel = (
   <MenuEntriesSettings
+    headless={true}
     config={[
       {
         entries: [
@@ -65,12 +66,12 @@ export default function ThemeMakerSettingsButton() {
         </div>
       ),
       contextKey,
-      defaultHeight: 234,
-      defaultWidth: 440,
+      defaultHeight: 206,
+      defaultWidth: 420,
       minWidth: 350,
-      minHeight: 234,
+      minHeight: 206,
       maxWidth: 440,
-      maxHeight: 266,
+      maxHeight: 256,
       defaultCenterX:
         (buttonRef.current?.getBoundingClientRect().left ?? 0) +
         (buttonRef.current?.getBoundingClientRect().width ?? 0) / 2,
