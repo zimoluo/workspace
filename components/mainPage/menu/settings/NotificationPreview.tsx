@@ -41,7 +41,7 @@ const MobileBanner = () => {
 const Toast = () => {
   return (
     <div
-      className={`absolute bg-saturated rounded-full -translate-x-1/2 left-1/2 ${notificationPreviewStyle.toast}`}
+      className={`absolute bg-saturated rounded-full origin-bottom-left -translate-x-1/2 left-1/2 ${notificationPreviewStyle.toast}`}
     />
   );
 };

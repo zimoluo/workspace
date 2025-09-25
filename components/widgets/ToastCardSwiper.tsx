@@ -291,6 +291,7 @@ export default function ToastCardSwiper({
           }%, ${!isHorizontal ? shift * -directionMultiplier : 0}%)`,
           opacity: toastOpacity,
           transition: toastTransition,
+          filter: `blur(${(1 - toastOpacity) * 6}px)`,
         }}
       >
         {children}
