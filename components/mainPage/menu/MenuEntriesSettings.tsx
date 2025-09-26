@@ -349,7 +349,7 @@ export default function MenuEntriesSettings({
             className={
               headless
                 ? "grid grid-cols-1 gap-4"
-                : "rounded-3xl w-full bg-light bg-opacity-65 shadow-lg px-6 pt-2 pb-6 mb-4 text-lg grid grid-cols-1 gap-4 border-reflect-light"
+                : "rounded-3xl w-full bg-light bg-opacity-65 shadow-lg px-6 pt-2 pb-6 mb-4 text-lg grid grid-cols-1 gap-4 border border-highlight-light border-opacity-15"
             }
           >
             {section.title && (

@@ -12,7 +12,7 @@ export default function AccentColorEditor() {
         className={`flex items-center justify-center w-full ${wrapperStyle.wrapper}`}
       >
         <div
-          className={`bg-pastel bg-opacity-40 backdrop-blur-lg rounded-3xl border-reflect-pastel shadow-lg p-4 ${editorStyle.container}`}
+          className={`bg-pastel bg-opacity-40 backdrop-blur-lg rounded-3xl border border-highlight-pastel border-opacity-15 shadow-lg p-4 ${editorStyle.container}`}
         >
           <div className={`${pillsStyle.pills} shrink-0`}>
             {(

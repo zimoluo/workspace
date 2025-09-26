@@ -206,7 +206,7 @@ export default function SignalGeneratorInterface(preset: Partial<ToastEntry>) {
 
   return (
     <div className={`w-full h-full ${signalStyle.grid}`}>
-      <div className="grid px-6 py-0 rounded-2xl bg-light bg-opacity-65 h-full overflow-hidden items-center shadow-lg border-reflect-light">
+      <div className="grid px-6 py-0 rounded-2xl bg-light bg-opacity-65 h-full overflow-hidden items-center shadow-lg border border-highlight-light border-opacity-15">
         <div
           className={`${signalStyle.selector}`}
           ref={listRef}
@@ -240,7 +240,7 @@ export default function SignalGeneratorInterface(preset: Partial<ToastEntry>) {
         </div>
       </div>
       <div className={`w-full h-full ${signalStyle.textboxGrid}`}>
-        <div className="w-full h-12 rounded-full border-reflect-light bg-light bg-opacity-65">
+        <div className="w-full h-12 rounded-full border border-highlight-light border-opacity-15 bg-light bg-opacity-65">
           <input
             className="bg-transparent w-full h-12 bg-none py-1.5 px-4 font-bold text-xl rounded-full placeholder:text-saturated placeholder:text-opacity-75 shadow-lg relative"
             placeholder="Title"
@@ -250,9 +250,9 @@ export default function SignalGeneratorInterface(preset: Partial<ToastEntry>) {
             }
           />
         </div>
-        <div className="w-full h-full rounded-2xl border-reflect-light bg-light bg-opacity-65">
+        <div className="w-full h-full rounded-2xl border border-highlight-light border-opacity-15 bg-light bg-opacity-65">
           <textarea
-            className="bg-transparent resize-none bg-none px-4 py-3 text-lg rounded-2xl w-full h-full placeholder:text-saturated placeholder:text-opacity-75 shadow-lg border-reflect-light"
+            className="bg-transparent resize-none bg-none px-4 py-3 text-lg rounded-2xl w-full h-full placeholder:text-saturated placeholder:text-opacity-75 shadow-lg"
             placeholder="Content..."
             value={toastEntry.description}
             onChange={(e) =>
@@ -265,7 +265,7 @@ export default function SignalGeneratorInterface(preset: Partial<ToastEntry>) {
         </div>
       </div>
       <button
-        className={`bg-light bg-opacity-65 w-24 h-full rounded-2xl flex items-center justify-center shadow-lg border-reflect-light ${
+        className={`bg-light bg-opacity-65 w-24 h-full rounded-2xl flex items-center justify-center shadow-lg border border-highlight-light border-opacity-15 ${
           toastEntry.title ? "" : "pointer-events-none"
         }`}
         onClick={() => {

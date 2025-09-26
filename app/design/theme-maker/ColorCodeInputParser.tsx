@@ -18,7 +18,7 @@ export default function ColorCodeInputParser({
 
   return (
     <input
-      className={`rounded-md bg-pastel bg-opacity-65 shadow-sm ${codeStyle.inputLine} px-1.5 w-full text-center`}
+      className={`rounded-xl bg-pastel bg-opacity-65 shadow-sm ${codeStyle.inputLine} px-1.5 w-full text-center`}
       value={storedValue}
       onChange={handleChange}
     />

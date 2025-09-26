@@ -1319,6 +1319,14 @@ export default function WindowInstance({ data, isActive, index }: Props) {
               {data.content}
             </WindowActionProvider>
           </div>
+          {!data.enableEdgeHighlight && (
+            <div
+              style={{
+                borderRadius: `${data.cornerRadius ?? 2}rem`,
+              }}
+              className="absolute left-0 top-0 w-full h-full pointer-events-none select-none border border-highlight-light border-opacity-15"
+            />
+          )}
           <div
             className={`absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-4 h-0 flex items-center justify-center w-full ${
               windowStyle.mountAnimator
