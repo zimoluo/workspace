@@ -311,5 +311,6 @@
     "",
     "Further improvements to certain visual elements."
   ],
-  "v1.12.5": ["# Changes", "", "Fixed certain rendering issues."]
+  "v1.12.5": ["# Changes", "", "Fixed certain rendering issues."],
+  "v1.12.6": ["# Changes", "", "Further adjusted the design of most elements."]
 }
