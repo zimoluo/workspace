@@ -95,10 +95,12 @@ export default function WindowSlideMenuWrapper({
           ? "left-0 origin-top-left"
           : "right-0 origin-top-right"
       } h-full duration-200 ease-out p-2 ${
-        isMenuOpen ? `opacity-100 scale-100` : `scale-75 opacity-0 invisible blur`
+        isMenuOpen
+          ? `opacity-100 scale-100`
+          : `scale-75 opacity-0 invisible blur`
       } ${className}`}
     >
-      <div className="rounded-[1.75rem] bg-widget-100 shadow-lg backdrop-blur-[6px] w-full h-full">
+      <div className="rounded-[1.75rem] bg-widget-100 border border-highlight-light border-opacity-15 shadow-lg backdrop-blur-[6px] w-full h-full">
         {children}
       </div>
     </aside>
