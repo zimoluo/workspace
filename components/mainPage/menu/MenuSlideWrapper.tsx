@@ -107,19 +107,6 @@ export default function MenuSlideWrapper({
       >
         <div className="w-full h-full">{children}</div>
       </aside>
-      <div
-        style={{
-          transition:
-            "transform 0.3s cubic-bezier(.37,.01,.11,.93), opacity 0.2s ease-out",
-          maskImage:
-            "linear-gradient(to bottom, black 0%, black 2.6rem, transparent 3.8rem, transparent calc(100% - 2.9rem), black calc(100% - 2.4rem), black 100%)",
-        }}
-        className={`fixed top-0 right-0 z-40 h-dynamic-screen ${
-          menuStyle.menuBlurDimension
-        } backdrop-blur-[4px] ${
-          isOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-16"
-        } pointer-events-none select-none`}
-      />
     </>
   );
 }
