@@ -5,7 +5,7 @@ import MenuEntriesUtility from "./MenuEntriesUtility";
 
 export default function MenuEntriesLayout() {
   return (
-    <div className="h-full w-full overflow-y-auto px-4 pb-4 rounded-[2rem]">
+    <div className="h-full w-full overflow-y-auto px-4 pb-4 rounded-[2.5rem]">
       <div className="rounded-full w-full bg-light bg-opacity-65 shadow-lg px-3 py-3 mt-16 mb-8 flex items-center border border-highlight-light border-opacity-15">
         <MenuEntriesTitle />
       </div>

@@ -85,17 +85,17 @@ export default function MenuSlideWrapper({
       ref={menuWrapperRef}
       style={{
         transition:
-          "transform 0.3s cubic-bezier(.37,.01,.11,.93), opacity 0.2s ease-out, visibility 0.3s ease-out, filter 0.3s ease-out",
+          "transform 0.3s cubic-bezier(.37,.01,.11,.93), opacity 0.2s ease-out, visibility 0.3s ease-out",
       }}
       className={`fixed top-0 right-0 z-40 h-dynamic-screen ${
         menuStyle.menuSlideWidth
       } origin-top-right p-2 ${
         isOpen
           ? `opacity-100 scale-100`
-          : "invisible opacity-0 scale-75 blur-[6px]"
+          : "invisible opacity-0 scale-75"
       }`}
     >
-      <div className="bg-widget-60 border border-highlight-light border-opacity-15 rounded-[2rem] shadow-lg backdrop-blur-[6px] w-full h-full">
+      <div className="bg-widget-60 border border-highlight-light border-opacity-15 rounded-[2.5rem] shadow-lg backdrop-blur-[6px] w-full h-full">
         {children}
       </div>
     </aside>
