@@ -313,5 +313,6 @@
   ],
   "v1.12.5": ["# Changes", "", "Fixed certain rendering issues."],
   "v1.12.6": ["# Changes", "", "Further adjusted the design of most elements."],
-  "v1.12.7": ["# Changes", "", "Fixed a minor rendering issue."]
+  "v1.12.7": ["# Changes", "", "Fixed a minor rendering issue."],
+  "v1.12.8": ["# Changes", "", "Redesigned the menu section."]
 }
