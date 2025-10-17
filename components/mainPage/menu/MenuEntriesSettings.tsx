@@ -260,12 +260,14 @@ interface Props {
   config?: typeof settingsConfig;
   ignoreConditions?: boolean;
   headless?: boolean;
+  cornerRadius?: string;
 }
 
 export default function MenuEntriesSettings({
   config = settingsConfig,
   ignoreConditions = false,
   headless = false,
+  cornerRadius = "1.5rem",
 }: Props) {
   const { settings, updateSettings } = useSettings();
   const { windows } = useWindow();
@@ -346,10 +348,13 @@ export default function MenuEntriesSettings({
         return (
           <div
             key={`${section.title || "settings-section"}-${sectionIndex}`}
+            style={{
+              borderRadius: cornerRadius,
+            }}
             className={
               headless
                 ? "grid grid-cols-1 gap-4"
-                : "rounded-3xl w-full bg-light bg-opacity-65 shadow-lg px-6 pt-2 pb-6 mb-4 text-lg grid grid-cols-1 gap-4 border border-highlight-light border-opacity-15"
+                : "w-full bg-light bg-opacity-80 shadow-sm px-6 pt-2 pb-6 mb-4 text-lg grid grid-cols-1 gap-4 border border-highlight-light border-opacity-15"
             }
           >
             {section.title && (

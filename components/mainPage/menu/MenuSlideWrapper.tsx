@@ -80,24 +80,33 @@ export default function MenuSlideWrapper({
   }, [onClose]);
 
   return (
-    <aside
-      aria-hidden={!isOpen}
-      ref={menuWrapperRef}
-      style={{
-        transition:
-          "transform 0.3s cubic-bezier(.37,.01,.11,.93), opacity 0.2s ease-out, visibility 0.3s ease-out",
-      }}
-      className={`fixed top-0 right-0 z-40 h-dynamic-screen ${
-        menuStyle.menuSlideWidth
-      } origin-top-right p-2 ${
-        isOpen
-          ? `opacity-100 scale-100`
-          : "invisible opacity-0 scale-75"
-      }`}
-    >
-      <div className="bg-widget-60 border border-highlight-light border-opacity-15 rounded-[2.5rem] shadow-lg backdrop-blur-[6px] w-full h-full">
-        {children}
-      </div>
-    </aside>
+    <>
+      <div
+        className={`fixed top-0 right-0 z-40 h-dynamic-screen ${
+          menuStyle.menuBlurDimension
+        } backdrop-blur-[9px] ${
+          isOpen ? "opacity-100" : "opacity-0"
+        } pointer-events-none select-none transition-opacity duration-300 ease-out`}
+      />
+      <aside
+        aria-hidden={!isOpen}
+        ref={menuWrapperRef}
+        style={{
+          transition:
+            "transform 0.3s cubic-bezier(.37,.01,.11,.93), opacity 0.2s ease-out, visibility 0.3s ease-out, filter 0.3s ease-out",
+          maskImage:
+            "linear-gradient(to bottom, transparent 0%, transparent 1.5rem, black 3.5rem, black calc(100% - 2.9rem), transparent calc(100% - 1.6rem), transparent 100%)",
+        }}
+        className={`fixed top-0 right-0 z-40 h-dynamic-screen ${
+          menuStyle.menuSlideWidth
+        } p-2 ${
+          isOpen
+            ? `opacity-100 translate-y-0`
+            : "invisible opacity-0 -translate-y-16 blur-[6px]"
+        }`}
+      >
+        <div className="w-full h-full">{children}</div>
+      </aside>
+    </>
   );
 }

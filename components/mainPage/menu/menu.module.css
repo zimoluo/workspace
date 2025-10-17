@@ -6,6 +6,22 @@
   width: min(32.5rem, 100vw);
 }
 
+.menuBlurDimension {
+  width: min(32.5rem, 100vw);
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0, 0, 0, 1) 1.5rem,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+@media (width < 31rem) {
+  .menuBlurDimension {
+    mask-image: none;
+  }
+}
+
 .themeProfileWidth {
   width: 100%;
 }

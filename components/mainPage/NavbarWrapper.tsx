@@ -32,11 +32,7 @@ export default function NavbarWrapper({ menuContent }: Props) {
         {menuContent}
       </MenuSlideWrapper>
       <ExpandMenuButton
-        className={`fixed top-5 right-5 z-40 transition-transform duration-300 ease-out ${
-          menuOpen
-            ? "-translate-x-1 translate-y-1"
-            : "translate-x-0 translate-y-0"
-        }`}
+        className="fixed top-5 right-5 z-40"
         isOpen={menuOpen}
         onClick={menuOpen ? restoreNavbar : openMenu}
         buttonRef={menuButtonRef}
