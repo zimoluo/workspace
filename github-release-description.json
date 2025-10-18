@@ -320,5 +320,6 @@
     "",
     "Various improvements to the new menu section design."
   ],
-  "v1.12.10": ["# Changes", "", "Fixed a minor layout issue."]
+  "v1.12.10": ["# Changes", "", "Fixed a minor layout issue."],
+  "v1.12.11": ["# Changes", "", "Prevent selection on UI elements."]
 }

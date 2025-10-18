@@ -70,7 +70,7 @@ export default function WindowButton() {
 
   return (
     <div
-      className={`flex fixed z-[12] bottom-8 right-8 items-center flex-col-reverse ${buttonStyle.container}`}
+      className={`flex fixed z-[12] bottom-8 right-8 items-center flex-col-reverse ${buttonStyle.container} select-none`}
     >
       <button
         className={`w-16 h-16 aspect-square p-3.5 rounded-full border-none border-transparent border-reflect-light group ${

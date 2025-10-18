@@ -1243,7 +1243,7 @@ export default function WindowInstance({ data, isActive, index }: Props) {
       >
         <div className="relative w-full h-full">
           <div
-            className={`absolute right-0 bottom-0 -translate-y-4 -translate-x-4 h-0 w-0 ${
+            className={`absolute right-0 bottom-0 select-none -translate-y-4 -translate-x-4 h-0 w-0 ${
               windowStyle.mountAnimator
             } ${
               isMounted || data.removeStartingAnimation
@@ -1328,7 +1328,7 @@ export default function WindowInstance({ data, isActive, index }: Props) {
             />
           )}
           <div
-            className={`absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-4 h-0 flex items-center justify-center w-full ${
+            className={`absolute select-none left-1/2 -translate-x-1/2 bottom-0 translate-y-4 h-0 flex items-center justify-center w-full ${
               windowStyle.mountAnimator
             } ${
               isMounted || data.removeStartingAnimation
