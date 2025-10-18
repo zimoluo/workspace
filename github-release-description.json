@@ -319,5 +319,6 @@
     "# Changes",
     "",
     "Various improvements to the new menu section design."
-  ]
+  ],
+  "v1.12.10": ["# Changes", "", "Fixed a minor layout issue."]
 }
