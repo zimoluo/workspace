@@ -60,11 +60,11 @@ const settingsConfig: {
         entry: "pageTheme",
         type: "special",
         component: (
-          <div className="my-5">
-            <div className="relative bg-light rounded-2xl bg-opacity-40 border-reflect-primary">
-              <div className="relative overflow-y-auto py-4 px-4 rounded-2xl">
+          <div className="my-5 sm:px-[11px]">
+            <div className="relative bg-light rounded-[40px] bg-opacity-40 border-reflect-primary">
+              <div className="relative overflow-y-auto px-4 py-4 rounded-[40px]">
                 <div
-                  className={`${menuStyle.pickerScrollContainer} rounded-xl`}
+                  className={`${menuStyle.pickerScrollContainer} rounded-[24px]`}
                 >
                   <SettingsThemePicker />
                   <div
@@ -354,7 +354,7 @@ export default function MenuEntriesSettings({
             className={
               headless
                 ? "grid grid-cols-1 gap-4"
-                : "w-full bg-light bg-opacity-80 shadow-sm px-6 pt-2 pb-6 mb-4 text-lg grid grid-cols-1 gap-4 border border-highlight-light border-opacity-15"
+                : "w-full bg-light bg-opacity-80 shadow-xl px-6 pt-2 pb-6 mb-4 text-lg grid grid-cols-1 gap-4 border border-highlight-light border-opacity-15"
             }
           >
             {section.title && (
