@@ -71,7 +71,7 @@ export default function ThemeMakerSettingsButton() {
       minWidth: 350,
       minHeight: 194,
       maxWidth: 440,
-      maxHeight: 324,
+      maxHeight: 194,
       defaultCenterX:
         (buttonRef.current?.getBoundingClientRect().left ?? 0) +
         (buttonRef.current?.getBoundingClientRect().width ?? 0) / 2,
