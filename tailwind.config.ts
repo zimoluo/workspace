@@ -78,6 +78,8 @@ const config: Config = {
       boxShadow: {
         xs: "0 8px 12px -4px rgb(0 0 0 / 0.02), 0 2px 8px -2px rgb(0 0 0 / 0.04)",
         sm: "0 12px 18px -5px rgb(0 0 0 / 0.025), 0 3px 12px -3px rgb(0 0 0 / 0.055)",
+        DEFAULT:
+          "0 14px 22px -6px rgb(0 0 0 / 0.026), 0 4px 18px -3px rgb(0 0 0 / 0.06)",
         md: "0 18px 28px -10px rgb(0 0 0 / 0.028), 0 5px 28px -4px rgb(0 0 0 / 0.065)",
         lg: "0 20px 28px -7px rgb(0 0 0 / 0.033), 0 5px 28px -4px rgb(0 0 0 / 0.075)",
         xl: "0 22px 34px -7px rgb(0 0 0 / 0.05), 0 6px 34px -4px rgb(0 0 0 / 0.092)",
