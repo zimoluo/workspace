@@ -321,5 +321,11 @@
     "Various improvements to the new menu section design."
   ],
   "v1.12.10": ["# Changes", "", "Fixed a minor layout issue."],
-  "v1.12.11": ["# Changes", "", "Prevent selection on UI elements."]
+  "v1.12.11": ["# Changes", "", "Prevent selection on UI elements."],
+  "v1.13.0": [
+    "# Changes",
+    "",
+    "* Redesigned some UI elements.",
+    "* Redesigned the Vitreous theme."
+  ]
 }
