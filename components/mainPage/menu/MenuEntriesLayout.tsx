@@ -16,7 +16,7 @@ export default function MenuEntriesLayout() {
         <MenuEntriesUtility />
       </div>
 
-      <div className="rounded-[2rem] w-full bg-light bg-opacity-80 shadow-xl px-6 py-0 text-lg border border-highlight-light border-opacity-15 select-auto">
+      <div className="rounded-[2rem] w-full bg-light bg-opacity-80 shadow-xl px-3 py-0 text-lg border border-highlight-light border-opacity-15 select-auto">
         <MenuEntriesInfo />
       </div>
     </div>

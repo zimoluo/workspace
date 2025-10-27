@@ -5,7 +5,7 @@ const displayYear = currentYear > 2024 ? `2024-${currentYear}` : "2024";
 
 export default function MenuEntriesInfo() {
   return (
-    <div className="w-full flex flex-col items-center justify-center py-4 px-2.5 text-sm text-center">
+    <div className="w-full flex flex-col items-center justify-center py-4 text-sm text-center">
       <p>Workspace v{process.env.version}</p>
       <p>
         &copy; {displayYear} Zimo Luo. All rights reserved.{" "}
