@@ -66,13 +66,18 @@ const WindowContext = createContext<
   | undefined
 >(undefined);
 
-export const windowSoftTopBorder = 36;
+export const windowSoftTopBorder = 16;
+export const windowSoftLeftBorder = 16;
+export const windowSoftRightBorder = 16;
+export const windowSoftBottomBorder = 36;
 
 export function WindowProvider({ children }: Props) {
   const [windows, setWindows] = useState<WindowData[]>([]);
   const [windowStates, setWindowStates] = useState<WindowState[]>([]);
   const [windowOrder, setWindowOrder] = useState<number[]>([]);
-  const [windowRefs, setWindowRefs] = useState<RefObject<HTMLDivElement | null>[]>([]);
+  const [windowRefs, setWindowRefs] = useState<
+    RefObject<HTMLDivElement | null>[]
+  >([]);
   const [windowCleanupData, setWindowCleanupData] = useState<
     ({ newX: number; newY: number } | null)[]
   >([]);
@@ -161,7 +166,10 @@ export function WindowProvider({ children }: Props) {
             formattedData.minWidth ?? 0,
             (formattedData.minHeight ?? 0) *
               (formattedData.minAspectRatio ?? 0),
-            Math.min(formattedData.defaultWidth, window.innerWidth - 48)
+            Math.min(
+              formattedData.defaultWidth,
+              window.innerWidth - windowSoftLeftBorder - windowSoftRightBorder
+            )
           );
 
           let confinedHeight = Math.max(
@@ -170,7 +178,7 @@ export function WindowProvider({ children }: Props) {
               (formattedData.maxAspectRatio ?? Infinity),
             Math.min(
               formattedData.defaultHeight,
-              window.innerHeight - 36 - windowSoftTopBorder
+              window.innerHeight - windowSoftBottomBorder - windowSoftTopBorder
             )
           );
 
@@ -305,7 +313,10 @@ export function WindowProvider({ children }: Props) {
   const setActiveWindowByIndex = (index: number) =>
     setActiveWindowByPredicate((_, idx) => idx === index);
 
-  const registerWindowRef = (index: number, ref: RefObject<HTMLDivElement | null>) => {
+  const registerWindowRef = (
+    index: number,
+    ref: RefObject<HTMLDivElement | null>
+  ) => {
     setWindowRefs((prevRefs) => {
       const newRefs = [...prevRefs];
       newRefs[index] = ref;
@@ -316,7 +327,7 @@ export function WindowProvider({ children }: Props) {
   const initiateWindowCleanup = useCallback(() => {
     const gap = 8;
     const rowHeight = 90;
-    const windowMargin = 24;
+    const windowMargin = windowSoftLeftBorder;
     const availableWidth = window.innerWidth - windowMargin;
     const newCleanupData: { newX: number; newY: number }[] = [];
     const newOrder: number[] = [];

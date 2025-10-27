@@ -10,6 +10,7 @@ import ThemeDataInitializer from "@/components/theme/util/ThemeDataInitializer";
 import ThemeApplier from "@/components/theme/util/ThemeApplier";
 import { WindowProvider } from "@/components/contexts/WindowContext";
 import SystemUIFontLoader from "@/components/mainPage/SystemUIFontLoader";
+import { MenuControlProvider } from "@/components/contexts/MenuControlContext";
 
 const environment = "production";
 
@@ -63,21 +64,23 @@ export default function RootLayout({
     <html lang="en">
       <body className="font-main">
         <SettingsProvider>
-          <SystemUIFontLoader>
-            <ToastProvider>
-              <WindowProvider>
-                <ThemeDataInitializer>
-                  <ThemeApplier>
-                    <MainPageFrame>
-                      <MainPageEffect>
-                        <MainPageElements>{children}</MainPageElements>
-                      </MainPageEffect>
-                    </MainPageFrame>
-                  </ThemeApplier>
-                </ThemeDataInitializer>
-              </WindowProvider>
-            </ToastProvider>
-          </SystemUIFontLoader>
+          <MenuControlProvider>
+            <SystemUIFontLoader>
+              <ToastProvider>
+                <WindowProvider>
+                  <ThemeDataInitializer>
+                    <ThemeApplier>
+                      <MainPageFrame>
+                        <MainPageEffect>
+                          <MainPageElements>{children}</MainPageElements>
+                        </MainPageEffect>
+                      </MainPageFrame>
+                    </ThemeApplier>
+                  </ThemeDataInitializer>
+                </WindowProvider>
+              </ToastProvider>
+            </SystemUIFontLoader>
+          </MenuControlProvider>
         </SettingsProvider>
       </body>
     </html>
