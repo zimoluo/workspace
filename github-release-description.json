@@ -327,5 +327,6 @@
     "",
     "* Redesigned some UI elements.",
     "* Redesigned the Vitreous theme."
-  ]
+  ],
+  "v1.13.1": ["# Changes", "", "Fixed a minor layout issue."]
 }
