@@ -330,5 +330,6 @@
   ],
   "v1.13.1": ["# Changes", "", "Fixed a minor layout issue."],
   "v1.13.2": ["# Changes", "", "Slightly adjusted certain rendering aspects."],
-  "v1.13.3": ["# Changes", "", "Adjusted the intensity of the shadows."]
+  "v1.13.3": ["# Changes", "", "Adjusted the intensity of the shadows."],
+  "v1.13.4": ["# Changes", "", "Slightly adjusted the favicon."]
 }
