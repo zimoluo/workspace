@@ -76,15 +76,13 @@ const config: Config = {
         "0.8": "0.8px",
       },
       boxShadow: {
-        xs: "0 7px 12px -4px rgb(0 0 0 / 0.023), 0 2px 8px -2px rgb(0 0 0 / 0.048)",
-        sm: "0 10px 18px -5px rgb(0 0 0 / 0.028), 0 3px 12px -3px rgb(0 0 0 / 0.066)",
-        DEFAULT:
-          "0 12px 22px -6px rgb(0 0 0 / 0.03), 0 4px 18px -3px rgb(0 0 0 / 0.072)",
-        md: "0 16px 28px -10px rgb(0 0 0 / 0.032), 0 5px 28px -4px rgb(0 0 0 / 0.078)",
-        lg: "0 18px 28px -7px rgb(0 0 0 / 0.038), 0 5px 28px -4px rgb(0 0 0 / 0.09)",
-        xl: "0 20px 34px -7px rgb(0 0 0 / 0.057), 0 6px 34px -4px rgb(0 0 0 / 0.11)",
-        "2xl":
-          "0 23px 40px -8px rgb(0 0 0 / 0.068), 0 8px 40px -6px rgb(0 0 0 / 0.12)",
+        xs: "0 0 2px rgb(0 0 0 / 0.02), 0 0 4px rgb(0 0 0 / 0.04)",
+        sm: "0 0 5px rgb(0 0 0 / 0.025), 0 0 10px rgb(0 0 0 / 0.05)",
+        DEFAULT: "0 0 8px rgb(0 0 0 / 0.028), 0 0 16px rgb(0 0 0 / 0.055)",
+        md: "0 0 10px rgb(0 0 0 / 0.03), 0 0 20px rgb(0 0 0 / 0.065)",
+        lg: "0 0 14px rgb(0 0 0 / 0.03), 0 0 28px rgb(0 0 0 / 0.073)",
+        xl: "0 0 20px rgb(0 0 0 / 0.035), 0 0 40px rgb(0 0 0 / 0.085)",
+        "2xl": "0 0 30px rgb(0 0 0 / 0.04), 0 0 60px rgb(0 0 0 / 0.1)",
         none: "none",
       },
     },

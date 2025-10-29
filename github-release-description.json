@@ -336,5 +336,6 @@
     "# Changes",
     "",
     "Reworked the menu icon's animation mechanism to be more reliable."
-  ]
+  ],
+  "v1.13.6": ["# Changes", "", "Adjusted the rendering of shadows again."]
 }
