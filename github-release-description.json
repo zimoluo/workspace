@@ -343,5 +343,6 @@
     "# Changes",
     "",
     "Prevented the document from being accidentally scrollable."
-  ]
+  ],
+  "v1.13.9": ["# Changes", "", "Adjusted the shadow rendering."]
 }
