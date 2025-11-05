@@ -351,5 +351,6 @@
     "",
     "* Adjusted the Scintillating theme.",
     "* Fixed the animated background of the Midnight theme."
-  ]
+  ],
+  "1.14.2": ["# Changes", "", "Windows now appear slightly faster."]
 }
