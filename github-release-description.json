@@ -345,5 +345,11 @@
     "Prevented the document from being accidentally scrollable."
   ],
   "v1.13.9": ["# Changes", "", "Adjusted the shadow rendering."],
-  "v1.14.0": ["# Changes", "", "Redesigned the Scintillating theme."]
+  "v1.14.0": ["# Changes", "", "Redesigned the Scintillating theme."],
+  "v1.14.1": [
+    "# Changes",
+    "",
+    "* Adjusted the Scintillating theme.",
+    "* Fixed the animated background of the Midnight theme."
+  ]
 }
