@@ -352,5 +352,10 @@
     "* Adjusted the Scintillating theme.",
     "* Fixed the animated background of the Midnight theme."
   ],
-  "v1.14.2": ["# Changes", "", "Windows now appear slightly faster."]
+  "v1.14.2": ["# Changes", "", "Windows now appear slightly faster."],
+  "v1.14.3": [
+    "# Changes",
+    "",
+    "Slightly adjusted the order of some theme presets."
+  ]
 }
