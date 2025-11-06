@@ -357,5 +357,6 @@
     "# Changes",
     "",
     "Slightly adjusted the order of some theme presets."
-  ]
+  ],
+  "v1.14.4": ["# Changes", "", "Slightly adjusted the Penumbra theme."]
 }

@@ -156,6 +156,9 @@ const penumbraConfig: ThemeDataConfig = {
     ],
   },
   siteThemeColor: "#3c3f4a",
+  misc: {
+    readingBlur: 8,
+  },
   favicon: { mode: "backdrop" },
 };
 
