@@ -62,7 +62,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="font-main overflow-hidden">
+      <body className="font-main overflow-hidden antialiased">
         <SettingsProvider>
           <MenuControlProvider>
             <SystemUIFontLoader>
