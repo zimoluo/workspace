@@ -360,5 +360,10 @@
   ],
   "v1.14.4": ["# Changes", "", "Slightly adjusted the Penumbra theme."],
   "v1.14.5": ["# Changes", "", "Adjusted the font rendering."],
-  "v1.14.6": ["# Changes", "", "Added the Birthday 20 theme."]
+  "v1.14.6": ["# Changes", "", "Added the Birthday 20 theme."],
+  "v1.14.7": [
+    "# Changes",
+    "",
+    "Adjusted the Birthday 20 theme animated background."
+  ]
 }
