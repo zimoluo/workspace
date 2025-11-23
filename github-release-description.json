@@ -359,5 +359,6 @@
     "Slightly adjusted the order of some theme presets."
   ],
   "v1.14.4": ["# Changes", "", "Slightly adjusted the Penumbra theme."],
-  "v1.14.5": ["# Changes", "", "Adjusted the font rendering."]
+  "v1.14.5": ["# Changes", "", "Adjusted the font rendering."],
+  "v1.14.6": ["# Changes", "", "Added the Birthday 20 theme."]
 }
