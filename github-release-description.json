@@ -390,5 +390,6 @@
     "# Changes",
     "",
     "Further adjusted the rendering of specular highlighting effect."
-  ]
+  ],
+  "v1.14.13": ["# Changes", "", "Fixed a minor rendering issue."]
 }
