@@ -6,7 +6,7 @@ import MagnetIcon from "../assets/entries/MagnetIcon";
 import WindowIcon from "../assets/entries/WindowIcon";
 import { useMenuControl } from "../contexts/MenuControlContext";
 import { useWindow } from "../contexts/WindowContext";
-import WindowPicker from "../window/WindowPicker";
+import { windowEntryMap } from "../window/WindowPickerEntry";
 import buttonStyle from "./window-button.module.css";
 
 const contextKey = "window-picker";
@@ -41,16 +41,10 @@ export default function NavbarWindowButton() {
     }
 
     appendWindow({
-      content: <WindowPicker />,
-      contextKey: contextKey,
-      defaultHeight: 480,
-      defaultWidth: 562,
-      minWidth: 432,
-      minHeight: 400,
-      maxWidth: 688,
-      maxHeight: 660,
+      ...windowEntryMap.windowPicker.window,
       defaultCenterX: window.innerWidth / 2,
       defaultCenterY: window.innerHeight / 2,
+      saveComponentKey: "windowPicker",
     });
   };
 

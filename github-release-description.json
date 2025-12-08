@@ -391,5 +391,10 @@
     "",
     "Further adjusted the rendering of specular highlighting effect."
   ],
-  "v1.14.13": ["# Changes", "", "Fixed a minor rendering issue."]
+  "v1.14.13": ["# Changes", "", "Fixed a minor rendering issue."],
+  "v1.14.14": [
+    "# Changes",
+    "",
+    "Fixed an issue where the Window Gallery is not saved properly."
+  ]
 }
