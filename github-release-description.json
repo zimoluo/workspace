@@ -396,5 +396,6 @@
     "# Changes",
     "",
     "Fixed an issue where the Window Gallery is not saved properly."
-  ]
+  ],
+  "v1.14.15": ["# Changes", "", "Updated some dependencies."]
 }
