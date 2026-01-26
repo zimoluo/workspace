@@ -397,5 +397,10 @@
     "",
     "Fixed an issue where the Window Gallery is not saved properly."
   ],
-  "v1.14.15": ["# Changes", "", "Updated some dependencies."]
+  "v1.14.15": ["# Changes", "", "Updated some dependencies."],
+  "v1.14.16": [
+    "# Changes",
+    "",
+    "Adjusted the rendering of specular highlights."
+  ]
 }
