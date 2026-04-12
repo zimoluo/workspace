@@ -402,5 +402,6 @@
     "# Changes",
     "",
     "Adjusted the rendering of specular highlights."
-  ]
+  ],
+  "v1.14.17": ["# Changes", "", "Tweaked certain animations."]
 }
