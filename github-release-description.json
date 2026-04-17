@@ -403,5 +403,6 @@
     "",
     "Adjusted the rendering of specular highlights."
   ],
-  "v1.14.17": ["# Changes", "", "Tweaked certain animations."]
+  "v1.14.17": ["# Changes", "", "Tweaked certain animations."],
+  "v1.14.18": ["# Changes", "", "Improved theme engine performance."]
 }
