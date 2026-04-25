@@ -406,5 +406,6 @@
   "v1.14.17": ["# Changes", "", "Tweaked certain animations."],
   "v1.14.18": ["# Changes", "", "Improved theme engine performance."],
   "v1.14.19": ["# Changes", "", "Improved certain animations."],
-  "v1.14.20": ["# Changes", "", "Improved the rendering of shadows."]
+  "v1.14.20": ["# Changes", "", "Improved the rendering of shadows."],
+  "v1.14.21": ["# Changes", "", "Further improved the rendering of shadows."]
 }
