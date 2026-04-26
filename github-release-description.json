@@ -409,5 +409,6 @@
   "v1.14.20": ["# Changes", "", "Improved the rendering of shadows."],
   "v1.14.21": ["# Changes", "", "Further improved the rendering of shadows."],
   "v1.14.22": ["# Changes", "", "Improved certain elements."],
-  "v1.14.23": ["# Changes", "", "Fixed a minor rendering issue."]
+  "v1.14.23": ["# Changes", "", "Fixed a minor rendering issue."],
+  "v1.15.0": ["# Changes", "", "Added the Velvet theme."]
 }
