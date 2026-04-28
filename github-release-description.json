@@ -415,5 +415,6 @@
     "# Changes",
     "",
     "Improved the notification banner behavior and rendering."
-  ]
+  ],
+  "v1.16.0": ["# Changes", "", "Added the Whiteout theme."]
 }
