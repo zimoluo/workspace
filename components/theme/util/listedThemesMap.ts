@@ -1,5 +1,6 @@
 export const allListedThemes: ThemeKey[] = [
   "unity",
+  "whiteout",
   "home",
   "photos",
   "blog",

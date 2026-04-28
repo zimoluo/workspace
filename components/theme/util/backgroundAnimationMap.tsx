@@ -33,6 +33,7 @@ import MemoriesAnimatedBackground from "@/components/mainPage/backgroundAnimatio
 import Gallery3DAnimatedBackground from "@/components/mainPage/backgroundAnimations/gallery3D/Gallery3DAnimatedBackground";
 import Birthday20AnimatedBackground from "@/components/mainPage/backgroundAnimations/birthday20/Birthday20AnimatedBackground";
 import VelvetAnimatedBackground from "@/components/mainPage/backgroundAnimations/velvet/VelvetAnimatedBackground";
+import WhiteoutAnimatedBackground from "@/components/mainPage/backgroundAnimations/whiteout/WhiteoutAnimatedBackground";
 
 export const backgroundAnimationMap: Record<
   ThemeAnimatedBackgroundKey,
@@ -72,4 +73,5 @@ export const backgroundAnimationMap: Record<
   gallery3D: <Gallery3DAnimatedBackground />,
   birthday20: <Birthday20AnimatedBackground />,
   velvet: <VelvetAnimatedBackground />,
+  whiteout: <WhiteoutAnimatedBackground />,
 };
