@@ -416,5 +416,10 @@
     "",
     "Improved the notification banner behavior and rendering."
   ],
-  "v1.16.0": ["# Changes", "", "Added the Whiteout theme."]
+  "v1.16.0": ["# Changes", "", "Added the Whiteout theme."],
+  "v1.16.1": [
+    "# Changes",
+    "",
+    "Improved the fidelity of the Whiteout theme animated background."
+  ]
 }

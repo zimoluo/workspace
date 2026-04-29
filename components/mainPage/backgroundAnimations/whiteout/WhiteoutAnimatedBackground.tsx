@@ -1,3 +1,5 @@
+"use client";
+
 import { useRef, useMemo } from "react";
 import { useSettings } from "@/components/contexts/SettingsContext";
 import { Canvas, useFrame } from "@react-three/fiber";
@@ -151,7 +153,7 @@ const MacroMesh: React.FC<MacroMeshProps> = ({ isReduced }) => {
 
   return (
     <mesh rotation={[-Math.PI / 2.06, 0, 0]}>
-      <planeGeometry args={[2.4, 2.4, 84, 84]} />
+      <planeGeometry args={[2.4, 2.4, 96, 96]} />
       <shaderMaterial
         ref={materialRef}
         vertexShader={vertexShader}
