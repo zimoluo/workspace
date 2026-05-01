@@ -434,5 +434,6 @@
     "# Changes",
     "",
     "Improved specular highlight rendering consistency."
-  ]
+  ],
+  "1.16.7": ["# Changes", "", "Added the Plain Black theme."]
 }
