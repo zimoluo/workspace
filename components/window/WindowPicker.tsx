@@ -47,8 +47,8 @@ export default function WindowPicker({ sections = defaultSections }: Props) {
   }
 
   return (
-    <div className="w-full h-full px-8 py-6 bg-widget-80">
-      <div className="w-full h-full overflow-y-auto space-y-6">
+    <div className="w-full h-full bg-widget-80">
+      <div className="w-full h-full overflow-y-auto px-8 py-6 space-y-6">
         {processedSections.map((section, index) => (
           <EntrySection
             key={index}

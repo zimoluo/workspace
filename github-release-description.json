@@ -428,5 +428,6 @@
     "Further improved the fidelity of the Whiteout theme animated background."
   ],
   "v1.16.3": ["# Changes", "", "Updated the Velvet theme."],
-  "v1.16.4": ["# Changes", "", "Improved specular highlight calculation."]
+  "v1.16.4": ["# Changes", "", "Improved specular highlight calculation."],
+  "v1.16.5": ["# Changes", "", "Improved window gallery interface."]
 }
