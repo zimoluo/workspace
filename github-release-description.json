@@ -435,5 +435,10 @@
     "",
     "Improved specular highlight rendering consistency."
   ],
-  "1.16.7": ["# Changes", "", "Added the Plain Black theme."]
+  "1.16.7": ["# Changes", "", "Added the Plain Black theme."],
+  "1.16.8": [
+    "# Changes",
+    "",
+    "Redesigned the color of the favicon of some themes."
+  ]
 }
