@@ -1,5 +1,4 @@
 export const allListedThemes: ThemeKey[] = [
-  "unity",
   "whiteout",
   "home",
   "photos",
@@ -8,6 +7,7 @@ export const allListedThemes: ThemeKey[] = [
   "about",
   "perpetuity",
   "velvet",
+  "unity",
   "vitreous",
   "scintillating",
   "penumbra",

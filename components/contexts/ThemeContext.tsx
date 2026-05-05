@@ -21,7 +21,10 @@ interface ThemeContextType {
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
-export function ThemeProvider({ children, defaultThemeKey = "unity" }: Props) {
+export function ThemeProvider({
+  children,
+  defaultThemeKey = "whiteout",
+}: Props) {
   const { updateSettings, currentCustomThemeConfig, settings } = useSettings();
   const { appendToast } = useToast();
   const navigationKey = useNavigation();
