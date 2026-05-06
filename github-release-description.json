@@ -435,20 +435,21 @@
     "",
     "Improved specular highlight rendering consistency."
   ],
-  "1.16.7": ["# Changes", "", "Added the Plain Black theme."],
-  "1.16.8": [
+  "v1.16.7": ["# Changes", "", "Added the Plain Black theme."],
+  "v1.16.8": [
     "# Changes",
     "",
     "Redesigned the color of the favicon of some themes."
   ],
-  "1.17.0": [
+  "v1.17.0": [
     "# Changes",
     "",
     "The default theme has been updated to the Whiteout theme."
   ],
-  "1.17.1": [
+  "v1.17.1": [
     "# Changes",
     "",
     "Further redesigned the color of the favicon of some themes."
-  ]
+  ],
+  "v1.17.2": ["# Changes", "", "Fixed changelog not displaying properly."]
 }
