@@ -445,5 +445,10 @@
     "# Changes",
     "",
     "The default theme has been updated to the Whiteout theme."
+  ],
+  "1.17.1": [
+    "# Changes",
+    "",
+    "Further redesigned the color of the favicon of some themes."
   ]
 }
