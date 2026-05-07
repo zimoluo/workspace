@@ -451,5 +451,6 @@
     "",
     "Further redesigned the color of the favicon of some themes."
   ],
-  "v1.17.2": ["# Changes", "", "Fixed changelog not displaying properly."]
+  "v1.17.2": ["# Changes", "", "Fixed changelog not displaying properly."],
+  "v1.17.3": ["# Changes", "", "Redesigned the color of the main favicon."]
 }
