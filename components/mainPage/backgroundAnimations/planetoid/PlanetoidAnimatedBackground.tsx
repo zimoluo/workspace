@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useMemo, useEffect, useState } from "react";
+import { useRef, useMemo } from "react";
 import { useSettings } from "@/components/contexts/SettingsContext";
 import { Canvas, useFrame } from "@react-three/fiber";
 import * as THREE from "three";
@@ -368,17 +368,11 @@ export default function PlanetoidAnimatedBackground() {
   const { settings } = useSettings();
   const isReduced = settings.backgroundRichness === "reduced";
 
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
   return (
     <div className="fixed -z-20 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center w-[100lvmin] h-[100lvmin] pointer-events-none select-none">
       <Canvas
         camera={{ position: [0, 0, 2.5], fov: 50 }}
-        className={`w-full h-full duration-300 ease-in transition-[opacity,filter] ${isMounted ? "opacity-100" : "opacity-0 blur-[8px]"}`}
+        className="w-full h-full"
         dpr={[1, 1.6]}
       >
         <MacroMesh isReduced={isReduced} />
