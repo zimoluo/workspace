@@ -42,6 +42,7 @@ export const allListedThemes: ThemeKey[] = [
   "midnight",
   "glitter",
   "verdant",
+  "planetoid",
   "sky",
   "storm",
   "rainbow",

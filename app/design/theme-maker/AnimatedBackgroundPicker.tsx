@@ -38,6 +38,7 @@ const availableAnimatedBackgroundKeys: (ThemeAnimatedBackgroundKey | null)[] = [
   "grass",
   "gold",
   "verdant",
+  "planetoid",
   "eep",
 ];
 
