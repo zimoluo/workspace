@@ -462,5 +462,6 @@
     "Optimized the Planetoid theme animated background."
   ],
   "v1.17.8": ["# Changes", "", "Optimized the Gold theme animated background."],
-  "v1.17.9": ["# Changes", "", "Slightly updated the Gold theme."]
+  "v1.17.9": ["# Changes", "", "Slightly updated the Gold theme."],
+  "v1.17.10": ["# Changes", "", "Updated the Celebration theme icon."]
 }
