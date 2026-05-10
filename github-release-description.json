@@ -460,5 +460,6 @@
     "# Changes",
     "",
     "Optimized the Planetoid theme animated background."
-  ]
+  ],
+  "v1.17.8": ["# Changes", "", "Optimized the Gold theme animated background."]
 }

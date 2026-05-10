@@ -124,7 +124,7 @@ const settingsConfig: {
       {
         entry: "goldSphereAnimationIntensity",
         type: "slider",
-        values: [20, 60, 100, 150, 800],
+        values: [30, 60, 100, 150, 600],
         captions: ["Gentle", "Steady", "Dynamic", "Vibrant", "Blazing"],
         condition: [{ value: "animationKey", match: "gold" }],
       },
@@ -279,7 +279,7 @@ export default function MenuEntriesSettings({
   const getWindowTagMatch = useCallback(
     (tag: string) =>
       windows.some((window) => (window.tags ?? []).includes(tag)),
-    [windows]
+    [windows],
   );
 
   const checkCondition = (condition: SettingsPanelEntry["condition"]) => {
@@ -326,7 +326,7 @@ export default function MenuEntriesSettings({
         if (settingsKey in settings) {
           if (Array.isArray(match)) {
             return match.includes(
-              settings[settingsKey as keyof SettingsState] as any
+              settings[settingsKey as keyof SettingsState] as any,
             );
           }
           return (
@@ -343,7 +343,7 @@ export default function MenuEntriesSettings({
     <>
       {config.map((section, sectionIndex) => {
         const filteredEntries = section.entries.filter((entry) =>
-          checkCondition(entry.condition)
+          checkCondition(entry.condition),
         );
         return (
           <div
