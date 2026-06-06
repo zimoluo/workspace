@@ -464,5 +464,6 @@
   "v1.17.8": ["# Changes", "", "Optimized the Gold theme animated background."],
   "v1.17.9": ["# Changes", "", "Slightly updated the Gold theme."],
   "v1.17.10": ["# Changes", "", "Updated the Celebration theme icon."],
-  "v1.17.11": ["# Changes", "", "Updated several theme icons."]
+  "v1.17.11": ["# Changes", "", "Updated several theme icons."],
+  "v1.17.12": ["# Changes", "", "Updated wording of some settings."]
 }

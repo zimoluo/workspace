@@ -14,7 +14,7 @@ type Props = {
 const utilityTextMap: Record<MenuUtility, string> = {
   resetSettings: "Reset Settings to Default",
   resetProfiles: "Reset Theme Maker Profiles",
-  resetAllData: "Reset All Stored Data",
+  resetAllData: "Reset All Customizations",
 };
 
 // Used for next rendering only. Typically involves those that modify settings.
