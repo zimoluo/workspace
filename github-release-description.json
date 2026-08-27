@@ -469,5 +469,10 @@
   "v1.18.0": ["# Changes", "", "Updated the rendering of specular highlights."],
   "v1.18.1": ["# Changes", "", "Redesigned specular highlights."],
   "v1.18.2": ["# Changes", "", "Adjusted specular highlight rendering."],
-  "v1.18.3": ["# Changes", "", "Refined specular highlight rendering."]
+  "v1.18.3": ["# Changes", "", "Refined specular highlight rendering."],
+  "v1.18.4": [
+    "# Changes",
+    "",
+    "Updated the Birthday 20 theme animated background."
+  ]
 }
