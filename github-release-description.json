@@ -474,5 +474,11 @@
     "# Changes",
     "",
     "Updated the Birthday 20 theme animated background."
+  ],
+  "v1.18.5": [
+    "# Changes",
+    "",
+    "* Specular highlights are now more chromatic.",
+    "* Updated the Birthday 20 theme animated background."
   ]
 }
