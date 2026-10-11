@@ -486,5 +486,6 @@
     "",
     "Fixed the Celebration theme animated background not displaying fireworks properly."
   ],
-  "v1.18.7": ["# Changes", "", "Minor user interface adjustments."]
+  "v1.18.7": ["# Changes", "", "Minor user interface adjustments."],
+  "v1.18.8": ["# Changes", "", "More minor user interface adjustments."]
 }
